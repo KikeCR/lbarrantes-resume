@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/lbarrantes-resume/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/lbarrantes-resume/static/js/main.b68c2f10.chunk.js",
+    "main.js.map": "/lbarrantes-resume/static/js/main.b68c2f10.chunk.js.map",
+    "runtime-main.js": "/lbarrantes-resume/static/js/runtime-main.9c170a84.js",
+    "runtime-main.js.map": "/lbarrantes-resume/static/js/runtime-main.9c170a84.js.map",
+    "static/js/2.2ce06523.chunk.js": "/lbarrantes-resume/static/js/2.2ce06523.chunk.js",
+    "static/js/2.2ce06523.chunk.js.map": "/lbarrantes-resume/static/js/2.2ce06523.chunk.js.map",
+    "static/js/3.fdc2a13b.chunk.js": "/lbarrantes-resume/static/js/3.fdc2a13b.chunk.js",
+    "static/js/3.fdc2a13b.chunk.js.map": "/lbarrantes-resume/static/js/3.fdc2a13b.chunk.js.map",
+    "index.html": "/lbarrantes-resume/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/lbarrantes-resume/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.2ce06523.chunk.js.LICENSE.txt": "/lbarrantes-resume/static/js/2.2ce06523.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/lbarrantes-resume/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9c170a84.js",
+    "static/js/2.2ce06523.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.b68c2f10.chunk.js"
+  ]
+}
