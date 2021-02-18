@@ -1,11 +1,14 @@
 import React from 'react';
-import { Typography, Paper, Grid } from '@material-ui/core';
+import { Paper } from '@material-ui/core';
 import styled from 'styled-components';
+import Navbar from './Navbar';
 import Profile from './Profile';
 import AboutMe from './AboutMe';
+import ContactMe from './ContactMe';
 
 const ResumeAppPaper = styled(Paper)`
     height: 100vh;
+    flex-grow: 1;
     background-color: #fafafa;
     margin: 0;
     padding: 0;
@@ -14,8 +17,10 @@ const ResumeAppPaper = styled(Paper)`
 function ResumeApp() {
 	return (
 		<ResumeAppPaper elevation={0}>
+			<Navbar />
 			<Profile />
 			<AboutMe />
+			<ContactMe />
 		</ResumeAppPaper>
 	);
 }
