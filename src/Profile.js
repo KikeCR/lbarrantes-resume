@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Paper, Avatar, Grid, Link, Button } from '@material-ui/core';
 import styled from 'styled-components';
 import ReactTypingEffect from 'react-typing-effect';
@@ -7,6 +7,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import { LanguageContext } from './contexts/language.context';
 
 const ProfilePaper = styled(Paper)`
     height: 100vh;
@@ -54,7 +55,22 @@ const ContactButton = styled(Button)`
     }
 `;
 
+const content = {
+	en: {
+		intro: "I'm a",
+		description: [ 'front-end developer.', 'back-end beginner.', 'traveler.', 'gamer.' ],
+		contactMeCta: 'Contact me'
+	},
+	es: {
+		intro: 'Soy',
+		description: [ 'front-end developer.', 'aprendiz de back-end.', 'viajero.', 'gamer.' ],
+		contactMeCta: 'Contáctame'
+	}
+};
+
 function Profile() {
+	const { language } = useContext(LanguageContext);
+	const { intro, description, contactMeCta } = content[language];
 	return (
 		<ProfilePaper elevation={0}>
 			<Grid container justify="center">
@@ -64,8 +80,8 @@ function Profile() {
 				<Grid item xs={11} md={7}>
 					<ProfileTitle>Luis Barrantes</ProfileTitle>
 					<ReactTypingEffect
-						staticText="I'm a"
-						text={[ 'front-end developer.', 'back-end beginner.', 'traveler.', 'gamer.' ]}
+						staticText={intro}
+						text={description}
 						speed={100}
 						eraseSpeed={100}
 						typingDelay={800}
@@ -86,7 +102,7 @@ function Profile() {
 						</Link>
 					</SocialContainer>
 					<ButtonProfile>
-						<ContactButton variant="contained">Contact me</ContactButton>
+						<ContactButton variant="contained">{contactMeCta}</ContactButton>
 					</ButtonProfile>
 				</Grid>
 			</Grid>

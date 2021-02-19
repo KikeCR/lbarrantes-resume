@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Paper, Grid, TextField, Button, Dialog, DialogTitle } from '@material-ui/core';
 import useInputState from './hooks/useInputState';
 import styled from 'styled-components';
+import { LanguageContext } from './contexts/language.context';
 
 const ContactMeFormPaper = styled(Paper)`
     margin: 1rem 0;
@@ -9,6 +10,9 @@ const ContactMeFormPaper = styled(Paper)`
 `;
 
 const ContactMeTextField = styled(TextField)`
+	.MuiInputBase-root {
+		background-color: #fff;
+	}
     .MuiFormLabel-root.Mui-focused {
 		color: #497DAD;
 	}
@@ -33,6 +37,27 @@ const MessageConfirmationDialog = styled(Dialog)`
     }
 `;
 
+const content = {
+	en: {
+		nameLabel: 'Name',
+		emailLabel: 'Email address',
+		subjectLabel: 'Subject',
+		messageLabel: 'Message',
+		sendButton: 'Send message',
+		dialogTitle: 'Message sent',
+		dialogText: 'Your message was successfully sent.'
+	},
+	es: {
+		nameLabel: 'Nombre',
+		emailLabel: 'Correo electrónico',
+		subjectLabel: 'Asunto',
+		messageLabel: 'Mensaje',
+		sendButton: 'Enviar',
+		dialogTitle: 'Mensaje enviado',
+		dialogText: 'El mensaje se envió correctamente.'
+	}
+};
+
 function ContactMeForm() {
 	const [ nameValue, handleNameChange, resetName ] = useInputState('');
 	const [ emailValue, handleEmailChange, resetEmail ] = useInputState('');
@@ -41,6 +66,11 @@ function ContactMeForm() {
 
 	const [ open, setOpen ] = useState(false);
 	const [ messages, setMessages ] = useState([]);
+
+	const { language } = useContext(LanguageContext);
+	const { nameLabel, emailLabel, subjectLabel, messageLabel, sendButton, dialogTitle, dialogText } = content[
+		language
+	];
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -82,7 +112,7 @@ function ContactMeForm() {
 							value={nameValue}
 							onChange={handleNameChange}
 							margin="normal"
-							label="Name"
+							label={nameLabel}
 							variant="outlined"
 							fullWidth
 						/>
@@ -92,7 +122,7 @@ function ContactMeForm() {
 							value={emailValue}
 							onChange={handleEmailChange}
 							margin="normal"
-							label="Email address"
+							label={emailLabel}
 							variant="outlined"
 							fullWidth
 						/>
@@ -102,7 +132,7 @@ function ContactMeForm() {
 							value={subjectValue}
 							onChange={handleSubjectValue}
 							margin="normal"
-							label="Subject"
+							label={subjectLabel}
 							variant="outlined"
 							fullWidth
 						/>
@@ -114,22 +144,22 @@ function ContactMeForm() {
 							multiline
 							rows={5}
 							margin="normal"
-							label="Message"
+							label={messageLabel}
 							variant="outlined"
 							fullWidth
 						/>
 					</Grid>
 					<Grid container item xs={11} md={12}>
 						<ContactButton type="submit" value="Submit" variant="contained">
-							Send message
+							{sendButton}
 						</ContactButton>
 					</Grid>
 				</Grid>
 			</form>
 
 			<MessageConfirmationDialog aria-labelledby="dialog-title" open={open} onClose={handleClose}>
-				<DialogTitle id="dialog-title">Message sent</DialogTitle>
-				<p>Your message was successfully sent.</p>
+				<DialogTitle id="dialog-title">{dialogTitle}</DialogTitle>
+				<p>{dialogText}</p>
 			</MessageConfirmationDialog>
 		</ContactMeFormPaper>
 	);
