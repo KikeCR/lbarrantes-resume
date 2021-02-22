@@ -28,7 +28,7 @@ function ContactMe() {
 	const { language } = useContext(LanguageContext);
 	const { sectionTitle, formTitle, formDescription } = content[language];
 	return (
-		<ContactMePaper elevation={0}>
+		<ContactMePaper elevation={0} square>
 			<Grid container justify="center">
 				<Grid container item xs={11} md={10}>
 					<h2>{sectionTitle}</h2>

@@ -3,30 +3,33 @@ import { Paper, Grid, TextField, Button, Dialog, DialogTitle } from '@material-u
 import useInputState from './hooks/useInputState';
 import styled from 'styled-components';
 import { LanguageContext } from './contexts/language.context';
+import { ThemeContext } from './contexts/theme.context';
 
 const ContactMeFormPaper = styled(Paper)`
     margin: 1rem 0;
     padding: 0 1rem;
+
+	.MuiFormLabel-root.Mui-focused {
+		color: ${(props) => (props.isDarkMode ? '#F77F00' : '#003049')};
+	}
+
+	.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+		border-color: ${(props) => (props.isDarkMode ? '#F77F00' : '#003049')};
+	}
 `;
 
 const ContactMeTextField = styled(TextField)`
 	.MuiInputBase-root {
 		background-color: #fff;
 	}
-    .MuiFormLabel-root.Mui-focused {
-		color: #497DAD;
-	}
-	.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-		border-color: #497DAD;
-	}
 `;
 
 const ContactButton = styled(Button)`
     &.MuiButtonBase-root {
-        background-color: #eb1796;
+		background-color: #D62828;
         color: #fff;
         &:hover {
-            background-color: #a12870;
+            background-color: #9B1C1C;
         }
     }
 `;
@@ -72,6 +75,8 @@ function ContactMeForm() {
 		language
 	];
 
+	const { isDarkMode } = useContext(ThemeContext);
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
@@ -104,7 +109,7 @@ function ContactMeForm() {
 	);
 
 	return (
-		<ContactMeFormPaper elevation={0}>
+		<ContactMeFormPaper elevation={0} isDarkMode={isDarkMode}>
 			<form onSubmit={handleSubmit}>
 				<Grid container justify="center" spacing={2}>
 					<Grid container item xs={11} md={6}>

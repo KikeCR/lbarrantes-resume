@@ -27,8 +27,8 @@ const TextBubblePaper = styled(Paper)`
     position: relative;
     &.MuiPaper-root {
         padding: 20px 30px;
-		color: #fff;
-        background-color: #853565 !important;
+		color: #fff !important;
+        background-color: #003049 !important;
         text-align: right;
         line-height: 1.5;
         border-radius: 30px;
@@ -43,7 +43,7 @@ const TextBubblePaper = styled(Paper)`
         position: absolute;
         right: -10px;
         top: 20%;
-        border-left-color: #853565;
+        border-left-color: #003049;
     }
 `;
 
@@ -60,19 +60,20 @@ const LinearProgressResume = styled(LinearProgress)`
     }
 
     &.main .MuiLinearProgress-barColorPrimary {
-        background-color: #EB1796;
+        background-color: #D62828;
+		
     }
 
     &.main.MuiLinearProgress-colorPrimary{
-        background-color: #FCD9EE;
+        background-color: #ededed;
     }
 
     .MuiLinearProgress-barColorPrimary {
-        background-color: #A12870;
+        background-color: #F77F00;
     }
 
     &.MuiLinearProgress-colorPrimary{
-        background-color: #FCD9EE;
+        background-color: #ededed;
     }
 `;
 
@@ -85,7 +86,7 @@ const content = {
 			{ title: 'Front-end', level: 95, class: 'main' },
 			{ title: 'Back-end', level: 40, class: 'main' },
 			{ title: 'Databases', level: 80, class: 'main' },
-			{ title: 'React', level: 70, class: '' },
+			{ title: 'React', level: 80, class: '' },
 			{ title: 'PHP', level: 70, class: '' },
 			{ title: 'SQL', level: 75, class: '' },
 			{ title: 'Adapt Framework', level: 90, class: '' },
@@ -101,7 +102,7 @@ const content = {
 			{ title: 'Front-end', level: 95, class: 'main' },
 			{ title: 'Back-end', level: 40, class: 'main' },
 			{ title: 'Bases de datos', level: 80, class: 'main' },
-			{ title: 'React', level: 70, class: '' },
+			{ title: 'React', level: 80, class: '' },
 			{ title: 'PHP', level: 70, class: '' },
 			{ title: 'SQL', level: 75, class: '' },
 			{ title: 'Adapt Framework', level: 90, class: '' },
@@ -115,7 +116,7 @@ function AboutMe() {
 	const { language } = useContext(LanguageContext);
 	const { sectionTitle, myDescription, technologies } = content[language];
 	return (
-		<AboutMePaper elevation={0}>
+		<AboutMePaper elevation={0} square>
 			<Grid container justify="center">
 				<Grid container item xs={11} md={10}>
 					<ResumeSubtitle>{sectionTitle}</ResumeSubtitle>

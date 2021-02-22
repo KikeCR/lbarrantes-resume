@@ -6,6 +6,7 @@ import { ThemeContext } from './contexts/theme.context';
 import Navbar from './Navbar';
 import Profile from './Profile';
 import AboutMe from './AboutMe';
+import Experience from './Experience';
 import ContactMe from './ContactMe';
 
 const ResumeAppPaper = styled(Paper)`
@@ -28,6 +29,7 @@ function ResumeApp() {
 				<Navbar />
 				<Profile />
 				<AboutMe />
+				<Experience />
 				<ContactMe />
 			</ResumeAppPaper>
 		</LanguageProvider>

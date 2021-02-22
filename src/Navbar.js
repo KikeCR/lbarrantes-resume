@@ -8,7 +8,7 @@ import { ThemeContext } from './contexts/theme.context';
 
 const ResumeAppBar = styled(AppBar)`
     &.MuiAppBar-colorPrimary.MuiPaper-root {
-        background-color: #853565;
+        background-color: #003049;
         color: #fff;
     }
 
@@ -23,11 +23,12 @@ const AppBarTitle = styled.div`
 	font-weight: bold;
 	letter-spacing: 1px;
 	span {
-		color: #eb1796;
+		color: #d62828;
 	}
 `;
 
 const AppBarButtonsContainer = styled.div`
+	display: flex;
 	order: 2;
 	margin-left: auto;
 `;

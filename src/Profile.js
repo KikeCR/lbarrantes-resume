@@ -14,6 +14,7 @@ const ProfilePaper = styled(Paper)`
     display: flex;
     align-items: center;
     justify-content: center;
+	background-color: #EAE2B7;
 `;
 
 const ProfileAvatar = styled(Avatar)`
@@ -33,12 +34,12 @@ const SocialContainer = styled.div`
 	a {
 		padding-right: 20px;
 		svg {
-			color: #a12870;
+			color: #fcbf49;
 			font-size: 26px;
 		}
 
 		&:hover svg {
-			color: #eb1796;
+			color: #f77f00;
 		}
 	}
 `;
@@ -47,10 +48,10 @@ const ButtonProfile = styled.div`margin-top: 12px;`;
 
 const ContactButton = styled(Button)`
     &.MuiButtonBase-root {
-        background-color: #eb1796;
+        background-color: #D62828;
         color: #fff;
         &:hover {
-            background-color: #a12870;
+            background-color: #9B1C1C;
         }
     }
 `;
@@ -59,20 +60,28 @@ const content = {
 	en: {
 		intro: "I'm a",
 		description: [ 'front-end developer.', 'back-end beginner.', 'traveler.', 'gamer.' ],
-		contactMeCta: 'Contact me'
+		contactMeCta: 'Contact me',
+		linkedIn: 'https://www.linkedin.com/in/luis-enrique-barrantes-8141995b/',
+		instagram: 'https://www.instagram.com/kike.barr/',
+		twitter: 'https://twitter.com/barr_kike',
+		facebook: 'https://www.facebook.com/kike.barrantes/'
 	},
 	es: {
 		intro: 'Soy',
 		description: [ 'front-end developer.', 'aprendiz de back-end.', 'viajero.', 'gamer.' ],
-		contactMeCta: 'Contáctame'
+		contactMeCta: 'Contáctame',
+		linkedIn: 'https://www.linkedin.com/in/luis-enrique-barrantes-8141995b/',
+		instagram: 'https://www.instagram.com/kike.barr/',
+		twitter: 'https://twitter.com/barr_kike',
+		facebook: 'https://www.facebook.com/kike.barrantes/'
 	}
 };
 
 function Profile() {
 	const { language } = useContext(LanguageContext);
-	const { intro, description, contactMeCta } = content[language];
+	const { intro, description, contactMeCta, linkedIn, instagram, twitter, facebook } = content[language];
 	return (
-		<ProfilePaper elevation={0}>
+		<ProfilePaper elevation={0} square>
 			<Grid container justify="center">
 				<Grid item xs={11} md={5}>
 					<ProfileAvatar alt="Luis Barrantes" src={avatar} />
@@ -88,16 +97,16 @@ function Profile() {
 						eraseDelay={1200}
 					/>
 					<SocialContainer>
-						<Link href="#" target="_blank">
+						<Link href={linkedIn} target="_blank">
 							<LinkedInIcon />
 						</Link>
-						<Link href="#" target="_blank">
+						<Link href={instagram} target="_blank">
 							<InstagramIcon />
 						</Link>
-						<Link href="#" target="_blank">
+						<Link href={twitter} target="_blank">
 							<TwitterIcon />
 						</Link>
-						<Link href="#" target="_blank">
+						<Link href={facebook} target="_blank">
 							<FacebookIcon />
 						</Link>
 					</SocialContainer>
