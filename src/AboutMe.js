@@ -1,8 +1,14 @@
 import React, { useContext } from 'react';
 import { Paper, Avatar, Grid, LinearProgress } from '@material-ui/core';
+import { Fade } from 'react-awesome-reveal';
 import styled from 'styled-components';
+
 import avatar from './images/lbarrantes_avatar.jpg'; // Context for this
+import dotsTitleLight from './images/dots-bg-light.svg'; // Context for this
+import dotsTitleDark from './images/dots-bg.svg'; // Context for this
+
 import { LanguageContext } from './contexts/language.context';
+import { ThemeContext } from './contexts/theme.context';
 
 const AboutMePaper = styled(Paper)`
     height: 100vh;
@@ -11,7 +17,19 @@ const AboutMePaper = styled(Paper)`
     justify-content: center;
 `;
 
-const ResumeSubtitle = styled.h2``;
+const ResumeSubtitle = styled.h2`
+	font-size: 36px;
+	&:before {
+		content: "";
+		background-image: ${(props) => (props.isDarkMode ? `url(${dotsTitleLight});` : `url(${dotsTitleDark});`)};
+		display: block;
+		height: 37px;
+		left: -14px;
+		top: 15px;
+		position: absolute;
+		width: 37px;
+	}
+`;
 
 const AboutMeAvatar = styled(Avatar)`
     &.MuiAvatar-root {
@@ -69,7 +87,7 @@ const LinearProgressResume = styled(LinearProgress)`
     }
 
     .MuiLinearProgress-barColorPrimary {
-        background-color: #F77F00;
+        background-color: #fcbf49;
     }
 
     &.MuiLinearProgress-colorPrimary{
@@ -115,23 +133,28 @@ const content = {
 function AboutMe() {
 	const { language } = useContext(LanguageContext);
 	const { sectionTitle, myDescription, technologies } = content[language];
+	const { isDarkMode } = useContext(ThemeContext);
 	return (
 		<AboutMePaper elevation={0} square>
 			<Grid container justify="center">
 				<Grid container item xs={11} md={10}>
-					<ResumeSubtitle>{sectionTitle}</ResumeSubtitle>
+					<Fade direction="up" triggerOnce>
+						<ResumeSubtitle isDarkMode={isDarkMode}>{sectionTitle}</ResumeSubtitle>
+					</Fade>
 				</Grid>
 				<Grid container item xs={11} md={10} spacing={2}>
 					<Grid item xs={11} md={10}>
-						<TextBubblePaper elevation={2} dangerouslySetInnerHTML={{ __html: myDescription }} />
+						<Fade triggerOnce>
+							<TextBubblePaper elevation={2} dangerouslySetInnerHTML={{ __html: myDescription }} />
+						</Fade>
 					</Grid>
 					<Grid item xs={11} md={2}>
 						<AboutMeAvatar alt="Luis Barrantes" src={avatar} />
 					</Grid>
 				</Grid>
 				<Grid container item xs={11} md={10} spacing={2}>
-					{technologies.map((tech) => (
-						<Grid item xs={4}>
+					{technologies.map((tech, i) => (
+						<Grid item xs={4} key={`tech-item-${i}`}>
 							<ProgressBarContainer>
 								<h3>{tech.title}</h3>
 								<LinearProgressResume variant="determinate" value={tech.level} className={tech.class} />

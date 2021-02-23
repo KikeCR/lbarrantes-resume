@@ -2,7 +2,9 @@ import React, { useContext } from 'react';
 import { AppBar, Toolbar, IconButton, FormControl, MenuItem, Select } from '@material-ui/core';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
+import { Fade } from 'react-awesome-reveal';
 import styled from 'styled-components';
+
 import { LanguageContext } from './contexts/language.context';
 import { ThemeContext } from './contexts/theme.context';
 
@@ -48,9 +50,11 @@ function Navbar() {
 	return (
 		<ResumeAppBar position="fixed">
 			<Toolbar>
-				<AppBarTitle>
-					lbarrantes<span>.</span>
-				</AppBarTitle>
+				<Fade duration="2000" triggerOnce>
+					<AppBarTitle>
+						lbarrantes<span>.</span>
+					</AppBarTitle>
+				</Fade>
 				<AppBarButtonsContainer>
 					<FormControl variant="outlined">
 						<LanguageSelect value={language} onChange={changeLanguage}>

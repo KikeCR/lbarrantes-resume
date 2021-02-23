@@ -1,13 +1,15 @@
 import React, { useContext } from 'react';
 import { Paper } from '@material-ui/core';
 import styled from 'styled-components';
-import { LanguageProvider } from './contexts/language.context';
-import { ThemeContext } from './contexts/theme.context';
+
 import Navbar from './Navbar';
 import Profile from './Profile';
 import AboutMe from './AboutMe';
 import Experience from './Experience';
 import ContactMe from './ContactMe';
+
+import { LanguageProvider } from './contexts/language.context';
+import { ThemeContext } from './contexts/theme.context';
 
 const ResumeAppPaper = styled(Paper)`
     height: 100vh;

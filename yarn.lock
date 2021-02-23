@@ -1180,7 +1180,7 @@
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.7.5.tgz#2c40f81449a4e554e9fc6396910ed4843ec2be50"
   integrity sha512-igX9a37DR2ZPGYtV6suZ6whr8pTFtyHL3K/oLUotxpSVO2ASaprmAe2Dkq7tBo7CRY7MMDrAa9nuQP9/YG8FxQ==
 
-"@emotion/react@^11.1.5":
+"@emotion/react@^11.1.4", "@emotion/react@^11.1.5":
   version "11.1.5"
   resolved "https://registry.yarnpkg.com/@emotion/react/-/react-11.1.5.tgz#15e78f9822894cdc296e6f4e0688bac8120dfe66"
   integrity sha512-xfnZ9NJEv9SU9K2sxXM06lzjK245xSeHRpUh67eARBm3PBHjjKIZlfWZ7UQvD0Obvw6ZKjlC79uHrlzFYpOB/Q==
@@ -9423,6 +9423,15 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
+react-awesome-reveal@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/react-awesome-reveal/-/react-awesome-reveal-3.7.0.tgz#f75d71c6cf2a4d38dc075c4f4c57682fd4ce6fbb"
+  integrity sha512-/9M12nMti0Jc03/gB546PtZDqygh6MKTs9sCopDh234gZfkHHdF5ezpxQMdkXPVnd0TcF5O4Z8gYj87lHQ8zYA==
+  dependencies:
+    "@emotion/react" "^11.1.4"
+    react-intersection-observer "^8.31.0"
+    react-is "^17.0.1"
+
 react-dev-utils@^11.0.2:
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-11.0.2.tgz#98aed16ef50f808ee17b32def75eb15f89655802"
@@ -9485,6 +9494,11 @@ react-event-listener@^0.6.2:
     "@babel/runtime" "^7.2.0"
     prop-types "^15.6.0"
     warning "^4.0.1"
+
+react-intersection-observer@^8.31.0:
+  version "8.31.0"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-8.31.0.tgz#0ed21aaf93c4c0475b22b0ccaba6169076d01605"
+  integrity sha512-XraIC/tkrD9JtrmVA7ypEN1QIpKc52mXBH1u/bz/aicRLo8QQEJQAMUTb8mz4B6dqpPwyzgjrr7Ljv/2ACDtqw==
 
 react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"

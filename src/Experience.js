@@ -11,14 +11,34 @@ import {
 } from '@material-ui/lab';
 import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work';
+import { Fade } from 'react-awesome-reveal';
 import styled from 'styled-components';
+
+import dotsTitleLight from './images/dots-bg-light.svg'; // Context for this
+import dotsTitleDark from './images/dots-bg.svg'; // Context for this
+
 import { LanguageContext } from './contexts/language.context';
+import { ThemeContext } from './contexts/theme.context';
 
 const ExperiencePaper = styled(Paper)`
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+`;
+
+const ResumeSubtitle = styled.h2`
+	font-size: 36px;
+	&:before {
+		content: "";
+		background-image: ${(props) => (props.isDarkMode ? `url(${dotsTitleLight});` : `url(${dotsTitleDark});`)};
+		display: block;
+		height: 37px;
+		left: -14px;
+		top: 15px;
+		position: absolute;
+		width: 37px;
+	}
 `;
 
 const TimelinePaper = styled(Paper)`
@@ -55,8 +75,6 @@ const TimestampTypography = styled(Typography)`
 	}
 `;
 
-const ResumeSubtitle = styled.h2``;
-
 const content = {
 	en: {
 		sectionTitle: 'Education & Experience',
@@ -83,7 +101,7 @@ const content = {
 			{
 				company: 'SweetRush Inc.',
 				role: 'Tech Lead / Web Engineer',
-				timestamp: '2017 - currently',
+				timestamp: '2017 - present',
 				category: 'work'
 			}
 		]
@@ -123,40 +141,45 @@ const content = {
 function Experience() {
 	const { language } = useContext(LanguageContext);
 	const { sectionTitle, experiences } = content[language];
+	const { isDarkMode } = useContext(ThemeContext);
 	return (
 		<ExperiencePaper elevation={0} square>
 			<Grid container justify="center">
 				<Grid container item xs={11} md={10}>
-					<ResumeSubtitle>{sectionTitle}</ResumeSubtitle>
+					<Fade direction="up" triggerOnce>
+						<ResumeSubtitle isDarkMode={isDarkMode}>{sectionTitle}</ResumeSubtitle>
+					</Fade>
 				</Grid>
 				<Grid container item xs={11} md={10} spacing={2}>
 					<Grid item xs={11} md={11}>
 						<TimelinePaper elevation={0} className="timeline-paper">
-							<ExperienceTimeline align="alternate">
-								{experiences.map((exp, i) => (
-									<TimelineItem>
-										<TimelineOppositeContent>
-											<TimestampTypography variant="body2" color="textSecondary">
-												{exp.timestamp}
-											</TimestampTypography>
-										</TimelineOppositeContent>
-										<TimelineSeparator>
-											<TimelineDot color="primary">
-												{exp.category === 'edu' ? <SchoolIcon /> : <WorkIcon />}
-											</TimelineDot>
-											{i < experiences.length - 1 && <TimelineConnector />}
-										</TimelineSeparator>
-										<TimelineContent>
-											<Paper elevation={0}>
-												<Typography variant="h6" component="h3">
-													{exp.company}
-												</Typography>
-												<Typography>{exp.role}</Typography>
-											</Paper>
-										</TimelineContent>
-									</TimelineItem>
-								))}
-							</ExperienceTimeline>
+							<Fade duration="2000" direction="up" triggerOnce>
+								<ExperienceTimeline align="alternate">
+									{experiences.map((exp, i) => (
+										<TimelineItem key={`exp-item-${i}`}>
+											<TimelineOppositeContent>
+												<TimestampTypography variant="body2" color="textSecondary">
+													{exp.timestamp}
+												</TimestampTypography>
+											</TimelineOppositeContent>
+											<TimelineSeparator>
+												<TimelineDot color="primary">
+													{exp.category === 'edu' ? <SchoolIcon /> : <WorkIcon />}
+												</TimelineDot>
+												{i < experiences.length - 1 && <TimelineConnector />}
+											</TimelineSeparator>
+											<TimelineContent>
+												<Paper elevation={0}>
+													<Typography variant="h6" component="h3">
+														{exp.company}
+													</Typography>
+													<Typography>{exp.role}</Typography>
+												</Paper>
+											</TimelineContent>
+										</TimelineItem>
+									))}
+								</ExperienceTimeline>
+							</Fade>
 						</TimelinePaper>
 					</Grid>
 				</Grid>
