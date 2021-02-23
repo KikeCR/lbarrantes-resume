@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Paper } from '@material-ui/core';
 import styled from 'styled-components';
 
@@ -25,6 +25,7 @@ const ResumeAppPaper = styled(Paper)`
 
 function ResumeApp() {
 	const { isDarkMode } = useContext(ThemeContext);
+
 	return (
 		<LanguageProvider>
 			<ResumeAppPaper elevation={0} isDarkMode={isDarkMode}>

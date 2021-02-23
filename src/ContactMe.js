@@ -32,6 +32,8 @@ const ResumeSubtitle = styled.h2`
 `;
 
 const FormDescription = styled.p`
+	margin-top: -8px;
+	line-height: 1.5;
 	a {
 		color: #d62828;
 	}

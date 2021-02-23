@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import useLocalStorageState from '../hooks/useLocalStorageState';
+
 function useToggle(initialVal = false) {
 	// call useState, "reserve piece of state"
-	const [ state, setState ] = useState(initialVal);
+	const [ isDarkTheme, setIsDarkTheme ] = useLocalStorageState('theme', initialVal);
 	const toggle = () => {
-		setState(!state);
+		setIsDarkTheme(!isDarkTheme);
 	};
 	// return piece of state AND a function to toggle it
-	return [ state, toggle ];
+	return [ isDarkTheme, toggle ];
 }
 export default useToggle;
