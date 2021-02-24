@@ -17,7 +17,15 @@ const ProfilePaper = styled(Paper)`
     display: flex;
     align-items: center;
     justify-content: center;
-	background-color: #EAE2B7;
+
+	@media (max-width: 599px) {
+		min-height: 100vh;
+		margin-top: 80px;
+		.description-container {
+			text-align: center;
+			margin-top: 20px;
+		}
+  	}
 `;
 
 const ProfileAvatar = styled(Avatar)`
@@ -27,6 +35,11 @@ const ProfileAvatar = styled(Avatar)`
         height: 120px;
         float: right;
         margin-right: 10%;
+
+		@media (max-width: 599px) {
+			float: none;
+			margin: 0 auto;
+  		}
     }
 `;
 
@@ -37,12 +50,12 @@ const SocialContainer = styled.div`
 	a {
 		padding-right: 20px;
 		svg {
-			color: #fcbf49;
+			color: ${(props) => props.theme.socialIconsColor};
 			font-size: 26px;
 		}
 
 		&:hover svg {
-			color: #f77f00;
+			color: ${(props) => props.theme.socialIconsColorHover};
 		}
 	}
 `;
@@ -51,10 +64,10 @@ const ButtonProfile = styled.div`margin-top: 12px;`;
 
 const ContactButton = styled(Button)`
     &.MuiButtonBase-root {
-        background-color: #D62828;
-        color: #fff;
+        background-color: ${(props) => props.theme.mainButtonColor};
+        color: ${(props) => props.theme.mainButtonTextColor};
         &:hover {
-            background-color: #9B1C1C;
+            background-color: ${(props) => props.theme.mainButtonColorHover};
         }
     }
 `;
@@ -87,10 +100,10 @@ function Profile() {
 		<ProfilePaper elevation={0} square>
 			<Fade direction="up" triggerOnce>
 				<Grid container justify="center">
-					<Grid item xs={11} md={5}>
+					<Grid item xs={11} sm={5}>
 						<ProfileAvatar alt="Luis Barrantes" src={avatar} />
 					</Grid>
-					<Grid item xs={11} md={7}>
+					<Grid item xs={11} sm={7} className="description-container">
 						<ProfileTitle>Luis Barrantes</ProfileTitle>
 						<ReactTypingEffect
 							staticText={intro}

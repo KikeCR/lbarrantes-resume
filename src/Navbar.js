@@ -10,12 +10,12 @@ import { ThemeContext } from './contexts/theme.context';
 
 const ResumeAppBar = styled(AppBar)`
     &.MuiAppBar-colorPrimary.MuiPaper-root {
-        background-color: #003049;
-        color: #fff;
+        background-color: ${(props) => props.theme.primaryColor};
+        color: ${(props) => props.theme.navbarTitleText};
     }
 
     .MuiToolbar-regular {
-        min-height: 80px;
+        min-height: ${(props) => props.theme.navbarHeight};
     }
 `;
 
@@ -25,7 +25,7 @@ const AppBarTitle = styled.div`
 	font-weight: bold;
 	letter-spacing: 1px;
 	span {
-		color: #d62828;
+		color: ${(props) => props.theme.secondaryColor};
 	}
 `;
 
@@ -37,7 +37,7 @@ const AppBarButtonsContainer = styled.div`
 
 const LanguageSelect = styled(Select)`
     .MuiSelect-root, .MuiSelect-iconOutlined {
-		color: #fff;
+		color: ${(props) => props.theme.navbarIconsColor};
 	}
 	.MuiOutlinedInput-notchedOutline {
 		border-color: transparent;

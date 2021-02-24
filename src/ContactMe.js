@@ -15,6 +15,12 @@ const ContactMePaper = styled(Paper)`
     display: flex;
     align-items: center;
     justify-content: center;
+
+	@media (max-width: 599px) {
+		min-height: 100vh;
+		height: auto;
+		padding: 40px 0;
+  	}
 `;
 
 const ResumeSubtitle = styled.h2`
@@ -35,7 +41,8 @@ const FormDescription = styled.p`
 	margin-top: -8px;
 	line-height: 1.5;
 	a {
-		color: #d62828;
+		color: ${(props) => props.theme.mainLinkColor};
+		text-decoration: none;
 	}
 `;
 
@@ -73,7 +80,7 @@ function ContactMe() {
 							<FormDescription dangerouslySetInnerHTML={{ __html: formDescription }} />
 						</Fade>
 					</Grid>
-					<Grid item xs={11} md={9}>
+					<Grid item xs={12} sm={9}>
 						<Fade direction="up" triggerOnce>
 							<ContactMeForm />
 						</Fade>

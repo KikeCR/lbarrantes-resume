@@ -10,26 +10,27 @@ const ContactMeFormPaper = styled(Paper)`
     padding: 0 1rem;
 
 	.MuiFormLabel-root.Mui-focused {
-		color: ${(props) => (props.isDarkMode ? '#F77F00' : '#003049')};
+		color: ${(props) => (props.isDarkMode ? props.theme.textFieldBorderDarkMode : props.theme.textFieldBorderLightMode)};
 	}
 
 	.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-		border-color: ${(props) => (props.isDarkMode ? '#F77F00' : '#003049')};
+		border-color: ${(props) =>
+			props.isDarkMode ? props.theme.textFieldBorderDarkMode : props.theme.textFieldBorderLightMode};
 	}
 `;
 
 const ContactMeTextField = styled(TextField)`
 	.MuiInputBase-root {
-		background-color: #fff;
+		background-color: ${(props) => props.theme.textFieldBg};
 	}
 `;
 
 const ContactButton = styled(Button)`
     &.MuiButtonBase-root {
-		background-color: #D62828;
-        color: #fff;
+        background-color: ${(props) => props.theme.mainButtonColor};
+        color: ${(props) => props.theme.mainButtonTextColor};
         &:hover {
-            background-color: #9B1C1C;
+            background-color: ${(props) => props.theme.mainButtonColorHover};
         }
     }
 `;
@@ -111,8 +112,8 @@ function ContactMeForm() {
 	return (
 		<ContactMeFormPaper elevation={0} isDarkMode={isDarkMode}>
 			<form onSubmit={handleSubmit}>
-				<Grid container justify="center" spacing={2}>
-					<Grid container item xs={11} md={6}>
+				<Grid container justify="center" alignItems="center" spacing={2}>
+					<Grid container item xs={12} md={6}>
 						<ContactMeTextField
 							value={nameValue}
 							onChange={handleNameChange}
@@ -122,7 +123,7 @@ function ContactMeForm() {
 							fullWidth
 						/>
 					</Grid>
-					<Grid container item xs={11} md={6}>
+					<Grid container item xs={12} md={6}>
 						<ContactMeTextField
 							value={emailValue}
 							onChange={handleEmailChange}
@@ -132,7 +133,7 @@ function ContactMeForm() {
 							fullWidth
 						/>
 					</Grid>
-					<Grid container item xs={11} md={12}>
+					<Grid container item xs={12} md={12}>
 						<ContactMeTextField
 							value={subjectValue}
 							onChange={handleSubjectValue}
@@ -142,7 +143,7 @@ function ContactMeForm() {
 							fullWidth
 						/>
 					</Grid>
-					<Grid container item xs={11} md={12}>
+					<Grid container item xs={12} md={12}>
 						<ContactMeTextField
 							value={messageValue}
 							onChange={handleMessageValue}
@@ -154,7 +155,7 @@ function ContactMeForm() {
 							fullWidth
 						/>
 					</Grid>
-					<Grid container item xs={11} md={12}>
+					<Grid container item xs={12}>
 						<ContactButton type="submit" value="Submit" variant="contained">
 							{sendButton}
 						</ContactButton>

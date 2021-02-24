@@ -25,6 +25,12 @@ const ExperiencePaper = styled(Paper)`
     display: flex;
     align-items: center;
     justify-content: center;
+
+	@media (max-width: 599px) {
+		min-height: 100vh;
+		height: auto;
+		padding: 40px 0;
+  	}
 `;
 
 const ResumeSubtitle = styled.h2`
@@ -43,20 +49,24 @@ const ResumeSubtitle = styled.h2`
 
 const TimelinePaper = styled(Paper)`
     &.MuiPaper-root.timeline-paper {
-		background-color: #003049;
+		background-color: ${(props) => props.theme.timelineBg};
 		padding: 3rem 0;
 		border-radius: 20px;
 		margin-top: 1rem;
+
+		@media (max-width: 599px) {
+			padding: 1.5rem 0;
+		}
 	}
 `;
 
 const ExperienceTimeline = styled(Timeline)`
     .MuiTimelineItem-root {
 		.MuiTimelineDot-root {
-			background-color: #D62828;
+			background-color: ${(props) => props.theme.timelineIconColor};
 		}
 		.MuiTimelineConnector-root {
-			background-color: #D62828;
+			background-color: ${(props) => props.theme.timelineConnectorColor};
 		}
 	}
 
@@ -65,13 +75,33 @@ const ExperienceTimeline = styled(Timeline)`
 	}
 
 	.MuiTypography-root {
-		color: #fff;
+		color: ${(props) => props.theme.timelineText};
 	}
+
+	@media (max-width: 599px) {
+		.MuiTimelineItem-alignAlternate:nth-child(even) {
+			flex-direction: initial;
+			.MuiTimelineItem-content {
+				text-align: left;
+			}
+			.MuiTimelineItem-oppositeContent {
+				text-align: right;
+			}
+		}
+
+		.MuiTimelineOppositeContent-root {
+			min-width: 25%;
+		}
+
+		.MuiTimelineItem-content {
+			min-width: 50%;
+		}
+  	}
 `;
 
 const TimestampTypography = styled(Typography)`
 	&.MuiTypography-root {
-		color: #EAE2B7;
+		color: ${(props) => props.theme.timelineTimeStampTextColor};
 	}
 `;
 
@@ -150,8 +180,8 @@ function Experience() {
 						<ResumeSubtitle isDarkMode={isDarkMode}>{sectionTitle}</ResumeSubtitle>
 					</Fade>
 				</Grid>
-				<Grid container item xs={11} md={10} spacing={2}>
-					<Grid item xs={11} md={11}>
+				<Grid container item xs={11} md={10} spacing={2} direction="column" alignItems="center">
+					<Grid item xs={12} sm={11}>
 						<TimelinePaper elevation={0} className="timeline-paper">
 							<Fade duration="2000" direction="up" triggerOnce>
 								<ExperienceTimeline align="alternate">

@@ -15,6 +15,12 @@ const AboutMePaper = styled(Paper)`
     display: flex;
     align-items: center;
     justify-content: center;
+
+	@media (max-width: 599px) {
+		min-height: 100vh;
+		height: auto;
+		padding: 40px 0;
+  	}
 `;
 
 const ResumeSubtitle = styled.h2`
@@ -38,15 +44,19 @@ const AboutMeAvatar = styled(Avatar)`
         height: 120px;
         float: left;
         margin-left: 10%;
+
+		@media (max-width: 599px) {
+			margin-left: 0;
+		}
     }
 `;
 
 const TextBubblePaper = styled(Paper)`
     position: relative;
-    &.MuiPaper-root {
+    &.MuiPaper-root.description-bubble {
         padding: 20px 30px;
-		color: #fff !important;
-        background-color: #003049 !important;
+		color: ${(props) => props.theme.bubbleFontColor};
+        background-color: ${(props) => props.theme.bubbleBgColor};
         text-align: right;
         line-height: 1.5;
         border-radius: 30px;
@@ -61,7 +71,11 @@ const TextBubblePaper = styled(Paper)`
         position: absolute;
         right: -10px;
         top: 20%;
-        border-left-color: #003049;
+        border-left-color: ${(props) => props.theme.bubbleBgColor};
+
+		@media (max-width: 599px) {
+			content: none;
+		}
     }
 `;
 
@@ -78,20 +92,20 @@ const LinearProgressResume = styled(LinearProgress)`
     }
 
     &.main .MuiLinearProgress-barColorPrimary {
-        background-color: #D62828;
+        background-color: ${(props) => props.theme.skillProgressMain};
 		
     }
 
     &.main.MuiLinearProgress-colorPrimary{
-        background-color: #ededed;
+        background-color: ${(props) => props.theme.skillProgressBg};
     }
 
     .MuiLinearProgress-barColorPrimary {
-        background-color: #fcbf49;
+        background-color: ${(props) => props.theme.skillProgressSecondary};
     }
 
     &.MuiLinearProgress-colorPrimary{
-        background-color: #ededed;
+        background-color: ${(props) => props.theme.skillProgressBg};
     }
 `;
 
@@ -142,13 +156,17 @@ function AboutMe() {
 						<ResumeSubtitle isDarkMode={isDarkMode}>{sectionTitle}</ResumeSubtitle>
 					</Fade>
 				</Grid>
-				<Grid container item xs={11} md={10} spacing={2}>
-					<Grid item xs={11} md={10}>
+				<Grid container item xs={12} md={10} spacing={2} direction="column" alignItems="center">
+					<Grid item xs={11} sm={10} spacing={0}>
 						<Fade triggerOnce>
-							<TextBubblePaper elevation={2} dangerouslySetInnerHTML={{ __html: myDescription }} />
+							<TextBubblePaper
+								elevation={2}
+								dangerouslySetInnerHTML={{ __html: myDescription }}
+								className="description-bubble"
+							/>
 						</Fade>
 					</Grid>
-					<Grid item xs={11} md={2}>
+					<Grid item xs={11} sm={2} spacing={0}>
 						<AboutMeAvatar alt="Luis Barrantes" src={avatar} />
 					</Grid>
 				</Grid>
