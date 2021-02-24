@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Paper, Grid, TextField, Button, Dialog, DialogTitle } from '@material-ui/core';
 import useInputState from './hooks/useInputState';
 import styled from 'styled-components';
+import emailjs from 'emailjs-com';
+
 import { LanguageContext } from './contexts/language.context';
 import { ThemeContext } from './contexts/theme.context';
 
@@ -81,9 +83,24 @@ function ContactMeForm() {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		setMessages(() => {
-			return [ ...messages, { nameValue, emailValue, subjectValue, messageValue } ];
-		});
+		// setMessages(() => {
+		// 	return [ ...messages, { nameValue, emailValue, subjectValue, messageValue } ];
+		// });
+
+		const templateParams = {
+			from_name: nameValue + ' (' + emailValue + ')',
+			to_name: 'Kike Barrantes',
+			message: 'Subject: ' + subjectValue + ' / Message: ' + messageValue
+		};
+
+		emailjs.send('service_qd0fz5r', 'template_l1deodu', templateParams, 'user_3AwNnISOAj3mKfNMzdWpd').then(
+			function(response) {
+				handleDialogOpen();
+			},
+			function(err) {
+				console.log('Error:', err);
+			}
+		);
 
 		resetName();
 		resetEmail();
@@ -98,16 +115,6 @@ function ContactMeForm() {
 	const handleClose = () => {
 		setOpen(false);
 	};
-
-	useEffect(
-		() => {
-			if (messages.length > 0) {
-				handleDialogOpen();
-				console.log(messages);
-			}
-		},
-		[ messages ]
-	);
 
 	return (
 		<ContactMeFormPaper elevation={0} isDarkMode={isDarkMode}>
