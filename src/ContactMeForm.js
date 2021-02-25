@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { Paper, Grid, TextField, Button, Dialog, DialogTitle } from '@material-ui/core';
 import useInputState from './hooks/useInputState';
 import styled from 'styled-components';

@@ -157,7 +157,7 @@ function AboutMe() {
 					</Fade>
 				</Grid>
 				<Grid container item xs={12} md={10} spacing={2} direction="column" alignItems="center">
-					<Grid item xs={11} sm={10} spacing={0}>
+					<Grid item xs={11} sm={10}>
 						<Fade triggerOnce>
 							<TextBubblePaper
 								elevation={2}
@@ -166,7 +166,7 @@ function AboutMe() {
 							/>
 						</Fade>
 					</Grid>
-					<Grid item xs={11} sm={2} spacing={0}>
+					<Grid item xs={11} sm={2}>
 						<AboutMeAvatar alt="Luis Barrantes" src={avatar} />
 					</Grid>
 				</Grid>
