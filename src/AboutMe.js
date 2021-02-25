@@ -46,7 +46,8 @@ const AboutMeAvatar = styled(Avatar)`
         margin-left: 10%;
 
 		@media (max-width: 599px) {
-			margin-left: 0;
+			margin: 0 auto;
+			float: none;
 		}
     }
 `;
@@ -156,7 +157,7 @@ function AboutMe() {
 						<ResumeSubtitle isDarkMode={isDarkMode}>{sectionTitle}</ResumeSubtitle>
 					</Fade>
 				</Grid>
-				<Grid container item xs={12} md={10} spacing={2} direction="column" alignItems="center">
+				<Grid container item xs={12} sm={10} spacing={2} direction="row" justify="center" alignItems="center">
 					<Grid item xs={11} sm={10}>
 						<Fade triggerOnce>
 							<TextBubblePaper
