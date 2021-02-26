@@ -83,7 +83,7 @@ const resumeTheme = {
 	textFieldLabelDark: '#ffffff',
 
 	textFieldBorderDark: '#FFC857',
-	textFieldBorderLight: '#084C61',
+	textFieldBorderLight: '#177E89',
 
 	// Buttons
 	mainButtonColor: '#DB3A34',
