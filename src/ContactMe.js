@@ -66,7 +66,7 @@ function ContactMe() {
 	const { sectionTitle, formTitle, formDescription } = content[language];
 	const { isDarkMode } = useContext(ThemeContext);
 	return (
-		<ContactMePaper elevation={0} square>
+		<ContactMePaper elevation={0} square id="contact-me-section">
 			<Grid container justify="center">
 				<Grid container item xs={11} md={10}>
 					<Fade direction="up" triggerOnce>

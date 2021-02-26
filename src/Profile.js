@@ -127,7 +127,14 @@ function Profile() {
 							</Link>
 						</SocialContainer>
 						<ButtonProfile>
-							<ContactButton variant="contained">{contactMeCta}</ContactButton>
+							<ContactButton
+								variant="contained"
+								onClick={() => {
+									document.getElementById('contact-me-section').scrollIntoView();
+								}}
+							>
+								{contactMeCta}
+							</ContactButton>
 						</ButtonProfile>
 					</Grid>
 				</Grid>
