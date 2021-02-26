@@ -73,7 +73,8 @@ const TextBubblePaper = styled(Paper)`
         position: absolute;
         right: -10px;
         top: 20%;
-        border-left-color: ${(props) => props.theme.bubbleBgColor};
+        border-left-color: ${(props) =>
+			props.isDarkMode ? props.theme.bubbleDarkBgColor : props.theme.bubbleLightBgColor};
 
 		@media (max-width: 599px) {
 			content: none;
