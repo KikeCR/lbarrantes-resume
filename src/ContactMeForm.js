@@ -41,8 +41,26 @@ const ContactButton = styled(Button)`
 
 const MessageConfirmationDialog = styled(Dialog)`
     &.MuiDialog-root .MuiDialog-paper {
-        padding: 20px;
+        padding: 50px 50px;
+		background-color: ${(props) => (props.isDarkMode ? props.theme.darkModeBg : props.theme.lightModeBg)};
+		color: ${(props) => (props.isDarkMode ? props.theme.darkModeFontColor : props.theme.lightModeFontColor)};
+
+		p {
+			margin: 5px 0;
+		}
+
+		.signature {
+			text-align: right;
+			margin-top: 15px;
+			span {
+				font-style: italic;
+			}
+		}
     }
+
+	.MuiDialogTitle-root {
+		padding: 16px 0;
+	}
 `;
 
 const content = {
@@ -52,8 +70,9 @@ const content = {
 		subjectLabel: 'Subject',
 		messageLabel: 'Message',
 		sendButton: 'Send message',
-		dialogTitle: 'Message sent',
-		dialogText: 'Your message was successfully sent.'
+		dialogTitle: 'Message sent 🚀',
+		dialogText:
+			"<p>Hey, your message was successfully sent.</p> <p>Thanks for reaching out to me, we'll be in touch!</p> <p class='signature'>- <span>Luis Barrantes</span></p>"
 	},
 	es: {
 		nameLabel: 'Nombre',
@@ -61,8 +80,9 @@ const content = {
 		subjectLabel: 'Asunto',
 		messageLabel: 'Mensaje',
 		sendButton: 'Enviar',
-		dialogTitle: 'Mensaje enviado',
-		dialogText: 'El mensaje se envió correctamente.'
+		dialogTitle: 'Mensaje enviado 🚀',
+		dialogText:
+			"<p>El mensaje fue enviado satisfactoriamente.</p> <p>Gracias por contactarme, estaré en contacto pronto.</p> <p class='signature'>- <span>Luis Barrantes</span></p>"
 	}
 };
 
@@ -73,7 +93,7 @@ function ContactMeForm() {
 	const [ messageValue, handleMessageValue, resetMessage ] = useInputState('');
 
 	const [ open, setOpen ] = useState(false);
-	const [ messages, setMessages ] = useState([]);
+	// const [ messages, setMessages ] = useState([]);
 
 	const { language } = useContext(LanguageContext);
 	const { nameLabel, emailLabel, subjectLabel, messageLabel, sendButton, dialogTitle, dialogText } = content[
@@ -176,9 +196,14 @@ function ContactMeForm() {
 				</Grid>
 			</form>
 
-			<MessageConfirmationDialog aria-labelledby="dialog-title" open={open} onClose={handleClose}>
+			<MessageConfirmationDialog
+				aria-labelledby="dialog-title"
+				open={open}
+				onClose={handleClose}
+				isDarkMode={isDarkMode}
+			>
 				<DialogTitle id="dialog-title">{dialogTitle}</DialogTitle>
-				<p>{dialogText}</p>
+				<div dangerouslySetInnerHTML={{ __html: dialogText }} />
 			</MessageConfirmationDialog>
 		</ContactMeFormPaper>
 	);
