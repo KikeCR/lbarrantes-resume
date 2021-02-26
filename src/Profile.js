@@ -20,7 +20,6 @@ const ProfilePaper = styled(Paper)`
 
 	@media (max-width: 599px) {
 		min-height: 100vh;
-		margin-top: 80px;
 		.description-container {
 			text-align: center;
 			margin-top: 20px;
