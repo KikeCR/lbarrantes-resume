@@ -93,7 +93,6 @@ function ContactMeForm() {
 	const [ messageValue, handleMessageValue, resetMessage ] = useInputState('');
 
 	const [ open, setOpen ] = useState(false);
-	// const [ messages, setMessages ] = useState([]);
 
 	const { language } = useContext(LanguageContext);
 	const { nameLabel, emailLabel, subjectLabel, messageLabel, sendButton, dialogTitle, dialogText } = content[
@@ -104,10 +103,6 @@ function ContactMeForm() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-
-		// setMessages(() => {
-		// 	return [ ...messages, { nameValue, emailValue, subjectValue, messageValue } ];
-		// });
 
 		const templateParams = {
 			from_name: nameValue + ' (' + emailValue + ')',

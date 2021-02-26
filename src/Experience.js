@@ -91,6 +91,11 @@ const ExperienceTimeline = styled(Timeline)`
 
 		.MuiTimelineOppositeContent-root {
 			min-width: 18%;
+			padding: 0 10px 0 0;
+		}
+
+		.MuiTimelineSeparator-root {
+			min-width: 10%;
 		}
 
 		.MuiTimelineItem-content {

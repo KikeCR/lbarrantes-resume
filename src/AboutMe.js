@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect, useRef } from 'react';
 import { Paper, Avatar, Grid, LinearProgress } from '@material-ui/core';
 import { Fade } from 'react-awesome-reveal';
 import styled from 'styled-components';
@@ -93,6 +93,9 @@ const LinearProgressResume = styled(LinearProgress)`
         height: 12px;
         border-radius: 5px;
     }
+	.MuiLinearProgress-barColorPrimary {
+        transition: all 1s;
+    }
 
     &.main .MuiLinearProgress-barColorPrimary {
         background-color: ${(props) => props.theme.skillProgressMain};
@@ -120,10 +123,10 @@ const content = {
 		technologies: [
 			{ title: 'Front-end', level: 95, class: 'main' },
 			{ title: 'Back-end', level: 40, class: 'main' },
-			{ title: 'Databases', level: 80, class: 'main' },
+			{ title: 'Databases', level: 70, class: 'main' },
 			{ title: 'React', level: 80, class: '' },
-			{ title: 'PHP', level: 70, class: '' },
-			{ title: 'SQL', level: 75, class: '' },
+			{ title: 'PHP', level: 60, class: '' },
+			{ title: 'SQL', level: 70, class: '' },
 			{ title: 'Adapt Framework', level: 90, class: '' },
 			{ title: 'Python', level: 30, class: '' },
 			{ title: 'MongoDB', level: 30, class: '' }
@@ -136,10 +139,10 @@ const content = {
 		technologies: [
 			{ title: 'Front-end', level: 95, class: 'main' },
 			{ title: 'Back-end', level: 40, class: 'main' },
-			{ title: 'Bases de datos', level: 80, class: 'main' },
+			{ title: 'Bases de datos', level: 70, class: 'main' },
 			{ title: 'React', level: 80, class: '' },
-			{ title: 'PHP', level: 70, class: '' },
-			{ title: 'SQL', level: 75, class: '' },
+			{ title: 'PHP', level: 60, class: '' },
+			{ title: 'SQL', level: 70, class: '' },
 			{ title: 'Adapt Framework', level: 90, class: '' },
 			{ title: 'Python', level: 30, class: '' },
 			{ title: 'MongoDB', level: 30, class: '' }
@@ -151,8 +154,25 @@ function AboutMe() {
 	const { language } = useContext(LanguageContext);
 	const { sectionTitle, myDescription, technologies } = content[language];
 	const { isDarkMode } = useContext(ThemeContext);
+
+	const ref = useRef();
+	const [ isSkillSectionVisible, setSkillSectionVisible ] = useState(false);
+	const [ offset, setOffset ] = useState(0);
+
+	useEffect(
+		() => {
+			window.onscroll = () => {
+				setOffset(window.pageYOffset);
+				if (offset > ref.current.offsetTop) {
+					setSkillSectionVisible(true);
+				}
+			};
+		},
+		[ isSkillSectionVisible, offset ]
+	);
+
 	return (
-		<AboutMePaper elevation={0} square>
+		<AboutMePaper elevation={0} square ref={ref}>
 			<Grid container justify="center">
 				<Grid container item xs={11} md={10}>
 					<Fade direction="up" triggerOnce>
@@ -176,10 +196,15 @@ function AboutMe() {
 				</Grid>
 				<Grid container item xs={11} md={10} spacing={2}>
 					{technologies.map((tech, i) => (
-						<Grid item xs={4} key={`tech-item-${i}`}>
+						<Grid item xs={12} sm={4} key={`tech-item-${i}`}>
 							<ProgressBarContainer>
 								<h3>{tech.title}</h3>
-								<LinearProgressResume variant="determinate" value={tech.level} className={tech.class} />
+								<LinearProgressResume
+									variant="determinate"
+									value={isSkillSectionVisible ? tech.level : 0}
+									className={tech.class}
+								/>
+								{isSkillSectionVisible}
 							</ProgressBarContainer>
 						</Grid>
 					))}
