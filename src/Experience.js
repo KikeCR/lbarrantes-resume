@@ -90,7 +90,7 @@ const ExperienceTimeline = styled(Timeline)`
 		}
 
 		.MuiTimelineOppositeContent-root {
-			min-width: 25%;
+			min-width: 18%;
 		}
 
 		.MuiTimelineItem-content {
