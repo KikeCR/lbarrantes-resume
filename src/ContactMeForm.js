@@ -12,18 +12,20 @@ const ContactMeFormPaper = styled(Paper)`
     padding: 0 1rem;
 
 	.MuiFormLabel-root.Mui-focused {
-		color: ${(props) => (props.isDarkMode ? props.theme.textFieldBorderDarkMode : props.theme.textFieldBorderLightMode)};
+		color: ${(props) => (props.isDarkMode ? props.theme.textFieldBorderDark : props.theme.textFieldBorderLight)};
 	}
 
 	.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-		border-color: ${(props) =>
-			props.isDarkMode ? props.theme.textFieldBorderDarkMode : props.theme.textFieldBorderLightMode};
+		border-color: ${(props) => (props.isDarkMode ? props.theme.textFieldBorderDark : props.theme.textFieldBorderLight)};
 	}
 `;
 
 const ContactMeTextField = styled(TextField)`
 	.MuiInputBase-root {
-		background-color: ${(props) => props.theme.textFieldBg};
+		background-color: ${(props) => (props.isDarkMode ? props.theme.textFieldBgDark : props.theme.textFieldBgLight)};
+	}
+	.MuiInputLabel-outlined, .MuiOutlinedInput-input {
+		color: ${(props) => (props.isDarkMode ? props.theme.textFieldLabelDark : props.theme.textFieldLabelLight)};
 	}
 `;
 
@@ -128,6 +130,7 @@ function ContactMeForm() {
 							label={nameLabel}
 							variant="outlined"
 							fullWidth
+							isDarkMode={isDarkMode}
 						/>
 					</Grid>
 					<Grid container item xs={12} md={6}>
@@ -138,6 +141,7 @@ function ContactMeForm() {
 							label={emailLabel}
 							variant="outlined"
 							fullWidth
+							isDarkMode={isDarkMode}
 						/>
 					</Grid>
 					<Grid container item xs={12} md={12}>
@@ -148,6 +152,7 @@ function ContactMeForm() {
 							label={subjectLabel}
 							variant="outlined"
 							fullWidth
+							isDarkMode={isDarkMode}
 						/>
 					</Grid>
 					<Grid container item xs={12} md={12}>
@@ -160,6 +165,7 @@ function ContactMeForm() {
 							label={messageLabel}
 							variant="outlined"
 							fullWidth
+							isDarkMode={isDarkMode}
 						/>
 					</Grid>
 					<Grid container item xs={12}>

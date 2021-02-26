@@ -49,7 +49,7 @@ const ResumeSubtitle = styled.h2`
 
 const TimelinePaper = styled(Paper)`
     &.MuiPaper-root.timeline-paper {
-		background-color: ${(props) => props.theme.timelineBg};
+		background-color: ${(props) => (props.isDarkMode ? props.theme.timelineDarkBg : props.theme.timelineLightBg)};
 		padding: 3rem 0;
 		border-radius: 20px;
 		margin-top: 1rem;
@@ -182,7 +182,7 @@ function Experience() {
 				</Grid>
 				<Grid container item xs={11} md={10} spacing={2} direction="column" alignItems="center">
 					<Grid item xs={12} sm={11}>
-						<TimelinePaper elevation={0} className="timeline-paper">
+						<TimelinePaper elevation={0} className="timeline-paper" isDarkMode={isDarkMode}>
 							<Fade duration="2000" direction="up" triggerOnce>
 								<ExperienceTimeline align="alternate">
 									{experiences.map((exp, i) => (

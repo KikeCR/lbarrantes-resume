@@ -10,7 +10,8 @@ import { ThemeContext } from './contexts/theme.context';
 
 const ResumeAppBar = styled(AppBar)`
     &.MuiAppBar-colorPrimary.MuiPaper-root {
-        background-color: ${(props) => props.theme.primaryColor};
+        background-color: ${(props) =>
+			props.isDarkMode ? props.theme.mainDarkModeColor : props.theme.mainLightModeColor};
         color: ${(props) => props.theme.navbarTitleText};
     }
 
@@ -25,7 +26,8 @@ const AppBarTitle = styled.div`
 	font-weight: bold;
 	letter-spacing: 1px;
 	span {
-		color: ${(props) => props.theme.secondaryColor};
+		color: ${(props) =>
+			props.isDarkMode ? props.theme.secondaryDarkModeColor : props.theme.secondaryLightModeColor};
 	}
 `;
 
@@ -48,10 +50,10 @@ function Navbar() {
 	const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 	const { language, changeLanguage } = useContext(LanguageContext);
 	return (
-		<ResumeAppBar position="fixed">
+		<ResumeAppBar position="fixed" isDarkMode={isDarkMode}>
 			<Toolbar>
 				<Fade duration="2000" triggerOnce>
-					<AppBarTitle>
+					<AppBarTitle isDarkMode={isDarkMode}>
 						lbarrantes<span>.</span>
 					</AppBarTitle>
 				</Fade>

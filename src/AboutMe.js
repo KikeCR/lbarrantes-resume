@@ -57,7 +57,8 @@ const TextBubblePaper = styled(Paper)`
     &.MuiPaper-root.description-bubble {
         padding: 20px 30px;
 		color: ${(props) => props.theme.bubbleFontColor};
-        background-color: ${(props) => props.theme.bubbleBgColor};
+        background-color: ${(props) =>
+			props.isDarkMode ? props.theme.bubbleDarkBgColor : props.theme.bubbleLightBgColor};
         text-align: right;
         line-height: 1.5;
         border-radius: 30px;
@@ -164,6 +165,7 @@ function AboutMe() {
 								elevation={2}
 								dangerouslySetInnerHTML={{ __html: myDescription }}
 								className="description-bubble"
+								isDarkMode={isDarkMode}
 							/>
 						</Fade>
 					</Grid>

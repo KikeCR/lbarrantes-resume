@@ -37,8 +37,10 @@ const ResumeAppPaper = styled(Paper)`
 // Theme for the resume app.
 const resumeTheme = {
 	// Main colors.
-	primaryColor: '#003049',
-	secondaryColor: '#D62828',
+	mainLightModeColor: '#084C61',
+	secondaryLightModeColor: '#DB3A34',
+	mainDarkModeColor: '#323031',
+	secondaryDarkModeColor: '#DB3A34',
 
 	// Variable colors depending on the theme.
 	darkModeBg: '#18191A',
@@ -52,35 +54,44 @@ const resumeTheme = {
 	navbarHeight: '80px',
 
 	// Profile.
-	socialIconsColor: '#fcbf49',
-	socialIconsColorHover: '#f77f00',
+	socialIconsColor: '#FFC857',
+	socialIconsColorHover: '#DB3A34',
 
 	// AboutMe.
 	bubbleFontColor: '#fff',
-	bubbleBgColor: '#003049',
-	skillProgressMain: '#D62828',
-	skillProgressSecondary: '#fcbf49',
+	bubbleLightBgColor: '#084C61',
+	bubbleDarkBgColor: '#323031',
+
+	skillProgressMain: '#DB3A34',
+	skillProgressSecondary: '#FFC857',
 	skillProgressBg: '#ededed',
 
 	// Experience.
-	timelineBg: '#003049',
-	timelineIconColor: '#D62828',
-	timelineConnectorColor: '#D62828',
+	timelineLightBg: '#084C61',
+	timelineDarkBg: '#323031',
+
+	timelineIconColor: '#DB3A34',
+	timelineConnectorColor: '#DB3A34',
 	timelineText: '#fff',
-	timelineTimeStampTextColor: '#EAE2B7',
+	timelineTimeStampTextColor: '#FFC857',
 
 	// Contact Me.
-	textFieldBg: '#fff',
-	textFieldBorderDarkMode: '#F77F00',
-	textFieldBorderLightMode: '#003049',
+	textFieldBgLight: '#fafafa',
+	textFieldBgDark: '#323031',
+
+	textFieldLabelLight: '#18191A',
+	textFieldLabelDark: '#ffffff',
+
+	textFieldBorderDark: '#FFC857',
+	textFieldBorderLight: '#084C61',
 
 	// Buttons
-	mainButtonColor: '#D62828',
-	mainButtonColorHover: '#9B1C1C',
+	mainButtonColor: '#DB3A34',
+	mainButtonColorHover: '#FFC857',
 	mainButtonTextColor: '#fff',
 
 	// Links.
-	mainLinkColor: '#D62828'
+	mainLinkColor: '#DB3A34'
 };
 
 function ResumeApp() {
