@@ -146,6 +146,7 @@ function ContactMeForm() {
 							variant="outlined"
 							fullWidth
 							isDarkMode={isDarkMode}
+							required
 						/>
 					</Grid>
 					<Grid container item xs={12} md={6}>
@@ -157,6 +158,7 @@ function ContactMeForm() {
 							variant="outlined"
 							fullWidth
 							isDarkMode={isDarkMode}
+							required
 						/>
 					</Grid>
 					<Grid container item xs={12} md={12}>
@@ -181,6 +183,7 @@ function ContactMeForm() {
 							variant="outlined"
 							fullWidth
 							isDarkMode={isDarkMode}
+							required
 						/>
 					</Grid>
 					<Grid container item xs={12}>
