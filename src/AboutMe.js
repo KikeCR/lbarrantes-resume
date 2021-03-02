@@ -121,10 +121,10 @@ const content = {
 		myDescription:
 			"<p>I'm Luis Barrantes, an accomplished and proactive front-end developer, with the ability to learn and adapt to new technologies with ease. Working towards becoming a full-stack developer. Always eager to collaborate and work in teams.</p><p>Love music and concerts, traveling, outdoors, dogs, working out and hanging out with the people I care about.</p>",
 		technologies: [
-			{ title: 'Front-end', level: 95, class: 'main' },
+			{ title: 'Front-end', level: 90, class: 'main' },
 			{ title: 'Back-end', level: 40, class: 'main' },
 			{ title: 'Databases', level: 70, class: 'main' },
-			{ title: 'React', level: 80, class: '' },
+			{ title: 'React', level: 70, class: '' },
 			{ title: 'PHP', level: 60, class: '' },
 			{ title: 'SQL', level: 70, class: '' },
 			{ title: 'Adapt Framework', level: 90, class: '' },
@@ -137,10 +137,10 @@ const content = {
 		myDescription:
 			'<p>Soy Luis Barrantes, front-end developer con experiencia, proactivo, adaptable y con facilidad de aprender nuevos lenguajes y tecnologías, trabajando en convertirme en un full-stack developer. Siempre dispuesto a colaborar y trabajar en equipo.</p><p>Me apasiona la música y los conciertos, viajar, los perros, el aire libre, hacer ejercicio y pasar el tiempo con mis seres queridos.</p>',
 		technologies: [
-			{ title: 'Front-end', level: 95, class: 'main' },
+			{ title: 'Front-end', level: 90, class: 'main' },
 			{ title: 'Back-end', level: 40, class: 'main' },
 			{ title: 'Bases de datos', level: 70, class: 'main' },
-			{ title: 'React', level: 80, class: '' },
+			{ title: 'React', level: 70, class: '' },
 			{ title: 'PHP', level: 60, class: '' },
 			{ title: 'SQL', level: 70, class: '' },
 			{ title: 'Adapt Framework', level: 90, class: '' },
