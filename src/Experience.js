@@ -123,7 +123,7 @@ const content = {
 			{
 				company: 'Universidad de Costa Rica',
 				role: 'Bachelor in Informática Empresarial',
-				timestamp: '2008 - 2012',
+				timestamp: '2008 - Ongoing',
 				category: 'edu'
 			},
 			{
@@ -153,7 +153,7 @@ const content = {
 			{
 				company: 'Universidad de Costa Rica',
 				role: 'Bachiller en Informática Empresarial',
-				timestamp: '2008 - 2012',
+				timestamp: '2008 - actualmente',
 				category: 'edu'
 			},
 			{
