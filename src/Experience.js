@@ -123,7 +123,7 @@ const content = {
 			{
 				company: 'Universidad de Costa Rica',
 				role: 'Bachelor in Informática Empresarial',
-				timestamp: '2008 - Ongoing',
+				timestamp: '2008 - present',
 				category: 'edu'
 			},
 			{
@@ -136,7 +136,13 @@ const content = {
 			{
 				company: 'SweetRush Inc.',
 				role: 'Tech Lead / Web Engineer',
-				timestamp: '2017 - present',
+				timestamp: '2017 - 2021',
+				category: 'work'
+			},
+			{
+				company: 'Laika',
+				role: 'Web Developer',
+				timestamp: '2021 - present',
 				category: 'work'
 			}
 		]
@@ -166,7 +172,13 @@ const content = {
 			{
 				company: 'SweetRush Inc.',
 				role: 'Tech Lead / Web Engineer',
-				timestamp: '2017 - actualmente',
+				timestamp: '2017 - 2021',
+				category: 'work'
+			},
+			{
+				company: 'Laika',
+				role: 'Web Developer',
+				timestamp: '2021 - actualmente',
 				category: 'work'
 			}
 		]
