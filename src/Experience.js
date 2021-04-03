@@ -122,7 +122,7 @@ const content = {
 			},
 			{
 				company: 'Universidad de Costa Rica',
-				role: 'Bachelor in Informática Empresarial',
+				role: 'Informática Empresarial',
 				timestamp: '2008 - present',
 				category: 'edu'
 			},
@@ -141,7 +141,7 @@ const content = {
 			},
 			{
 				company: 'Laika',
-				role: 'Web Developer',
+				role: 'Software Engineer',
 				timestamp: '2021 - present',
 				category: 'work'
 			}
@@ -158,7 +158,7 @@ const content = {
 			},
 			{
 				company: 'Universidad de Costa Rica',
-				role: 'Bachiller en Informática Empresarial',
+				role: 'Informática Empresarial',
 				timestamp: '2008 - actualmente',
 				category: 'edu'
 			},
@@ -177,7 +177,7 @@ const content = {
 			},
 			{
 				company: 'Laika',
-				role: 'Web Developer',
+				role: 'Software Engineer',
 				timestamp: '2021 - actualmente',
 				category: 'work'
 			}
