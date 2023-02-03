@@ -119,33 +119,29 @@ const content = {
 	en: {
 		sectionTitle: 'Who am I?',
 		myDescription:
-			"<p>I'm Luis Barrantes, an accomplished and proactive front-end developer, with the ability to learn and adapt to new technologies with ease. Working towards becoming a full-stack developer. Always eager to collaborate and work in teams.</p><p>Love music and concerts, traveling, outdoors, dogs, working out and hanging out with the people I care about.</p>",
+			"<p>I'm Luis Barrantes, an accomplished and proactive full-stack developer, with the confidence and ability to learn and adapt to new technologies with ease. Working towards improving my skills everyday, including softskills. Always eager to collaborate and work in teams.</p><p>Love music and concerts, traveling, outdoors, dogs, working out and hanging out with the people I care about.</p>",
 		technologies: [
 			{ title: 'Front-end', level: 90, class: 'main' },
-			{ title: 'Back-end', level: 40, class: 'main' },
-			{ title: 'Databases', level: 70, class: 'main' },
-			{ title: 'React', level: 70, class: '' },
-			{ title: 'PHP', level: 60, class: '' },
-			{ title: 'SQL', level: 70, class: '' },
-			{ title: 'Adapt Framework', level: 90, class: '' },
-			{ title: 'Python', level: 30, class: '' },
-			{ title: 'MongoDB', level: 30, class: '' }
+			{ title: 'Back-end', level: 85, class: 'main' },
+			{ title: 'React', level: 90, class: '' },
+			{ title: 'Django/Python', level: 80, class: '' },
+			{ title: 'SQL', level: 75, class: '' },
+			{ title: 'GraphQL', level: 80, class: '' },
+			{ title: 'PostgresDB', level: 70, class: '' }
 		]
 	},
 	es: {
 		sectionTitle: '¿Quién soy?',
 		myDescription:
-			'<p>Soy Luis Barrantes, front-end developer con experiencia, proactivo, adaptable y con facilidad de aprender nuevos lenguajes y tecnologías, trabajando en convertirme en un full-stack developer. Siempre dispuesto a colaborar y trabajar en equipo.</p><p>Me apasiona la música y los conciertos, viajar, los perros, el aire libre, hacer ejercicio y pasar el tiempo con mis seres queridos.</p>',
+			'<p>Soy Luis Barrantes, full-stack developer experimentado, proactivo, adaptable y con facilidad de aprender nuevos lenguajes y tecnologías, trabajando en mejorar mis "skills" cada día, incluyendo los "softskills". Siempre dispuesto a colaborar y trabajar en equipo.</p><p>Me apasiona la música y los conciertos, viajar, los perros, el aire libre, hacer ejercicio y pasar el tiempo con mis seres queridos.</p>',
 		technologies: [
 			{ title: 'Front-end', level: 90, class: 'main' },
-			{ title: 'Back-end', level: 40, class: 'main' },
-			{ title: 'Bases de datos', level: 70, class: 'main' },
-			{ title: 'React', level: 70, class: '' },
-			{ title: 'PHP', level: 60, class: '' },
-			{ title: 'SQL', level: 70, class: '' },
-			{ title: 'Adapt Framework', level: 90, class: '' },
-			{ title: 'Python', level: 30, class: '' },
-			{ title: 'MongoDB', level: 30, class: '' }
+			{ title: 'Back-end', level: 85, class: 'main' },
+			{ title: 'React', level: 90, class: '' },
+			{ title: 'Django/Python', level: 80, class: '' },
+			{ title: 'SQL', level: 75, class: '' },
+			{ title: 'GraphQL', level: 80, class: '' },
+			{ title: 'PostgresDB', level: 70, class: '' }
 		]
 	}
 };

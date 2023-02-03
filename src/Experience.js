@@ -135,7 +135,7 @@ const content = {
 			{ company: 'Hangar Worldwide', role: 'Front-end developer', timestamp: '2014 - 2017', category: 'work' },
 			{
 				company: 'SweetRush Inc.',
-				role: 'Tech Lead / Web Engineer',
+				role: 'Tech Lead / Software Engineer',
 				timestamp: '2017 - 2021',
 				category: 'work'
 			},
@@ -171,7 +171,7 @@ const content = {
 			{ company: 'Hangar Worldwide', role: 'Front-end developer', timestamp: '2014 - 2017', category: 'work' },
 			{
 				company: 'SweetRush Inc.',
-				role: 'Tech Lead / Web Engineer',
+				role: 'Tech Lead / Software Engineer',
 				timestamp: '2017 - 2021',
 				category: 'work'
 			},

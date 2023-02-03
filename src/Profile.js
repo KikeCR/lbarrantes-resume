@@ -74,7 +74,7 @@ const ContactButton = styled(Button)`
 const content = {
 	en: {
 		intro: "I'm a",
-		description: [ 'front-end developer.', 'back-end beginner.', 'traveler.', 'gamer.' ],
+		description: [ 'front-end engineer.', 'back-end engineer.', 'full-stack engineer.', 'traveler.', 'gamer.' ],
 		contactMeCta: 'Contact me',
 		linkedIn: 'https://www.linkedin.com/in/luis-enrique-barrantes-8141995b/',
 		twitter: 'https://twitter.com/barr_kike',
@@ -83,7 +83,7 @@ const content = {
 	},
 	es: {
 		intro: 'Soy',
-		description: [ 'front-end developer.', 'aprendiz de back-end.', 'viajero.', 'gamer.' ],
+		description: [ 'ingeniero de front-end.', 'ingeniero de back-end.', 'ingeniero full-stack.', 'viajero.', 'gamer.' ],
 		contactMeCta: 'Contáctame',
 		linkedIn: 'https://www.linkedin.com/in/luis-enrique-barrantes-8141995b/',
 		twitter: 'https://twitter.com/barr_kike',
