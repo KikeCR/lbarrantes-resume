@@ -132,7 +132,7 @@ const content = {
 				timestamp: '2013 - 2014',
 				category: 'work'
 			},
-			{ company: 'Hangar Worldwide', role: 'Front-end developer', timestamp: '2014 - 2017', category: 'work' },
+			{ company: 'Hangar Worldwide\n(Critical Mass Latam)', role: 'Front-end developer', timestamp: '2014 - 2017', category: 'work' },
 			{
 				company: 'SweetRush Inc.',
 				role: 'Tech Lead / Software Engineer',
@@ -140,7 +140,7 @@ const content = {
 				category: 'work'
 			},
 			{
-				company: 'Laika',
+				company: 'Thoropass',
 				role: 'Software Engineer',
 				timestamp: '2021 - present',
 				category: 'work'
@@ -168,7 +168,7 @@ const content = {
 				timestamp: '2013 - 2014',
 				category: 'work'
 			},
-			{ company: 'Hangar Worldwide', role: 'Front-end developer', timestamp: '2014 - 2017', category: 'work' },
+			{ company: 'Hangar Worldwide\n(Critical Mass Latam)', role: 'Front-end developer', timestamp: '2014 - 2017', category: 'work' },
 			{
 				company: 'SweetRush Inc.',
 				role: 'Tech Lead / Software Engineer',
@@ -176,7 +176,7 @@ const content = {
 				category: 'work'
 			},
 			{
-				company: 'Laika',
+				company: 'Thoropass',
 				role: 'Software Engineer',
 				timestamp: '2021 - actualmente',
 				category: 'work'

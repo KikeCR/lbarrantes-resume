@@ -122,12 +122,12 @@ const content = {
 			"<p>I'm Luis Barrantes, an accomplished and proactive full-stack developer, with the confidence and ability to learn and adapt to new technologies with ease. Working towards improving my skills everyday, including softskills. Always eager to collaborate and work in teams.</p><p>Love music and concerts, traveling, outdoors, dogs, working out and hanging out with the people I care about.</p>",
 		technologies: [
 			{ title: 'Front-end', level: 90, class: 'main' },
-			{ title: 'Back-end', level: 85, class: 'main' },
+			{ title: 'Back-end', level: 90, class: 'main' },
 			{ title: 'React', level: 90, class: '' },
-			{ title: 'Django/Python', level: 80, class: '' },
+			{ title: 'Django/Python', level: 85, class: '' },
 			{ title: 'SQL', level: 75, class: '' },
-			{ title: 'GraphQL', level: 80, class: '' },
-			{ title: 'PostgresDB', level: 70, class: '' }
+			{ title: 'GraphQL', level: 90, class: '' },
+			{ title: 'PostgresDB', level: 80, class: '' }
 		]
 	},
 	es: {
@@ -136,12 +136,12 @@ const content = {
 			'<p>Soy Luis Barrantes, full-stack developer experimentado, proactivo, adaptable y con facilidad de aprender nuevos lenguajes y tecnologías, trabajando en mejorar mis "skills" cada día, incluyendo los "softskills". Siempre dispuesto a colaborar y trabajar en equipo.</p><p>Me apasiona la música y los conciertos, viajar, los perros, el aire libre, hacer ejercicio y pasar el tiempo con mis seres queridos.</p>',
 		technologies: [
 			{ title: 'Front-end', level: 90, class: 'main' },
-			{ title: 'Back-end', level: 85, class: 'main' },
+			{ title: 'Back-end', level: 90, class: 'main' },
 			{ title: 'React', level: 90, class: '' },
-			{ title: 'Django/Python', level: 80, class: '' },
+			{ title: 'Django/Python', level: 85, class: '' },
 			{ title: 'SQL', level: 75, class: '' },
-			{ title: 'GraphQL', level: 80, class: '' },
-			{ title: 'PostgresDB', level: 70, class: '' }
+			{ title: 'GraphQL', level: 90, class: '' },
+			{ title: 'PostgresDB', level: 80, class: '' }
 		]
 	}
 };

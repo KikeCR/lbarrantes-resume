@@ -5,8 +5,7 @@ import ReactTypingEffect from 'react-typing-effect';
 import { Fade } from 'react-awesome-reveal';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 import avatar from './images/lbarrantes_avatar.jpg'; // Context for this
 
@@ -77,8 +76,7 @@ const content = {
 		description: [ 'front-end engineer.', 'back-end engineer.', 'full-stack engineer.', 'traveler.', 'gamer.' ],
 		contactMeCta: 'Contact me',
 		linkedIn: 'https://www.linkedin.com/in/luis-enrique-barrantes-8141995b/',
-		twitter: 'https://twitter.com/barr_kike',
-		facebook: 'https://www.facebook.com/kike.barrantes/',
+		instagram: 'https://instagram.com/kike.barr',
 		github: 'https://github.com/KikeCR'
 	},
 	es: {
@@ -86,15 +84,14 @@ const content = {
 		description: [ 'ingeniero de front-end.', 'ingeniero de back-end.', 'ingeniero full-stack.', 'viajero.', 'gamer.' ],
 		contactMeCta: 'Contáctame',
 		linkedIn: 'https://www.linkedin.com/in/luis-enrique-barrantes-8141995b/',
-		twitter: 'https://twitter.com/barr_kike',
-		facebook: 'https://www.facebook.com/kike.barrantes/',
+		instagram: 'https://instagram.com/kike.barr',
 		github: 'https://github.com/KikeCR'
 	}
 };
 
 function Profile() {
 	const { language } = useContext(LanguageContext);
-	const { intro, description, contactMeCta, linkedIn, twitter, facebook, github } = content[language];
+	const { intro, description, contactMeCta, linkedIn, instagram, github } = content[language];
 	return (
 		<ProfilePaper elevation={0} square>
 			<Fade direction="up" triggerOnce>
@@ -119,11 +116,8 @@ function Profile() {
 							<Link href={linkedIn} target="_blank">
 								<LinkedInIcon />
 							</Link>
-							<Link href={twitter} target="_blank">
-								<TwitterIcon />
-							</Link>
-							<Link href={facebook} target="_blank">
-								<FacebookIcon />
+							<Link href={instagram} target="_blank">
+								<InstagramIcon />
 							</Link>
 						</SocialContainer>
 						<ButtonProfile>
