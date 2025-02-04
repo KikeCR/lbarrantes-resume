@@ -107,6 +107,11 @@ const ExperienceTimeline = styled(Timeline)`
 const TimestampTypography = styled(Typography)`
 	&.MuiTypography-root {
 		color: ${(props) => props.theme.timelineTimeStampTextColor};
+		margin-top: 10px;
+
+		@media (max-width: 599px) {
+			margin-top: 12px;
+		}
 	}
 `;
 

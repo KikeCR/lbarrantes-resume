@@ -23,7 +23,7 @@ const ProfilePaper = styled(Paper)`
 			text-align: center;
 			margin-top: 20px;
 		}
-  	}
+  }
 `;
 
 const ProfileAvatar = styled(Avatar)`
@@ -45,6 +45,7 @@ const ProfileTitle = styled.h1`margin: 0 0 12px;`;
 
 const SocialContainer = styled.div`
 	margin-top: 12px;
+	padding-left: 4px;
 	a {
 		padding-right: 20px;
 		svg {
@@ -56,6 +57,12 @@ const SocialContainer = styled.div`
 			color: ${(props) => props.theme.socialIconsColorHover};
 		}
 	}
+
+	@media (max-width: 599px) {
+		a {
+			padding: 0 10px;
+		}
+  }
 `;
 
 const ButtonProfile = styled.div`margin-top: 12px;`;
@@ -73,7 +80,7 @@ const ContactButton = styled(Button)`
 const content = {
 	en: {
 		intro: "I'm a",
-		description: [ 'front-end engineer.', 'back-end engineer.', 'full-stack engineer.', 'traveler.', 'gamer.' ],
+		description: [ 'front-end engineer.', 'back-end engineer.', 'full-stack engineer.', 'traveler.', 'gamer.', 'human.' ],
 		contactMeCta: 'Contact me',
 		linkedIn: 'https://www.linkedin.com/in/luis-enrique-barrantes-8141995b/',
 		instagram: 'https://instagram.com/kike.barr',
@@ -81,7 +88,7 @@ const content = {
 	},
 	es: {
 		intro: 'Soy',
-		description: [ 'ingeniero de front-end.', 'ingeniero de back-end.', 'ingeniero full-stack.', 'viajero.', 'gamer.' ],
+		description: [ 'ingeniero de front-end.', 'ingeniero de back-end.', 'ingeniero full-stack.', 'viajero.', 'gamer.', 'humano.' ],
 		contactMeCta: 'Contáctame',
 		linkedIn: 'https://www.linkedin.com/in/luis-enrique-barrantes-8141995b/',
 		instagram: 'https://instagram.com/kike.barr',

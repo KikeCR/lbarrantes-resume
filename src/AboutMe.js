@@ -117,9 +117,9 @@ const LinearProgressResume = styled(LinearProgress)`
 
 const content = {
 	en: {
-		sectionTitle: 'Who am I?',
+		sectionTitle: 'Who is Luis Barrantes?',
 		myDescription:
-			"<p>I'm Luis Barrantes, an accomplished and proactive full-stack developer, with the confidence and ability to learn and adapt to new technologies with ease. Working towards improving my skills everyday, including softskills. Always eager to collaborate and work in teams.</p><p>Love music and concerts, traveling, outdoors, dogs, working out and hanging out with the people I care about.</p>",
+			"<p>I'm Luis Barrantes, an accomplished and proactive full-stack developer, with the confidence and ability to learn and adapt to new technologies with ease. Working towards improving my skills everyday, including softskills. Always eager to collaborate and work in teams.</p><p>Love music and concerts, traveling, photography, outdoors, dogs, working out and hanging out with my loved ones.</p>",
 		technologies: [
 			{ title: 'Front-end', level: 90, class: 'main' },
 			{ title: 'Back-end', level: 90, class: 'main' },
@@ -131,9 +131,9 @@ const content = {
 		]
 	},
 	es: {
-		sectionTitle: '¿Quién soy?',
+		sectionTitle: '¿Quién es Luis Barrantes?',
 		myDescription:
-			'<p>Soy Luis Barrantes, full-stack developer experimentado, proactivo, adaptable y con facilidad de aprender nuevos lenguajes y tecnologías, trabajando en mejorar mis "skills" cada día, incluyendo los "softskills". Siempre dispuesto a colaborar y trabajar en equipo.</p><p>Me apasiona la música y los conciertos, viajar, los perros, el aire libre, hacer ejercicio y pasar el tiempo con mis seres queridos.</p>',
+			'<p>Soy Luis Barrantes, full-stack developer experimentado, proactivo, adaptable y con facilidad de aprender nuevos lenguajes y tecnologías, trabajando en mejorar mis "skills" cada día, incluyendo los "softskills". Siempre dispuesto a colaborar y trabajar en equipo.</p><p>Me apasiona la música y los conciertos, viajar, la fotografía, los perros, el aire libre, hacer ejercicio y pasar el tiempo con mis seres queridos.</p>',
 		technologies: [
 			{ title: 'Front-end', level: 90, class: 'main' },
 			{ title: 'Back-end', level: 90, class: 'main' },
