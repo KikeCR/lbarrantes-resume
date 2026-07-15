@@ -83,7 +83,6 @@ const content = {
 		description: [ 'front-end engineer.', 'back-end engineer.', 'full-stack engineer.', 'traveler.', 'gamer.', 'human.' ],
 		contactMeCta: 'Contact me',
 		linkedIn: 'https://www.linkedin.com/in/luis-enrique-barrantes-8141995b/',
-		instagram: 'https://instagram.com/kike.barr',
 		github: 'https://github.com/KikeCR'
 	},
 	es: {
@@ -91,7 +90,6 @@ const content = {
 		description: [ 'ingeniero de front-end.', 'ingeniero de back-end.', 'ingeniero full-stack.', 'viajero.', 'gamer.', 'humano.' ],
 		contactMeCta: 'Contáctame',
 		linkedIn: 'https://www.linkedin.com/in/luis-enrique-barrantes-8141995b/',
-		instagram: 'https://instagram.com/kike.barr',
 		github: 'https://github.com/KikeCR'
 	}
 };
@@ -122,9 +120,6 @@ function Profile() {
 							</Link>
 							<Link href={linkedIn} target="_blank">
 								<LinkedInIcon />
-							</Link>
-							<Link href={instagram} target="_blank">
-								<InstagramIcon />
 							</Link>
 						</SocialContainer>
 						<ButtonProfile>

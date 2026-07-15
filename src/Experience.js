@@ -147,7 +147,7 @@ const content = {
 			{
 				company: 'Thoropass',
 				role: 'Software Engineer',
-				timestamp: '2021 - present',
+				timestamp: '2021 - 2026',
 				category: 'work'
 			}
 		]
@@ -183,7 +183,7 @@ const content = {
 			{
 				company: 'Thoropass',
 				role: 'Software Engineer',
-				timestamp: '2021 - actualmente',
+				timestamp: '2021 - 2026',
 				category: 'work'
 			}
 		]

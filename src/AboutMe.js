@@ -124,8 +124,8 @@ const content = {
 			{ title: 'Front-end', level: 90, class: 'main' },
 			{ title: 'Back-end', level: 90, class: 'main' },
 			{ title: 'React', level: 90, class: '' },
-			{ title: 'Django/Python', level: 85, class: '' },
-			{ title: 'SQL', level: 75, class: '' },
+			{ title: 'Django/Python', level: 90, class: '' },
+			{ title: 'SQL', level: 80, class: '' },
 			{ title: 'GraphQL', level: 90, class: '' },
 			{ title: 'PostgresDB', level: 80, class: '' }
 		]
@@ -138,8 +138,8 @@ const content = {
 			{ title: 'Front-end', level: 90, class: 'main' },
 			{ title: 'Back-end', level: 90, class: 'main' },
 			{ title: 'React', level: 90, class: '' },
-			{ title: 'Django/Python', level: 85, class: '' },
-			{ title: 'SQL', level: 75, class: '' },
+			{ title: 'Django/Python', level: 90, class: '' },
+			{ title: 'SQL', level: 80, class: '' },
 			{ title: 'GraphQL', level: 90, class: '' },
 			{ title: 'PostgresDB', level: 80, class: '' }
 		]
