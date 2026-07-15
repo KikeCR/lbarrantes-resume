@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { Paper, Avatar, Grid, Link, Button } from '@material-ui/core';
+import { Paper, Avatar, Grid, Link, Button } from '@mui/material';
 import styled from 'styled-components';
 import ReactTypingEffect from 'react-typing-effect';
 import { Fade } from 'react-awesome-reveal';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 import avatar from './images/lbarrantes_avatar.jpg'; // Context for this
 
@@ -99,7 +99,7 @@ function Profile() {
 	return (
 		<ProfilePaper elevation={0} square>
 			<Fade direction="up" triggerOnce>
-				<Grid container justify="center">
+				<Grid container justifyContent="center">
 					<Grid item xs={11} sm={5}>
 						<ProfileAvatar alt="Luis Barrantes" src={avatar} />
 					</Grid>

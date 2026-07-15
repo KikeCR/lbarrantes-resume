@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Paper, Grid } from '@material-ui/core';
+import { Paper, Grid } from '@mui/material';
 import ContactMeForm from './ContactMeForm';
 import styled from 'styled-components';
 import { Fade } from 'react-awesome-reveal';
@@ -67,7 +67,7 @@ function ContactMe() {
 	const { isDarkMode } = useContext(ThemeContext);
 	return (
 		<ContactMePaper elevation={0} square id="contact-me-section">
-			<Grid container justify="center">
+			<Grid container justifyContent="center">
 				<Grid container item xs={11} md={10}>
 					<Fade direction="up" triggerOnce>
 						<ResumeSubtitle isDarkMode={isDarkMode}>{sectionTitle}</ResumeSubtitle>

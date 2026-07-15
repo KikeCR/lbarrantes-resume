@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect, useRef } from 'react';
-import { Paper, Avatar, Grid, LinearProgress } from '@material-ui/core';
+import { Paper, Avatar, Grid, LinearProgress } from '@mui/material';
 import { Fade } from 'react-awesome-reveal';
 import styled from 'styled-components';
 
@@ -169,13 +169,13 @@ function AboutMe() {
 
 	return (
 		<AboutMePaper elevation={0} square ref={ref}>
-			<Grid container justify="center">
+			<Grid container justifyContent="center">
 				<Grid container item xs={11} md={10}>
 					<Fade direction="up" triggerOnce>
 						<ResumeSubtitle isDarkMode={isDarkMode}>{sectionTitle}</ResumeSubtitle>
 					</Fade>
 				</Grid>
-				<Grid container item xs={12} sm={10} spacing={2} direction="row" justify="center" alignItems="center">
+				<Grid container item xs={12} sm={10} spacing={2} direction="row" justifyContent="center" alignItems="center">
 					<Grid item xs={11} sm={10}>
 						<Fade triggerOnce>
 							<TextBubblePaper

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Paper } from '@material-ui/core';
+import { Paper } from '@mui/material';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import Navbar from './Navbar';

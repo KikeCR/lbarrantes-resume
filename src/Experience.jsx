@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Paper, Grid, Typography } from '@material-ui/core';
+import { Paper, Grid, Typography } from '@mui/material';
 import {
 	Timeline,
 	TimelineItem,
@@ -8,9 +8,9 @@ import {
 	TimelineContent,
 	TimelineOppositeContent,
 	TimelineDot
-} from '@material-ui/lab';
-import SchoolIcon from '@material-ui/icons/School';
-import WorkIcon from '@material-ui/icons/Work';
+} from '@mui/lab';
+import SchoolIcon from '@mui/icons-material/School';
+import WorkIcon from '@mui/icons-material/Work';
 import { Fade } from 'react-awesome-reveal';
 import styled from 'styled-components';
 
@@ -196,7 +196,7 @@ function Experience() {
 	const { isDarkMode } = useContext(ThemeContext);
 	return (
 		<ExperiencePaper elevation={0} square>
-			<Grid container justify="center">
+			<Grid container justifyContent="center">
 				<Grid container item xs={11} md={10}>
 					<Fade direction="up" triggerOnce>
 						<ResumeSubtitle isDarkMode={isDarkMode}>{sectionTitle}</ResumeSubtitle>
@@ -210,7 +210,7 @@ function Experience() {
 									{experiences.map((exp, i) => (
 										<TimelineItem key={`exp-item-${i}`}>
 											<TimelineOppositeContent>
-												<TimestampTypography variant="body2" color="textSecondary">
+												<TimestampTypography variant="body2" color="text.secondary">
 													{exp.timestamp}
 												</TimestampTypography>
 											</TimelineOppositeContent>

@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Paper, Grid, TextField, Button, Dialog, DialogTitle } from '@material-ui/core';
+import { Paper, Grid, TextField, Button, Dialog, DialogTitle } from '@mui/material';
 import useInputState from './hooks/useInputState';
 import styled from 'styled-components';
 import emailjs from 'emailjs-com';
@@ -136,7 +136,7 @@ function ContactMeForm() {
 	return (
 		<ContactMeFormPaper elevation={0} isDarkMode={isDarkMode}>
 			<form onSubmit={handleSubmit}>
-				<Grid container justify="center" alignItems="center" spacing={2}>
+				<Grid container justifyContent="center" alignItems="center" spacing={2}>
 					<Grid container item xs={12} md={6}>
 						<ContactMeTextField
 							value={nameValue}
