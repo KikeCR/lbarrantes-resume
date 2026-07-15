@@ -79,7 +79,7 @@ const ExperienceTimeline = styled(Timeline)`
 	}
 
 	@media (max-width: 599px) {
-		.MuiTimelineItem-alignAlternate:nth-child(even) {
+		.MuiTimelineItem-positionAlternate:nth-child(even) {
 			flex-direction: initial;
 			.MuiTimelineItem-content {
 				text-align: left;
@@ -206,7 +206,7 @@ function Experience() {
 					<Grid item xs={12} sm={11}>
 						<TimelinePaper elevation={0} className="timeline-paper" isDarkMode={isDarkMode}>
 							<Fade duration="2000" direction="up" triggerOnce>
-								<ExperienceTimeline align="alternate">
+								<ExperienceTimeline position="alternate">
 									{experiences.map((exp, i) => (
 										<TimelineItem key={`exp-item-${i}`}>
 											<TimelineOppositeContent>
