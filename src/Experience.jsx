@@ -128,7 +128,7 @@ const content = {
 			{
 				company: 'Universidad de Costa Rica',
 				role: 'Informática Empresarial',
-				timestamp: '2008 - present',
+				timestamp: '2008 - 2013',
 				category: 'edu'
 			},
 			{
@@ -164,7 +164,7 @@ const content = {
 			{
 				company: 'Universidad de Costa Rica',
 				role: 'Informática Empresarial',
-				timestamp: '2008 - actualmente',
+				timestamp: '2008 - 2013',
 				category: 'edu'
 			},
 			{
