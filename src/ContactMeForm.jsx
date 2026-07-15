@@ -1,11 +1,12 @@
 import React, { useState, useContext } from 'react';
-import { Paper, Grid, TextField, Button, Dialog, DialogTitle } from '@mui/material';
+import { Paper, Grid, TextField, Dialog, DialogTitle } from '@mui/material';
 import useInputState from './hooks/useInputState';
 import styled from 'styled-components';
 import emailjs from 'emailjs-com';
 
 import { LanguageContext } from './contexts/language.context';
 import { ThemeContext } from './contexts/theme.context';
+import ContactButton from './components/ContactButton';
 
 const ContactMeFormPaper = styled(Paper)`
     margin: 1rem 0;
@@ -27,16 +28,6 @@ const ContactMeTextField = styled(TextField)`
 	.MuiInputLabel-outlined, .MuiOutlinedInput-input {
 		color: ${(props) => (props.isDarkMode ? props.theme.textFieldLabelDark : props.theme.textFieldLabelLight)};
 	}
-`;
-
-const ContactButton = styled(Button)`
-    &.MuiButtonBase-root {
-        background-color: ${(props) => props.theme.mainButtonColor};
-        color: ${(props) => props.theme.mainButtonTextColor};
-        &:hover {
-            background-color: ${(props) => props.theme.mainButtonColorHover};
-        }
-    }
 `;
 
 const MessageConfirmationDialog = styled(Dialog)`

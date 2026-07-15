@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Paper, Avatar, Grid, Link, Button } from '@mui/material';
+import { Paper, Avatar, Grid, Link } from '@mui/material';
 import styled from 'styled-components';
 import ReactTypingEffect from 'react-typing-effect';
 import { Fade } from 'react-awesome-reveal';
@@ -9,6 +9,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import avatar from './images/lbarrantes_avatar.jpg'; // Context for this
 
 import { LanguageContext } from './contexts/language.context';
+import ContactButton from './components/ContactButton';
 
 const ProfilePaper = styled(Paper)`
     height: 100vh;
@@ -65,16 +66,6 @@ const SocialContainer = styled.div`
 `;
 
 const ButtonProfile = styled.div`margin-top: 12px;`;
-
-const ContactButton = styled(Button)`
-    &.MuiButtonBase-root {
-        background-color: ${(props) => props.theme.mainButtonColor};
-        color: ${(props) => props.theme.mainButtonTextColor};
-        &:hover {
-            background-color: ${(props) => props.theme.mainButtonColorHover};
-        }
-    }
-`;
 
 const content = {
 	en: {

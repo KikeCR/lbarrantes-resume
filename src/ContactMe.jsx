@@ -4,11 +4,8 @@ import ContactMeForm from './ContactMeForm';
 import styled from 'styled-components';
 import { Fade } from 'react-awesome-reveal';
 
-import dotsTitleLight from './images/dots-bg-light.svg'; // Context for this
-import dotsTitleDark from './images/dots-bg.svg'; // Context for this
-
 import { LanguageContext } from './contexts/language.context';
-import { ThemeContext } from './contexts/theme.context';
+import ResumeSubtitle from './components/ResumeSubtitle';
 
 const ContactMePaper = styled(Paper)`
     height: 100vh;
@@ -21,20 +18,6 @@ const ContactMePaper = styled(Paper)`
 		height: auto;
 		padding: 40px 0;
   	}
-`;
-
-const ResumeSubtitle = styled.h2`
-	font-size: 36px;
-	&:before {
-		content: "";
-		background-image: ${(props) => (props.isDarkMode ? `url(${dotsTitleLight});` : `url(${dotsTitleDark});`)};
-		display: block;
-		height: 37px;
-		left: -14px;
-		top: 15px;
-		position: absolute;
-		width: 37px;
-	}
 `;
 
 const FormDescription = styled.p`
@@ -64,13 +47,12 @@ const content = {
 function ContactMe() {
 	const { language } = useContext(LanguageContext);
 	const { sectionTitle, formTitle, formDescription } = content[language];
-	const { isDarkMode } = useContext(ThemeContext);
 	return (
 		<ContactMePaper elevation={0} square id="contact-me-section">
 			<Grid container justifyContent="center">
 				<Grid container item xs={11} md={10}>
 					<Fade direction="up" triggerOnce>
-						<ResumeSubtitle isDarkMode={isDarkMode}>{sectionTitle}</ResumeSubtitle>
+						<ResumeSubtitle>{sectionTitle}</ResumeSubtitle>
 					</Fade>
 				</Grid>
 				<Grid container item xs={11} md={10} spacing={2}>
