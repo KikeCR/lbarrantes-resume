@@ -15,6 +15,8 @@ const SOCIAL_LINKS = {
 	github: 'https://github.com/KikeCR',
 } as const;
 
+const AVATAR_SIZE = 120;
+
 const content = {
 	en: {
 		intro: "I'm a",
@@ -40,7 +42,8 @@ function Profile() {
 						<Avatar
 							alt="Luis Barrantes"
 							src={avatar}
-							className="mx-auto h-[120px] w-[120px] sm:float-right sm:mr-[10%]"
+							className="mx-auto sm:float-right sm:mr-4"
+							sx={{ width: AVATAR_SIZE, height: AVATAR_SIZE }}
 						/>
 					</div>
 					<div className="mt-5 w-[91.6667%] text-center sm:mt-0 sm:w-[58.3333%] sm:text-left">
@@ -73,7 +76,7 @@ function Profile() {
 						</div>
 						<ContactButton
 							variant="contained"
-							className="mt-3"
+							sx={{ mt: 1.5 }}
 							onClick={() => {
 								document.getElementById('contact-me-section')?.scrollIntoView();
 							}}
