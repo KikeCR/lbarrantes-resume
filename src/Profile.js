@@ -5,7 +5,6 @@ import ReactTypingEffect from 'react-typing-effect';
 import { Fade } from 'react-awesome-reveal';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import InstagramIcon from '@material-ui/icons/Instagram';
 
 import avatar from './images/lbarrantes_avatar.jpg'; // Context for this
 
@@ -96,7 +95,7 @@ const content = {
 
 function Profile() {
 	const { language } = useContext(LanguageContext);
-	const { intro, description, contactMeCta, linkedIn, instagram, github } = content[language];
+	const { intro, description, contactMeCta, linkedIn, github } = content[language];
 	return (
 		<ProfilePaper elevation={0} square>
 			<Fade direction="up" triggerOnce>
