@@ -35,7 +35,7 @@ export const ContactMe = () => {
 				<Fade direction="up" triggerOnce>
 					<ResumeSubtitle>{sectionTitle}</ResumeSubtitle>
 				</Fade>
-				<div className="mt-4 flex w-full flex-wrap gap-4">
+				<div className="mt-8 flex w-full flex-wrap gap-6">
 					<div className="w-full md:w-[calc(25%-1rem)]">
 						<Fade direction="up" triggerOnce cascade>
 							<h3 className="my-[18.72px] text-[18.72px] font-bold leading-[normal]">

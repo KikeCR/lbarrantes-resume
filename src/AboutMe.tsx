@@ -50,11 +50,11 @@ export const AboutMe = () => {
 			<Fade direction="up" triggerOnce className="w-full">
 				<div className="mx-auto w-[91.6667%] md:w-[83.3333%]">
 					<ResumeSubtitle>{sectionTitle}</ResumeSubtitle>
-					<div className="mt-4 flex flex-wrap items-center justify-center gap-4">
+					<div className="mt-8 flex flex-wrap items-center justify-center gap-6">
 						<div className="w-full sm:flex-1">
 							<Fade triggerOnce>
 								<div
-									className="after:content-[''] relative rounded-[30px] bg-bubble-bg px-[30px] py-5 text-right leading-normal text-bubble-font shadow-md after:absolute after:top-[20%] after:right-[-10px] after:hidden after:h-0 after:w-0 after:border-y-[10px] after:border-l-[10px] after:border-y-transparent after:border-l-bubble-bg sm:after:block [&_p]:my-4"
+									className="rounded-[24px] bg-bubble-bg px-[30px] py-6 text-right leading-relaxed text-bubble-font shadow-md [&_p]:my-4"
 									dangerouslySetInnerHTML={{ __html: myDescription }}
 								/>
 							</Fade>
@@ -68,7 +68,7 @@ export const AboutMe = () => {
 							/>
 						</div>
 					</div>
-					<div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+					<div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
 						{technologies.map((tech) => (
 							<div key={tech.title} className="pt-[25px]">
 								<h3 className="my-[18.72px] text-[18.72px] font-bold leading-[normal]">

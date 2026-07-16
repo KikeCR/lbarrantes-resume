@@ -18,6 +18,7 @@ import { pickTranslation } from './utils/pickTranslation'
 
 import { LanguageContext } from './contexts/language.context'
 import { ResumeSubtitle } from './components/ResumeSubtitle'
+import { FADE_DURATION_SLOW } from './constants'
 
 const content = {
 	en: { sectionTitle: 'Education & Experience' },
@@ -33,8 +34,8 @@ export const Experience = () => {
 			<Fade direction="up" triggerOnce className="w-full">
 				<div className="mx-auto w-[91.6667%] md:w-[83.3333%]">
 					<ResumeSubtitle>{sectionTitle}</ResumeSubtitle>
-					<div className="mx-auto mt-4 rounded-[20px] bg-timeline-bg py-6 sm:w-[91.6667%] sm:py-12">
-						<Fade duration={2000} direction="up" triggerOnce>
+					<div className="mx-auto mt-8 rounded-[20px] bg-timeline-bg py-6 sm:w-[91.6667%] sm:py-12">
+						<Fade duration={FADE_DURATION_SLOW} direction="up" triggerOnce>
 							<Timeline
 								position="alternate"
 								sx={{

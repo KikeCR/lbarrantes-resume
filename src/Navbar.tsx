@@ -13,6 +13,7 @@ import { Fade } from 'react-awesome-reveal'
 
 import { LanguageContext } from './contexts/language.context'
 import { ThemeContext } from './contexts/theme.context'
+import { FADE_DURATION_SLOW } from './constants'
 
 export const Navbar = () => {
 	const { isDarkMode, toggleTheme } = useContext(ThemeContext)
@@ -28,7 +29,7 @@ export const Navbar = () => {
 			}}
 		>
 			<Toolbar>
-				<Fade duration={2000} triggerOnce>
+				<Fade duration={FADE_DURATION_SLOW} triggerOnce>
 					<div className="px-5 text-lg font-bold tracking-wide">
 						lbarrantes<span className="text-secondary">.</span>
 					</div>

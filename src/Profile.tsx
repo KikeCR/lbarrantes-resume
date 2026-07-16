@@ -61,7 +61,7 @@ export const Profile = () => {
 						/>
 					</div>
 					<div className="mt-5 w-[91.6667%] text-center sm:mt-0 sm:w-[58.3333%] sm:text-left">
-						<h1 className="mb-3 text-4xl font-bold">Luis Barrantes</h1>
+						<h1 className="mb-4 text-4xl font-bold">Luis Barrantes</h1>
 						<ReactTypingEffect
 							text={description}
 							speed={100}
