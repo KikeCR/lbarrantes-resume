@@ -1,13 +1,4 @@
-/*
- * Preflight (Tailwind's base CSS reset) is intentionally excluded for now.
- * It resets default heading/element styles (e.g. <h1> font-size/weight),
- * which several existing elements still rely on implicitly since they
- * haven't been given explicit Tailwind typography classes yet. Re-enable
- * by switching to `@import "tailwindcss";` once every component has been
- * converted (end of the component-by-component Tailwind rewrite).
- */
-@import "tailwindcss/theme" layer(theme);
-@import "tailwindcss/utilities" layer(utilities);
+@import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 

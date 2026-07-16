@@ -38,9 +38,9 @@ function ContactMe() {
 				<div className="mt-4 flex w-full flex-wrap gap-4">
 					<div className="w-full md:w-[calc(25%-1rem)]">
 						<Fade direction="up" triggerOnce cascade>
-							<h3>{formTitle}</h3>
+							<h3 className="my-[18.72px] text-[18.72px] font-bold leading-[normal]">{formTitle}</h3>
 							<p
-								className="-mt-2 leading-normal [&_a]:text-link [&_a]:no-underline"
+								className="-mt-2 mb-4 leading-normal [&_a]:text-link [&_a]:no-underline"
 								dangerouslySetInnerHTML={{ __html: formDescription(CONTACT_EMAIL) }}
 							/>
 						</Fade>

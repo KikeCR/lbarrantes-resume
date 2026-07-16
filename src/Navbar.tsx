@@ -15,10 +15,8 @@ function Navbar() {
 		<AppBar
 			position="fixed"
 			sx={{
-				'&.MuiAppBar-colorPrimary.MuiPaper-root': {
-					backgroundColor: 'var(--color-main)',
-					color: 'var(--color-navbar-title-text)',
-				},
+				backgroundColor: 'var(--color-main)',
+				color: 'var(--color-navbar-title-text)',
 				'& .MuiToolbar-regular': { minHeight: 'var(--spacing-navbar-height)' },
 			}}
 		>

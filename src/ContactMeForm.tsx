@@ -78,14 +78,8 @@ function ContactMeForm() {
 			elevation={0}
 			className="my-4 px-4"
 			sx={{
-				// `&.MuiPaper-elevation0.MuiPaper-root` (not a flat rule) is required to
-				// out-specificity ResumeApp.jsx's legacy `.MuiPaper-root { background-color }`
-				// descendant selector, which this Paper also matches. Drop this once Phase 6e
-				// removes ResumeApp's styled-components cascade.
-				'&.MuiPaper-elevation0.MuiPaper-root': {
-					backgroundColor: 'transparent',
-					color: 'var(--color-font)',
-				},
+				backgroundColor: 'transparent',
+				color: 'var(--color-font)',
 				'& .MuiFormLabel-root.Mui-focused': { color: 'var(--color-textfield-border)' },
 				'& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
 					borderColor: 'var(--color-textfield-border)',
