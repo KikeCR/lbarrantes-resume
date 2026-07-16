@@ -2,12 +2,14 @@ import type { IconType } from 'react-icons'
 import {
 	SiReact,
 	SiTypescript,
+	SiTailwindcss,
 	SiStorybook,
+	SiMui,
+	SiVite,
 	SiDjango,
 	SiPython,
 	SiPostgresql,
 	SiGraphql,
-	SiMui,
 	SiAnthropic,
 	SiGit,
 } from 'react-icons/si'
@@ -15,17 +17,20 @@ import {
 export interface SkillLogo {
 	title: string
 	Icon: IconType
+	category: 'frontend' | 'backend'
 }
 
 export const skillLogos: SkillLogo[] = [
-	{ title: 'React', Icon: SiReact },
-	{ title: 'TypeScript', Icon: SiTypescript },
-	{ title: 'Design Systems', Icon: SiStorybook },
-	{ title: 'Django', Icon: SiDjango },
-	{ title: 'Python', Icon: SiPython },
-	{ title: 'PostgreSQL', Icon: SiPostgresql },
-	{ title: 'GraphQL', Icon: SiGraphql },
-	{ title: 'Material UI', Icon: SiMui },
-	{ title: 'LLM Tooling', Icon: SiAnthropic },
-	{ title: 'Git', Icon: SiGit },
+	{ title: 'React', Icon: SiReact, category: 'frontend' },
+	{ title: 'TypeScript', Icon: SiTypescript, category: 'frontend' },
+	{ title: 'Tailwind', Icon: SiTailwindcss, category: 'frontend' },
+	{ title: 'Design Systems', Icon: SiStorybook, category: 'frontend' },
+	{ title: 'Material UI', Icon: SiMui, category: 'frontend' },
+	{ title: 'Vite', Icon: SiVite, category: 'frontend' },
+	{ title: 'Django', Icon: SiDjango, category: 'backend' },
+	{ title: 'Python', Icon: SiPython, category: 'backend' },
+	{ title: 'PostgreSQL', Icon: SiPostgresql, category: 'backend' },
+	{ title: 'GraphQL', Icon: SiGraphql, category: 'backend' },
+	{ title: 'LLM Tooling', Icon: SiAnthropic, category: 'backend' },
+	{ title: 'Git', Icon: SiGit, category: 'backend' },
 ]
