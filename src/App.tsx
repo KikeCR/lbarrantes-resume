@@ -1,14 +1,12 @@
-import ResumeApp from './ResumeApp';
-import { ThemeProvider } from './contexts/theme.context';
+import { ResumeApp } from './ResumeApp'
+import { ThemeProvider } from './contexts/theme.context'
 
-function App() {
+export const App = () => {
 	return (
 		<div className="App">
 			<ThemeProvider>
 				<ResumeApp />
 			</ThemeProvider>
 		</div>
-	);
+	)
 }
-
-export default App;

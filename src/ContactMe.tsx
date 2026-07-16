@@ -1,11 +1,11 @@
-import { useContext } from 'react';
-import ContactMeForm from './ContactMeForm';
-import { Fade } from 'react-awesome-reveal';
+import { useContext } from 'react'
+import { ContactMeForm } from './ContactMeForm'
+import { Fade } from 'react-awesome-reveal'
 
-import { LanguageContext } from './contexts/language.context';
-import ResumeSubtitle from './components/ResumeSubtitle';
+import { LanguageContext } from './contexts/language.context'
+import { ResumeSubtitle } from './components/ResumeSubtitle'
 
-const CONTACT_EMAIL = 'luis.barrantesv@gmail.com';
+const CONTACT_EMAIL = 'luis.barrantesv@gmail.com'
 
 const content = {
 	en: {
@@ -20,11 +20,11 @@ const content = {
 		formDescription: (email: string) =>
 			`¿No te gustan los forms? <br />No hay problema, envíame un <a href='mailto:${email}?subject=Mensaje desde lbarrantes'>email</a>.`,
 	},
-};
+}
 
-function ContactMe() {
-	const { language } = useContext(LanguageContext);
-	const { sectionTitle, formTitle, formDescription } = content[language];
+export const ContactMe = () => {
+	const { language } = useContext(LanguageContext)
+	const { sectionTitle, formTitle, formDescription } = content[language]
 
 	return (
 		<section
@@ -38,10 +38,14 @@ function ContactMe() {
 				<div className="mt-4 flex w-full flex-wrap gap-4">
 					<div className="w-full md:w-[calc(25%-1rem)]">
 						<Fade direction="up" triggerOnce cascade>
-							<h3 className="my-[18.72px] text-[18.72px] font-bold leading-[normal]">{formTitle}</h3>
+							<h3 className="my-[18.72px] text-[18.72px] font-bold leading-[normal]">
+								{formTitle}
+							</h3>
 							<p
 								className="-mt-2 mb-4 leading-normal [&_a]:text-link [&_a]:no-underline"
-								dangerouslySetInnerHTML={{ __html: formDescription(CONTACT_EMAIL) }}
+								dangerouslySetInnerHTML={{
+									__html: formDescription(CONTACT_EMAIL),
+								}}
 							/>
 						</Fade>
 					</div>
@@ -53,7 +57,5 @@ function ContactMe() {
 				</div>
 			</div>
 		</section>
-	);
+	)
 }
-
-export default ContactMe;

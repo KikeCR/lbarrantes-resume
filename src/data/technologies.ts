@@ -1,7 +1,7 @@
 export interface Technology {
-	title: string;
-	level: number;
-	category: 'main' | '';
+	title: string
+	level: number
+	category: 'main' | ''
 }
 
 export const technologies: Technology[] = [
@@ -12,4 +12,4 @@ export const technologies: Technology[] = [
 	{ title: 'SQL', level: 80, category: '' },
 	{ title: 'GraphQL', level: 90, category: '' },
 	{ title: 'PostgresDB', level: 80, category: '' },
-];
+]

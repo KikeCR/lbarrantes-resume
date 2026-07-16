@@ -1,12 +1,12 @@
-export type ExperienceCategory = 'edu' | 'work';
+export type ExperienceCategory = 'edu' | 'work'
 
 export interface ExperienceEntry {
-	id: string;
-	company: string;
-	role: string;
-	category: ExperienceCategory;
-	start: string;
-	end: string;
+	id: string
+	company: string
+	role: string
+	category: ExperienceCategory
+	start: string
+	end: string
 }
 
 export const experiences: ExperienceEntry[] = [
@@ -58,4 +58,4 @@ export const experiences: ExperienceEntry[] = [
 		start: '2021',
 		end: '2026',
 	},
-];
+]

@@ -1,15 +1,15 @@
-import { useContext, useState, useEffect, useRef } from 'react';
-import { Avatar, LinearProgress } from '@mui/material';
-import { Fade } from 'react-awesome-reveal';
+import { useContext, useState, useEffect, useRef } from 'react'
+import { Avatar, LinearProgress } from '@mui/material'
+import { Fade } from 'react-awesome-reveal'
 
-import avatar from './images/lbarrantes_avatar.jpg';
-import { technologies } from './data/technologies';
-import { pickTranslation } from './utils/pickTranslation';
+import avatar from './images/lbarrantes_avatar.jpg'
+import { technologies } from './data/technologies'
+import { pickTranslation } from './utils/pickTranslation'
 
-import { LanguageContext } from './contexts/language.context';
-import ResumeSubtitle from './components/ResumeSubtitle';
+import { LanguageContext } from './contexts/language.context'
+import { ResumeSubtitle } from './components/ResumeSubtitle'
 
-const AVATAR_SIZE = 120;
+const AVATAR_SIZE = 120
 
 const content = {
 	en: {
@@ -22,28 +22,31 @@ const content = {
 		myDescription:
 			'<p>Soy Luis Barrantes, full-stack developer experimentado, proactivo, adaptable y con facilidad de aprender nuevos lenguajes y tecnologías, trabajando en mejorar mis "skills" cada día, incluyendo los "softskills". Siempre dispuesto a colaborar y trabajar en equipo.</p><p>Me apasiona la música y los conciertos, viajar, la fotografía, los perros, el aire libre, hacer ejercicio y pasar el tiempo con mis seres queridos.</p>',
 	},
-};
+}
 
-function AboutMe() {
-	const { language } = useContext(LanguageContext);
-	const { sectionTitle, myDescription } = pickTranslation(content, language);
+export const AboutMe = () => {
+	const { language } = useContext(LanguageContext)
+	const { sectionTitle, myDescription } = pickTranslation(content, language)
 
-	const ref = useRef<HTMLElement>(null);
-	const [ isSkillSectionVisible, setSkillSectionVisible ] = useState(false);
+	const ref = useRef<HTMLElement>(null)
+	const [isSkillSectionVisible, setSkillSectionVisible] = useState(false)
 
 	useEffect(() => {
 		const handleScroll = () => {
-			if (isSkillSectionVisible) return;
+			if (isSkillSectionVisible) return
 			if (ref.current && window.pageYOffset > ref.current.offsetTop) {
-				setSkillSectionVisible(true);
+				setSkillSectionVisible(true)
 			}
-		};
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, [ isSkillSectionVisible ]);
+		}
+		window.addEventListener('scroll', handleScroll)
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, [isSkillSectionVisible])
 
 	return (
-		<section ref={ref} className="flex min-h-screen items-center justify-center bg-bg py-10 text-font sm:h-screen sm:py-0">
+		<section
+			ref={ref}
+			className="flex min-h-screen items-center justify-center bg-bg py-10 text-font sm:h-screen sm:py-0"
+		>
 			<Fade direction="up" triggerOnce className="w-full">
 				<div className="mx-auto w-[91.6667%] md:w-[83.3333%]">
 					<ResumeSubtitle>{sectionTitle}</ResumeSubtitle>
@@ -68,7 +71,9 @@ function AboutMe() {
 					<div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
 						{technologies.map((tech) => (
 							<div key={tech.title} className="pt-[25px]">
-								<h3 className="my-[18.72px] text-[18.72px] font-bold leading-[normal]">{tech.title}</h3>
+								<h3 className="my-[18.72px] text-[18.72px] font-bold leading-[normal]">
+									{tech.title}
+								</h3>
 								<LinearProgress
 									variant="determinate"
 									value={isSkillSectionVisible ? tech.level : 0}
@@ -91,7 +96,5 @@ function AboutMe() {
 				</div>
 			</Fade>
 		</section>
-	);
+	)
 }
-
-export default AboutMe;

@@ -1,15 +1,22 @@
-import { useContext } from 'react';
-import { AppBar, Toolbar, IconButton, FormControl, MenuItem, Select } from '@mui/material';
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
-import { Fade } from 'react-awesome-reveal';
+import { useContext } from 'react'
+import {
+	AppBar,
+	Toolbar,
+	IconButton,
+	FormControl,
+	MenuItem,
+	Select,
+} from '@mui/material'
+import Brightness4Icon from '@mui/icons-material/Brightness4'
+import Brightness7Icon from '@mui/icons-material/Brightness7'
+import { Fade } from 'react-awesome-reveal'
 
-import { LanguageContext } from './contexts/language.context';
-import { ThemeContext } from './contexts/theme.context';
+import { LanguageContext } from './contexts/language.context'
+import { ThemeContext } from './contexts/theme.context'
 
-function Navbar() {
-	const { isDarkMode, toggleTheme } = useContext(ThemeContext);
-	const { language, changeLanguage } = useContext(LanguageContext);
+export const Navbar = () => {
+	const { isDarkMode, toggleTheme } = useContext(ThemeContext)
+	const { language, changeLanguage } = useContext(LanguageContext)
 
 	return (
 		<AppBar
@@ -33,8 +40,12 @@ function Navbar() {
 							onChange={changeLanguage}
 							SelectDisplayProps={{ 'aria-label': 'Language' }}
 							sx={{
-								'&, & .MuiSelect-iconOutlined': { color: 'var(--color-navbar-icons)' },
-								'& .MuiOutlinedInput-notchedOutline': { borderColor: 'transparent' },
+								'&, & .MuiSelect-iconOutlined': {
+									color: 'var(--color-navbar-icons)',
+								},
+								'& .MuiOutlinedInput-notchedOutline': {
+									borderColor: 'transparent',
+								},
 							}}
 							MenuProps={{
 								slotProps: {
@@ -42,10 +53,11 @@ function Navbar() {
 										sx: {
 											backgroundColor: 'var(--color-bg)',
 											color: 'var(--color-font)',
-											'& .MuiMenuItem-root.Mui-selected, & .MuiMenuItem-root:hover': {
-												backgroundColor: 'var(--color-main) !important',
-												color: 'var(--color-navbar-title-text) !important',
-											},
+											'& .MuiMenuItem-root.Mui-selected, & .MuiMenuItem-root:hover':
+												{
+													backgroundColor: 'var(--color-main) !important',
+													color: 'var(--color-navbar-title-text) !important',
+												},
 										},
 									},
 								},
@@ -55,13 +67,16 @@ function Navbar() {
 							<MenuItem value="es">ES</MenuItem>
 						</Select>
 					</FormControl>
-					<IconButton edge="end" color="inherit" aria-label="Toggle theme" onClick={toggleTheme}>
+					<IconButton
+						edge="end"
+						color="inherit"
+						aria-label="Toggle theme"
+						onClick={toggleTheme}
+					>
 						{isDarkMode ? <Brightness7Icon /> : <Brightness4Icon />}
 					</IconButton>
 				</div>
 			</Toolbar>
 		</AppBar>
-	);
+	)
 }
-
-export default Navbar;

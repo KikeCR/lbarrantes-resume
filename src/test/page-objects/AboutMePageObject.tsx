@@ -1,18 +1,20 @@
-import { screen } from '@testing-library/react';
+import { screen } from '@testing-library/react'
 
-import AboutMe from '../../AboutMe';
-import { renderWithProviders } from '../render';
+import { AboutMe } from '../../AboutMe'
+import { renderWithProviders } from '../render'
 
 export class AboutMePageObject {
 	constructor() {
-		renderWithProviders(<AboutMe />);
+		renderWithProviders(<AboutMe />)
 	}
 
 	get sectionTitle(): string | null {
-		return screen.getByRole('heading', { level: 2 }).textContent;
+		return screen.getByRole('heading', { level: 2 }).textContent
 	}
 
 	get skillTitles(): string[] {
-		return screen.getAllByRole('heading', { level: 3 }).map((el) => el.textContent ?? '');
+		return screen
+			.getAllByRole('heading', { level: 3 })
+			.map((el) => el.textContent ?? '')
 	}
 }
