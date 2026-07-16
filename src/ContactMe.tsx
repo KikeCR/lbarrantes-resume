@@ -4,8 +4,7 @@ import { Fade } from 'react-awesome-reveal'
 
 import { LanguageContext } from './contexts/language.context'
 import { ResumeSubtitle } from './components/ResumeSubtitle'
-
-const CONTACT_EMAIL = 'luis.barrantesv@gmail.com'
+import { CONTACT_LINKS } from './data/contactLinks'
 
 const content = {
 	en: {
@@ -44,7 +43,7 @@ export const ContactMe = () => {
 							<p
 								className="-mt-2 mb-4 leading-normal [&_a]:text-link [&_a]:no-underline"
 								dangerouslySetInnerHTML={{
-									__html: formDescription(CONTACT_EMAIL),
+									__html: formDescription(CONTACT_LINKS.email),
 								}}
 							/>
 						</Fade>

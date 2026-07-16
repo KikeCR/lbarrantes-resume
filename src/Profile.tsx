@@ -9,11 +9,8 @@ import avatar from './images/lbarrantes_avatar.jpg'
 
 import { LanguageContext } from './contexts/language.context'
 import { ContactButton } from './components/ContactButton'
-
-const SOCIAL_LINKS = {
-	linkedIn: 'https://www.linkedin.com/in/luis-enrique-barrantes-8141995b/',
-	github: 'https://github.com/KikeCR',
-} as const
+import { DownloadResumeButton } from './components/DownloadResumeButton'
+import { CONTACT_LINKS } from './data/contactLinks'
 
 const AVATAR_SIZE = 120
 
@@ -74,7 +71,7 @@ export const Profile = () => {
 						/>
 						<div className="mt-3 flex justify-center pl-1 sm:justify-start">
 							<a
-								href={SOCIAL_LINKS.github}
+								href={CONTACT_LINKS.github}
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="GitHub"
@@ -86,7 +83,7 @@ export const Profile = () => {
 								/>
 							</a>
 							<a
-								href={SOCIAL_LINKS.linkedIn}
+								href={CONTACT_LINKS.linkedIn}
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="LinkedIn"
@@ -98,15 +95,19 @@ export const Profile = () => {
 								/>
 							</a>
 						</div>
-						<ContactButton
-							variant="contained"
-							sx={{ mt: 1.5 }}
-							onClick={() => {
-								document.getElementById('contact-me-section')?.scrollIntoView()
-							}}
-						>
-							{contactMeCta}
-						</ContactButton>
+						<div className="mt-1.5 flex flex-wrap justify-center gap-2 sm:justify-start">
+							<ContactButton
+								variant="contained"
+								onClick={() => {
+									document
+										.getElementById('contact-me-section')
+										?.scrollIntoView()
+								}}
+							>
+								{contactMeCta}
+							</ContactButton>
+							<DownloadResumeButton />
+						</div>
 					</div>
 				</div>
 			</Fade>
