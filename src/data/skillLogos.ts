@@ -2,7 +2,7 @@ import type { IconType } from 'react-icons'
 import {
 	SiReact,
 	SiTypescript,
-	SiVite,
+	SiStorybook,
 	SiDjango,
 	SiPython,
 	SiPostgresql,
@@ -20,7 +20,7 @@ export interface SkillLogo {
 export const skillLogos: SkillLogo[] = [
 	{ title: 'React', Icon: SiReact },
 	{ title: 'TypeScript', Icon: SiTypescript },
-	{ title: 'Vite', Icon: SiVite },
+	{ title: 'Design Systems', Icon: SiStorybook },
 	{ title: 'Django', Icon: SiDjango },
 	{ title: 'Python', Icon: SiPython },
 	{ title: 'PostgreSQL', Icon: SiPostgresql },

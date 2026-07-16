@@ -17,6 +17,10 @@ globalThis.ResizeObserver = MockObserver as unknown as typeof ResizeObserver
 // CTA, AboutMe's scroll-triggered skill bars) is missing entirely.
 Element.prototype.scrollIntoView = vi.fn()
 
+// jsdom doesn't implement the Blob URL APIs used by the resume PDF download.
+URL.createObjectURL = vi.fn(() => 'blob:mock-url')
+URL.revokeObjectURL = vi.fn()
+
 afterEach(() => {
 	localStorage.clear()
 })
