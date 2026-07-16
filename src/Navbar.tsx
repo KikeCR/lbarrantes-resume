@@ -37,6 +37,23 @@ function Navbar() {
 								'&, & .MuiSelect-iconOutlined': { color: 'var(--color-navbar-icons)' },
 								'& .MuiOutlinedInput-notchedOutline': { borderColor: 'transparent' },
 							}}
+							MenuProps={{
+								slotProps: {
+									paper: {
+										sx: {
+											backgroundColor: 'var(--color-bg)',
+											color: 'var(--color-font)',
+											// `!important`: MUI auto-focuses the selected MenuItem on open, so it
+											// carries `.Mui-selected.Mui-focusVisible` together — a same-specificity
+											// MUI rule that wins on source order over a plain nested override.
+											'& .MuiMenuItem-root.Mui-selected, & .MuiMenuItem-root:hover': {
+												backgroundColor: 'var(--color-main) !important',
+												color: 'var(--color-navbar-title-text) !important',
+											},
+										},
+									},
+								},
+							}}
 						>
 							<MenuItem value="en">EN</MenuItem>
 							<MenuItem value="es">ES</MenuItem>
