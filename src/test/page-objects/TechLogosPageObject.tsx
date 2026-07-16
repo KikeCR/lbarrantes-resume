@@ -1,18 +1,18 @@
 import { screen } from '@testing-library/react'
 
-import { ContactMe } from '../../ContactMe'
+import { TechLogos } from '../../TechLogos'
 import { renderWithProviders } from '../render'
 
-export class ContactMePageObject {
+export class TechLogosPageObject {
 	constructor() {
-		renderWithProviders(<ContactMe />)
+		renderWithProviders(<TechLogos />)
 	}
 
 	get sectionTitle(): string | null {
 		return screen.getByRole('heading', { level: 2 }).textContent
 	}
 
-	get mailtoHref(): string | null {
-		return screen.getByRole('link').getAttribute('href')
+	hasLogo(title: string): boolean {
+		return screen.queryByText(title) !== null
 	}
 }

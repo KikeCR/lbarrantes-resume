@@ -1,6 +1,6 @@
-import { Button, type ButtonProps } from '@mui/material';
+import { Button, type ButtonProps } from '@mui/material'
 
-export default function ContactButton(props: ButtonProps) {
+export const ContactButton = (props: ButtonProps) => {
 	return (
 		<Button
 			{...props}
@@ -13,5 +13,5 @@ export default function ContactButton(props: ButtonProps) {
 				...props.sx,
 			}}
 		/>
-	);
+	)
 }

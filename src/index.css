@@ -1,26 +1,36 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-	/* Mode-invariant tokens (same value in light and dark). */
-	--color-secondary: #db3a34;
-	--color-navbar-title-text: #fff;
-	--color-navbar-icons: #fff;
-	--color-social-icons: #ffc857;
-	--color-social-icons-hover: #db3a34;
-	--color-bubble-font: #fff;
-	--color-skill-progress-main: #db3a34;
-	--color-skill-progress-secondary: #ffc857;
-	--color-skill-progress-bg: #ededed;
-	--color-timeline-icon: #db3a34;
-	--color-timeline-connector: #db3a34;
-	--color-timeline-text: #fff;
-	--color-timeline-timestamp: #ffc857;
-	--color-button: #db3a34;
-	--color-button-hover: #ffc857;
-	--color-button-text: #fff;
-	--color-link: #db3a34;
+	/* "Minimal & refined" palette: a near-monochrome ink/warm-white base with
+	   a single terracotta accent family (full-strength + a lighter tint for
+	   secondary uses + a darker shade for hover), replacing the old
+	   three-hue teal/red/gold system. */
+	--color-secondary: #c1533d;
+	--color-navbar-title-text: #f5f2ed;
+	--color-navbar-icons: #f5f2ed;
+	--color-social-icons: #d98b76;
+	--color-social-icons-hover: #c1533d;
+	--color-bubble-font: #f5f2ed;
+	--color-skill-progress-main: #c1533d;
+	--color-skill-progress-secondary: #d98b76;
+	--color-skill-progress-bg: #e8e6e1;
+	--color-timeline-icon: #c1533d;
+	--color-timeline-connector: #c1533d;
+	--color-timeline-text: #f5f2ed;
+	--color-timeline-timestamp: #d98b76;
+	--color-button: #c1533d;
+	--color-button-hover: #9c4530;
+	--color-button-text: #f5f2ed;
+	--color-link: #c1533d;
+
+	/* Display font for headings (Newsreader), body font for everything else
+	   (Inter) — loaded in index.html. Referenced from the MUI theme
+	   (src/theme.ts) as well as the native-heading rule below, so both
+	   plain HTML headings and MUI Typography variants pick them up. */
+	--font-display: 'Newsreader', serif;
+	--font-body: 'Inter', sans-serif;
 
 	--spacing-navbar-height: 80px;
 
@@ -32,25 +42,42 @@
 	--breakpoint-md: 900px;
 
 	/* Mode-variant tokens: light-mode default, overridden under .dark below. */
-	--color-main: #084c61;
-	--color-bg: #fafafa;
-	--color-font: #18191a;
-	--color-bubble-bg: #084c61;
-	--color-timeline-bg: #084c61;
-	--color-textfield-bg: #fafafa;
-	--color-textfield-label: #18191a;
-	--color-textfield-border: #177e89;
+	--color-main: #1c1b1a;
+	--color-bg: #faf9f6;
+	--color-font: #1c1b1a;
+	--color-bubble-bg: #1c1b1a;
+	--color-timeline-bg: #1c1b1a;
+	--color-textfield-bg: #faf9f6;
+	--color-textfield-label: #1c1b1a;
+	--color-textfield-border: #c1533d;
 }
 
 .dark {
-	--color-main: #323031;
-	--color-bg: #18191a;
-	--color-font: #fff;
-	--color-bubble-bg: #323031;
-	--color-timeline-bg: #323031;
-	--color-textfield-bg: #323031;
-	--color-textfield-label: #ffffff;
-	--color-textfield-border: #ffc857;
+	--color-main: #262523;
+	--color-bg: #141414;
+	--color-font: #f5f2ed;
+	--color-bubble-bg: #262523;
+	--color-timeline-bg: #262523;
+	--color-textfield-bg: #262523;
+	--color-textfield-label: #f5f2ed;
+	--color-textfield-border: #d98b76;
+}
+
+/* Used by ThinkingIndicator's "AI thinking" dots (NowSection) — a gentle
+   scale + opacity pulse, staggered per-dot via animation-delay, rather than
+   Tailwind's built-in animate-bounce (too large/playful a motion for this
+   otherwise restrained section). */
+@keyframes thinking-dot {
+	0%,
+	80%,
+	100% {
+		transform: scale(0.6);
+		opacity: 0.4;
+	}
+	40% {
+		transform: scale(1);
+		opacity: 1;
+	}
 }
 
 @layer base {
@@ -59,7 +86,15 @@
 	}
 	body {
 		margin: 0;
-		font-family: 'Roboto', sans-serif;
+		font-family: var(--font-body);
 		background-color: var(--color-bg);
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-display);
 	}
 }

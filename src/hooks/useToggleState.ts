@@ -1,10 +1,12 @@
-import useLocalStorageState from './useLocalStorageState';
+import { useLocalStorageState } from './useLocalStorageState'
 
-function useToggle(key: string, initialVal = false): [boolean, () => void] {
-	const [ isToggled, setIsToggled ] = useLocalStorageState(key, initialVal);
+export const useToggleState = (
+	key: string,
+	initialVal = false,
+): [boolean, () => void] => {
+	const [isToggled, setIsToggled] = useLocalStorageState(key, initialVal)
 	const toggle = () => {
-		setIsToggled(!isToggled);
-	};
-	return [ isToggled, toggle ];
+		setIsToggled(!isToggled)
+	}
+	return [isToggled, toggle]
 }
-export default useToggle;

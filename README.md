@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Luis Barrantes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Live site: [lbarrantes.com](https://lbarrantes.com)**
 
-## Available Scripts
+Hi, I'm Luis — an accomplished and proactive full-stack developer, with the confidence and ability to learn and adapt to new technologies with ease. I'm currently a Software Engineer at [Thoropass](https://thoropass.com), and my background spans front-end, back-end, and — most recently — AI agent / LLM tooling work.
 
-In the project directory, you can run:
+I'm always eager to collaborate and work in teams. Outside of code: music and concerts, traveling, photography, the outdoors, dogs, working out, and time with my loved ones.
 
-### `yarn start`
+This repository is the source for my personal site above — a bilingual (EN/ES) resume/portfolio. If you're a recruiter or hiring manager skimming this repo, the sections below cover both who I am and how the site itself is built (the latter doubles as a look at how I approach a real-world codebase: TypeScript throughout, a real test suite, no dead config lying around).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Background
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Now**: Software Engineer at Thoropass (2021–present)
+- **Previously**: Tech Lead / Software Engineer at SweetRush Inc., Front-end Developer at Hangar Worldwide (Critical Mass Latam), Reporting Analyst / Developer at Hewlett-Packard
+- **Education**: Informática Empresarial, Universidad de Costa Rica
 
-### `yarn test`
+Full timeline with dates is on the [Experience section](https://lbarrantes.com/#experience-section) of the live site — kept there rather than duplicated here so it can't drift out of sync.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Skills
 
-### `yarn build`
+Front-end, back-end, and AI agents / LLM tooling are my primary strengths, backed by React, Django/Python, SQL, GraphQL, and PostgreSQL day to day. See the [About Me section](https://lbarrantes.com/#about-me-section) (proficiency bars) and [Tech Stack section](https://lbarrantes.com/#tech-stack-section) (tools & platforms) on the site for the full breakdown.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Get in touch
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Email**: [luis.barrantesv@gmail.com](mailto:luis.barrantesv@gmail.com)
+- **LinkedIn**: [linkedin.com/in/luis-enrique-barrantes-8141995b](https://www.linkedin.com/in/luis-enrique-barrantes-8141995b/)
+- **GitHub**: [github.com/KikeCR](https://github.com/KikeCR)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Or just use the contact form on the live site.
 
-### `yarn eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## About this project
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A from-scratch modernization of a 5-year-old Create React App resume site — rebuilt on a current toolchain, then given a full content and visual refresh. Notable technical decisions:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **[Vite](https://vitejs.dev/)** (not CRA) for the build, with **TypeScript** (`strict: true`, including `noUncheckedIndexedAccess`) across the entire codebase — zero `.js`/`.jsx` files remain.
+- **[MUI v6](https://mui.com/)** for accessible, interactive components (forms, dialogs, the timeline) layered with **[Tailwind CSS v4](https://tailwindcss.com/)** for layout, spacing, and the design-token system (colors and typography flow through CSS custom properties in `src/index.css`, consumed by both Tailwind utility classes and an MUI theme override in `src/theme.ts`).
+- **Bilingual content (EN/ES)** via a small `pickTranslation` utility, with content data split so invariant data (dates, tech names, URLs) lives once, and only genuinely-translated copy is duplicated per language — see `src/data/*.ts`.
+- **[Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/react)**, structured around a **Page Object** pattern (`src/test/page-objects/`) — each component under test gets a small wrapper class exposing semantic methods (`.selectLanguage('es')`, `.submit()`) instead of leaking raw queries into test bodies. EmailJS calls are mocked in the contact-form tests; nothing ever hits the real network.
+- **[Prettier](https://prettier.io/)** (`semi: false`) enforcing a consistent, semicolon-free style.
+- Deployed on **[Netlify](https://www.netlify.com/)** — see `netlify.toml`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Getting started
 
-## Learn More
+```bash
+npm install
+npm run dev        # start the dev server
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Other scripts:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm run build         # production build to dist/
+npm run preview       # serve the production build locally
+npm test               # run the Vitest suite once
+npm run test:watch    # run tests in watch mode
+npm run format         # apply Prettier formatting
+npm run format:check  # check formatting without writing
+```

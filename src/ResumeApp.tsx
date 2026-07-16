@@ -1,23 +1,25 @@
-import Navbar from './Navbar';
-import Profile from './Profile';
-import AboutMe from './AboutMe';
-import Experience from './Experience';
-import ContactMe from './ContactMe';
+import { Navbar } from './Navbar'
+import { Profile } from './Profile'
+import { AboutMe } from './AboutMe'
+import { TechLogos } from './TechLogos'
+import { Experience } from './Experience'
+import { NowSection } from './NowSection'
+import { ContactMe } from './ContactMe'
 
-import { LanguageProvider } from './contexts/language.context';
+import { LanguageProvider } from './contexts/language.context'
 
-function ResumeApp() {
+export const ResumeApp = () => {
 	return (
 		<LanguageProvider>
 			<div className="min-h-screen">
 				<Navbar />
 				<Profile />
 				<AboutMe />
+				<TechLogos />
 				<Experience />
+				<NowSection />
 				<ContactMe />
 			</div>
 		</LanguageProvider>
-	);
+	)
 }
-
-export default ResumeApp;

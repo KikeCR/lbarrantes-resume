@@ -1,20 +1,22 @@
-import { useContext, useState, type FormEvent } from 'react';
-import { Paper, Grid, TextField, Dialog, DialogTitle } from '@mui/material';
-import emailjs from '@emailjs/browser';
+import { useContext, useState, type FormEvent } from 'react'
+import { Paper, Grid, TextField, Dialog, DialogTitle } from '@mui/material'
+import emailjs from '@emailjs/browser'
 
-import useInputState from './hooks/useInputState';
-import { LanguageContext } from './contexts/language.context';
-import ContactButton from './components/ContactButton';
+import { useInputState } from './hooks/useInputState'
+import { LanguageContext } from './contexts/language.context'
+import { ContactButton } from './components/ContactButton'
 
-const EMAILJS_SERVICE_ID = 'service_qd0fz5r';
-const EMAILJS_TEMPLATE_ID = 'template_l1deodu';
-const EMAILJS_PUBLIC_KEY = 'user_3AwNnISOAj3mKfNMzdWpd';
-const RECIPIENT_NAME = 'Kike Barrantes';
+const EMAILJS_SERVICE_ID = 'service_qd0fz5r'
+const EMAILJS_TEMPLATE_ID = 'template_l1deodu'
+const EMAILJS_PUBLIC_KEY = 'user_3AwNnISOAj3mKfNMzdWpd'
+const RECIPIENT_NAME = 'Kike Barrantes'
 
 const textFieldSx = {
 	'& .MuiInputBase-root': { backgroundColor: 'var(--color-textfield-bg)' },
-	'& .MuiInputLabel-outlined, & .MuiOutlinedInput-input': { color: 'var(--color-textfield-label)' },
-};
+	'& .MuiInputLabel-outlined, & .MuiOutlinedInput-input': {
+		color: 'var(--color-textfield-label)',
+	},
+}
 
 const content = {
 	en: {
@@ -37,41 +39,55 @@ const content = {
 		dialogText:
 			"<p>El mensaje fue enviado satisfactoriamente.</p> <p>Gracias por contactarme, estaré en contacto pronto.</p> <p class='signature'>- <span>Luis Barrantes</span></p>",
 	},
-};
+}
 
-function ContactMeForm() {
-	const [ nameValue, handleNameChange, resetName ] = useInputState('');
-	const [ emailValue, handleEmailChange, resetEmail ] = useInputState('');
-	const [ subjectValue, handleSubjectValue, resetSubject ] = useInputState('');
-	const [ messageValue, handleMessageValue, resetMessage ] = useInputState('');
+export const ContactMeForm = () => {
+	const [nameValue, handleNameChange, resetName] = useInputState('')
+	const [emailValue, handleEmailChange, resetEmail] = useInputState('')
+	const [subjectValue, handleSubjectValue, resetSubject] = useInputState('')
+	const [messageValue, handleMessageValue, resetMessage] = useInputState('')
 
-	const [ open, setOpen ] = useState(false);
+	const [open, setOpen] = useState(false)
 
-	const { language } = useContext(LanguageContext);
-	const { nameLabel, emailLabel, subjectLabel, messageLabel, sendButton, dialogTitle, dialogText } =
-		content[language];
+	const { language } = useContext(LanguageContext)
+	const {
+		nameLabel,
+		emailLabel,
+		subjectLabel,
+		messageLabel,
+		sendButton,
+		dialogTitle,
+		dialogText,
+	} = content[language]
 
 	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
+		e.preventDefault()
 
 		const templateParams = {
 			from_name: nameValue + ' (' + emailValue + ')',
 			to_name: RECIPIENT_NAME,
 			message: 'Subject: ' + subjectValue + ' / Message: ' + messageValue,
-		};
+		}
 
-		emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY).then(
-			() => setOpen(true),
-			(err) => console.log('Error:', err),
-		);
+		emailjs
+			.send(
+				EMAILJS_SERVICE_ID,
+				EMAILJS_TEMPLATE_ID,
+				templateParams,
+				EMAILJS_PUBLIC_KEY,
+			)
+			.then(
+				() => setOpen(true),
+				(err) => console.log('Error:', err),
+			)
 
-		resetName();
-		resetEmail();
-		resetSubject();
-		resetMessage();
-	};
+		resetName()
+		resetEmail()
+		resetSubject()
+		resetMessage()
+	}
 
-	const handleClose = () => setOpen(false);
+	const handleClose = () => setOpen(false)
 
 	return (
 		<Paper
@@ -80,10 +96,13 @@ function ContactMeForm() {
 			sx={{
 				backgroundColor: 'transparent',
 				color: 'var(--color-font)',
-				'& .MuiFormLabel-root.Mui-focused': { color: 'var(--color-textfield-border)' },
-				'& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-					borderColor: 'var(--color-textfield-border)',
+				'& .MuiFormLabel-root.Mui-focused': {
+					color: 'var(--color-textfield-border)',
 				},
+				'& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline':
+					{
+						borderColor: 'var(--color-textfield-border)',
+					},
 			}}
 		>
 			<form onSubmit={handleSubmit}>
@@ -165,7 +184,5 @@ function ContactMeForm() {
 				/>
 			</Dialog>
 		</Paper>
-	);
+	)
 }
-
-export default ContactMeForm;
