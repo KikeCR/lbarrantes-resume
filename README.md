@@ -2,7 +2,7 @@
 
 **Live site: [lbarrantes.com](https://lbarrantes.com)**
 
-Hi, I'm Luis — an accomplished and proactive full-stack developer, with the confidence and ability to learn and adapt to new technologies with ease. I'm currently a Software Engineer at [Thoropass](https://thoropass.com), and my background spans front-end, back-end, and — most recently — AI agent / LLM tooling work.
+Hi, I'm Luis, an accomplished and proactive full-stack developer, with the confidence and ability to learn and adapt to new technologies with ease. I'm currently a Software Engineer at [Thoropass](https://thoropass.com), and my background spans front-end, back-end, and — most recently — AI agent / LLM tooling work.
 
 I'm always eager to collaborate and work in teams. Outside of code: music and concerts, traveling, photography, the outdoors, dogs, working out, and time with my loved ones.
 
