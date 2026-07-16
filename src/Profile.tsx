@@ -4,6 +4,7 @@ import ReactTypingEffect from 'react-typing-effect'
 import { Fade } from 'react-awesome-reveal'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
+import MailOutlineIcon from '@mui/icons-material/MailOutline'
 
 import avatar from './images/lbarrantes_avatar.jpg'
 
@@ -25,7 +26,7 @@ const content = {
 			"I'm human.",
 			"I'm not AI.",
 		],
-		contactMeCta: 'Contact me',
+		contactMeCta: 'Contact Me',
 	},
 	es: {
 		description: [
@@ -95,9 +96,23 @@ export const Profile = () => {
 								/>
 							</a>
 						</div>
-						<div className="mt-1.5 flex flex-wrap justify-center gap-2 sm:justify-start">
+						<div className="mt-4 flex flex-col items-center gap-2 sm:items-start">
+							<DownloadResumeButton />
 							<ContactButton
-								variant="contained"
+								variant="outlined"
+								sx={{
+									backgroundColor: 'transparent',
+									color: 'var(--color-button)',
+									borderColor: 'var(--color-button)',
+									textTransform: 'none',
+									minWidth: { xs: 210, sm: 'auto' },
+									'&:hover': {
+										backgroundColor: 'var(--color-button)',
+										color: 'var(--color-button-text)',
+										borderColor: 'var(--color-button)',
+									},
+								}}
+								startIcon={<MailOutlineIcon />}
 								onClick={() => {
 									document
 										.getElementById('contact-me-section')
@@ -106,7 +121,6 @@ export const Profile = () => {
 							>
 								{contactMeCta}
 							</ContactButton>
-							<DownloadResumeButton />
 						</div>
 					</div>
 				</div>

@@ -24,6 +24,6 @@ export class ProfilePageObject {
 	}
 
 	async clickContactMe() {
-		await this.user.click(screen.getByRole('button', { name: 'Contact me' }))
+		await this.user.click(screen.getByRole('button', { name: 'Contact Me' }))
 	}
 }
