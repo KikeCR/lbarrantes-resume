@@ -38,8 +38,6 @@ function Experience() {
 							<Timeline
 								position="alternate"
 								sx={{
-									// Explicit UL margin: previously came from the browser's default
-									// `ul { margin: 1em 0 }`, which Tailwind Preflight (Phase 6e) zeroes out.
 									marginTop: '16px',
 									marginBottom: '16px',
 									'& .MuiTimelineDot-root': { backgroundColor: 'var(--color-timeline-icon)' },

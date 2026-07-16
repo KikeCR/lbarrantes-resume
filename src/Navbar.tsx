@@ -31,6 +31,7 @@ function Navbar() {
 						<Select
 							value={language}
 							onChange={changeLanguage}
+							SelectDisplayProps={{ 'aria-label': 'Language' }}
 							sx={{
 								'&, & .MuiSelect-iconOutlined': { color: 'var(--color-navbar-icons)' },
 								'& .MuiOutlinedInput-notchedOutline': { borderColor: 'transparent' },
@@ -41,9 +42,6 @@ function Navbar() {
 										sx: {
 											backgroundColor: 'var(--color-bg)',
 											color: 'var(--color-font)',
-											// `!important`: MUI auto-focuses the selected MenuItem on open, so it
-											// carries `.Mui-selected.Mui-focusVisible` together — a same-specificity
-											// MUI rule that wins on source order over a plain nested override.
 											'& .MuiMenuItem-root.Mui-selected, & .MuiMenuItem-root:hover': {
 												backgroundColor: 'var(--color-main) !important',
 												color: 'var(--color-navbar-title-text) !important',
@@ -57,7 +55,7 @@ function Navbar() {
 							<MenuItem value="es">ES</MenuItem>
 						</Select>
 					</FormControl>
-					<IconButton edge="end" color="inherit" aria-label="menu" onClick={toggleTheme}>
+					<IconButton edge="end" color="inherit" aria-label="Toggle theme" onClick={toggleTheme}>
 						{isDarkMode ? <Brightness7Icon /> : <Brightness4Icon />}
 					</IconButton>
 				</div>

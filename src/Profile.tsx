@@ -61,6 +61,7 @@ function Profile() {
 								href={SOCIAL_LINKS.github}
 								target="_blank"
 								rel="noopener noreferrer"
+								aria-label="GitHub"
 								className="px-2.5 sm:pr-5 sm:pl-0"
 							>
 								<GitHubIcon className="text-social-icons hover:text-social-icons-hover" sx={{ fontSize: 26 }} />
@@ -69,6 +70,7 @@ function Profile() {
 								href={SOCIAL_LINKS.linkedIn}
 								target="_blank"
 								rel="noopener noreferrer"
+								aria-label="LinkedIn"
 								className="px-2.5 sm:pr-5"
 							>
 								<LinkedInIcon className="text-social-icons hover:text-social-icons-hover" sx={{ fontSize: 26 }} />
