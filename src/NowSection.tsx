@@ -5,6 +5,7 @@ import { pickTranslation } from './utils/pickTranslation'
 
 import { LanguageContext } from './contexts/language.context'
 import { ResumeSubtitle } from './components/ResumeSubtitle'
+import { ThinkingIndicator } from './components/ThinkingIndicator'
 
 const content = {
 	en: {
@@ -32,6 +33,9 @@ export const NowSection = () => {
 						<ResumeSubtitle>{sectionTitle}</ResumeSubtitle>
 					</div>
 					<p className="mt-8 text-lg leading-relaxed">{body}</p>
+					<div className="mt-10">
+						<ThinkingIndicator />
+					</div>
 				</div>
 			</Fade>
 		</section>

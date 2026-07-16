@@ -25,11 +25,11 @@
 	--color-button-text: #f5f2ed;
 	--color-link: #c1533d;
 
-	/* Display font for headings (Fraunces), body font for everything else
+	/* Display font for headings (Newsreader), body font for everything else
 	   (Inter) — loaded in index.html. Referenced from the MUI theme
 	   (src/theme.ts) as well as the native-heading rule below, so both
 	   plain HTML headings and MUI Typography variants pick them up. */
-	--font-display: 'Fraunces', serif;
+	--font-display: 'Newsreader', serif;
 	--font-body: 'Inter', sans-serif;
 
 	--spacing-navbar-height: 80px;
@@ -61,6 +61,23 @@
 	--color-textfield-bg: #262523;
 	--color-textfield-label: #f5f2ed;
 	--color-textfield-border: #d98b76;
+}
+
+/* Used by ThinkingIndicator's "AI thinking" dots (NowSection) — a gentle
+   scale + opacity pulse, staggered per-dot via animation-delay, rather than
+   Tailwind's built-in animate-bounce (too large/playful a motion for this
+   otherwise restrained section). */
+@keyframes thinking-dot {
+	0%,
+	80%,
+	100% {
+		transform: scale(0.6);
+		opacity: 0.4;
+	}
+	40% {
+		transform: scale(1);
+		opacity: 1;
+	}
 }
 
 @layer base {
