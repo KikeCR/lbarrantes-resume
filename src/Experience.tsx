@@ -53,8 +53,8 @@ export const Experience = () => {
 									'@media (max-width: 599px)': {
 										'& .MuiTimelineItem-positionAlternate:nth-of-type(even)': {
 											flexDirection: 'initial',
-											'& .MuiTimelineItem-content': { textAlign: 'left' },
-											'& .MuiTimelineItem-oppositeContent': {
+											'& .MuiTimelineContent-root': { textAlign: 'left' },
+											'& .MuiTimelineOppositeContent-root': {
 												textAlign: 'right',
 											},
 										},
@@ -63,7 +63,7 @@ export const Experience = () => {
 											padding: '0 10px 0 0',
 										},
 										'& .MuiTimelineSeparator-root': { minWidth: '10%' },
-										'& .MuiTimelineItem-content': { minWidth: '50%' },
+										'& .MuiTimelineContent-root': { minWidth: '50%' },
 									},
 								}}
 							>
