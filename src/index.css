@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	/* Mode-invariant tokens (same value in light and dark). */
+	--color-secondary: #db3a34;
+	--color-navbar-title-text: #fff;
+	--color-navbar-icons: #fff;
+	--color-social-icons: #ffc857;
+	--color-social-icons-hover: #db3a34;
+	--color-bubble-font: #fff;
+	--color-skill-progress-main: #db3a34;
+	--color-skill-progress-secondary: #ffc857;
+	--color-skill-progress-bg: #ededed;
+	--color-timeline-icon: #db3a34;
+	--color-timeline-connector: #db3a34;
+	--color-timeline-text: #fff;
+	--color-timeline-timestamp: #ffc857;
+	--color-button: #db3a34;
+	--color-button-hover: #ffc857;
+	--color-button-text: #fff;
+	--color-link: #db3a34;
+
+	--spacing-navbar-height: 80px;
+
+	/* Matches MUI's default breakpoints (600px/900px), used throughout the
+	   not-yet-converted MUI Grid components and the codebase's existing
+	   `@media (max-width: 599px)` queries, for exact parity during the
+	   transition instead of Tailwind's defaults (640px/768px). */
+	--breakpoint-sm: 600px;
+	--breakpoint-md: 900px;
+
+	/* Mode-variant tokens: light-mode default, overridden under .dark below. */
+	--color-main: #084c61;
+	--color-bg: #fafafa;
+	--color-font: #18191a;
+	--color-bubble-bg: #084c61;
+	--color-timeline-bg: #084c61;
+	--color-textfield-bg: #fafafa;
+	--color-textfield-label: #18191a;
+	--color-textfield-border: #177e89;
+}
+
+.dark {
+	--color-main: #323031;
+	--color-bg: #18191a;
+	--color-font: #fff;
+	--color-bubble-bg: #323031;
+	--color-timeline-bg: #323031;
+	--color-textfield-bg: #323031;
+	--color-textfield-label: #ffffff;
+	--color-textfield-border: #ffc857;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+	body {
+		margin: 0;
+		font-family: 'Roboto', sans-serif;
+		background-color: var(--color-bg);
+	}
+}
