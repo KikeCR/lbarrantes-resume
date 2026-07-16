@@ -13,9 +13,6 @@
 	--color-social-icons: #d98b76;
 	--color-social-icons-hover: #c1533d;
 	--color-bubble-font: #f5f2ed;
-	--color-skill-progress-main: #c1533d;
-	--color-skill-progress-secondary: #d98b76;
-	--color-skill-progress-bg: #e8e6e1;
 	--color-timeline-icon: #c1533d;
 	--color-timeline-connector: #c1533d;
 	--color-timeline-text: #f5f2ed;
@@ -77,6 +74,47 @@
 	40% {
 		transform: scale(1);
 		opacity: 1;
+	}
+}
+
+/* TechLogos' marquee divider between the front-end and back-end grids: each
+   row's logo list is repeated back-to-back (see MARQUEE_COPIES in
+   TechLogos.tsx) and translated by exactly one copy's width — passed in as
+   --marquee-offset so the JS copy count and this loop distance can't drift
+   out of sync — so the loop point is invisible. The two rows run opposite
+   directions to read as one deliberate motion. */
+@keyframes marquee-left {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(var(--marquee-offset, -50%));
+	}
+}
+@keyframes marquee-right {
+	from {
+		transform: translateX(var(--marquee-offset, -50%));
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+.marquee-track {
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+.marquee-track--left {
+	animation-name: marquee-left;
+}
+.marquee-track--right {
+	animation-name: marquee-right;
+}
+.marquee-track:hover {
+	animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+	.marquee-track {
+		animation: none;
 	}
 }
 

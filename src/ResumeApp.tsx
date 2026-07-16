@@ -5,6 +5,7 @@ import { TechLogos } from './TechLogos'
 import { Experience } from './Experience'
 import { NowSection } from './NowSection'
 import { ContactMe } from './ContactMe'
+import { Footer } from './Footer'
 
 import { LanguageProvider } from './contexts/language.context'
 
@@ -19,6 +20,7 @@ export const ResumeApp = () => {
 				<Experience />
 				<NowSection />
 				<ContactMe />
+				<Footer />
 			</div>
 		</LanguageProvider>
 	)

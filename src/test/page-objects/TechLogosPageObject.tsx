@@ -13,6 +13,6 @@ export class TechLogosPageObject {
 	}
 
 	hasLogo(title: string): boolean {
-		return screen.queryByText(title) !== null
+		return screen.queryAllByText(title).length > 0
 	}
 }

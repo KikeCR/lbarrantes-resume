@@ -11,7 +11,13 @@ const labels = {
 	es: { idle: 'Descargar CV', generating: 'Generando…' },
 }
 
-export const DownloadResumeButton = () => {
+interface DownloadResumeButtonProps {
+	variant?: 'button' | 'icon'
+}
+
+export const DownloadResumeButton = ({
+	variant = 'button',
+}: DownloadResumeButtonProps) => {
 	const { language } = useContext(LanguageContext)
 	const [isGenerating, setIsGenerating] = useState(false)
 	const { idle, generating } = labels[language]
@@ -23,6 +29,24 @@ export const DownloadResumeButton = () => {
 		} finally {
 			setIsGenerating(false)
 		}
+	}
+
+	if (variant === 'icon') {
+		return (
+			<button
+				type="button"
+				aria-label={isGenerating ? generating : idle}
+				disabled={isGenerating}
+				onClick={handleClick}
+				className="cursor-pointer text-social-icons hover:text-social-icons-hover disabled:cursor-default disabled:opacity-50"
+			>
+				{isGenerating ? (
+					<CircularProgress size={22} color="inherit" />
+				) : (
+					<PictureAsPdfIcon sx={{ fontSize: 22 }} />
+				)}
+			</button>
+		)
 	}
 
 	return (

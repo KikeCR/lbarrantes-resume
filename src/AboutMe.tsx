@@ -1,9 +1,8 @@
-import { useContext, useState, useEffect, useRef } from 'react'
-import { Avatar, LinearProgress } from '@mui/material'
+import { useContext } from 'react'
+import { Avatar } from '@mui/material'
 import { Fade } from 'react-awesome-reveal'
 
 import avatar from './images/lbarrantes_avatar.jpg'
-import { technologies } from './data/technologies'
 import { pickTranslation } from './utils/pickTranslation'
 
 import { LanguageContext } from './contexts/language.context'
@@ -28,23 +27,8 @@ export const AboutMe = () => {
 	const { language } = useContext(LanguageContext)
 	const { sectionTitle, myDescription } = pickTranslation(content, language)
 
-	const ref = useRef<HTMLElement>(null)
-	const [isSkillSectionVisible, setSkillSectionVisible] = useState(false)
-
-	useEffect(() => {
-		const handleScroll = () => {
-			if (isSkillSectionVisible) return
-			if (ref.current && window.pageYOffset > ref.current.offsetTop) {
-				setSkillSectionVisible(true)
-			}
-		}
-		window.addEventListener('scroll', handleScroll)
-		return () => window.removeEventListener('scroll', handleScroll)
-	}, [isSkillSectionVisible])
-
 	return (
 		<section
-			ref={ref}
 			id="about-me-section"
 			className="flex min-h-screen items-center justify-center bg-bg py-10 text-font sm:h-screen sm:py-0"
 		>
@@ -68,31 +52,6 @@ export const AboutMe = () => {
 								sx={{ width: AVATAR_SIZE, height: AVATAR_SIZE }}
 							/>
 						</div>
-					</div>
-					<div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
-						{technologies.map((tech) => (
-							<div key={tech.title} className="pt-[25px]">
-								<h3 className="my-[18.72px] text-[18.72px] font-bold leading-[normal]">
-									{tech.title}
-								</h3>
-								<LinearProgress
-									variant="determinate"
-									value={isSkillSectionVisible ? tech.level : 0}
-									sx={{
-										height: 12,
-										borderRadius: '5px',
-										backgroundColor: 'var(--color-skill-progress-bg)',
-										'& .MuiLinearProgress-bar': {
-											backgroundColor:
-												tech.category === 'main'
-													? 'var(--color-skill-progress-main)'
-													: 'var(--color-skill-progress-secondary)',
-											transition: 'all 1s',
-										},
-									}}
-								/>
-							</div>
-						))}
 					</div>
 				</div>
 			</Fade>
