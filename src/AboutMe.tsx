@@ -15,12 +15,12 @@ const content = {
 	en: {
 		sectionTitle: 'Who is Luis Barrantes?',
 		myDescription:
-			"<p>I'm Luis Barrantes, an accomplished and proactive full-stack developer, with the confidence and ability to learn and adapt to new technologies with ease. Working towards improving my skills everyday, including softskills. Always eager to collaborate and work in teams.</p><p>Love music and concerts, traveling, photography, outdoors, dogs, working out and hanging out with my loved ones.</p>",
+			"<p>I'm Luis Barrantes, a full-stack developer with a track record thriving in startups and other fast-paced environments, where priorities shift quickly and ownership matters. I'm proactive by nature. I look for problems before they become blockers, take initiative without waiting to be asked, and follow through on what I commit to. I put as much care into communication as I do into code: keeping my team and stakeholders in the loop, asking the right questions early, and making sure technical decisions are understood by everyone involved. Always eager to collaborate, adapt to new technologies, and keep growing both my technical and soft skills.</p><p>Love music and concerts, traveling, photography, outdoors, dogs, working out and hanging out with my loved ones.</p>",
 	},
 	es: {
 		sectionTitle: '¿Quién es Luis Barrantes?',
 		myDescription:
-			'<p>Soy Luis Barrantes, full-stack developer experimentado, proactivo, adaptable y con facilidad de aprender nuevos lenguajes y tecnologías, trabajando en mejorar mis "skills" cada día, incluyendo los "softskills". Siempre dispuesto a colaborar y trabajar en equipo.</p><p>Me apasiona la música y los conciertos, viajar, la fotografía, los perros, el aire libre, hacer ejercicio y pasar el tiempo con mis seres queridos.</p>',
+			'<p>Soy Luis Barrantes, full-stack developer con experiencia trabajando en startups y otros entornos de ritmo acelerado, donde las prioridades cambian rápido y la responsabilidad personal es clave. Soy proactivo por naturaleza: identifico problemas antes de que se conviertan en obstáculos, tomo la iniciativa sin esperar a que me lo pidan, y cumplo con lo que me comprometo a hacer. Le doy tanta importancia a la comunicación como al código: mantengo a mi equipo y a los stakeholders informados, hago las preguntas correctas a tiempo, y me aseguro de que las decisiones técnicas se entiendan por todos los involucrados. Siempre dispuesto a colaborar, adaptarme a nuevas tecnologías y seguir creciendo tanto en mis habilidades técnicas como blandas.</p><p>Me apasiona la música y los conciertos, viajar, la fotografía, los perros, el aire libre, hacer ejercicio y pasar el tiempo con mis seres queridos.</p>',
 	},
 }
 
@@ -45,6 +45,7 @@ export const AboutMe = () => {
 	return (
 		<section
 			ref={ref}
+			id="about-me-section"
 			className="flex min-h-screen items-center justify-center bg-bg py-10 text-font sm:h-screen sm:py-0"
 		>
 			<Fade direction="up" triggerOnce className="w-full">

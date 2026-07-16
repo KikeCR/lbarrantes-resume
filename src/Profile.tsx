@@ -49,7 +49,10 @@ export const Profile = () => {
 	const { description, contactMeCta } = content[language]
 
 	return (
-		<section className="flex min-h-screen items-center justify-center bg-bg py-10 text-font sm:h-screen sm:py-0">
+		<section
+			id="profile-section"
+			className="flex min-h-screen items-center justify-center bg-bg py-10 text-font sm:h-screen sm:py-0"
+		>
 			<Fade direction="up" triggerOnce className="w-full">
 				<div className="flex flex-wrap justify-center">
 					<div className="w-[91.6667%] sm:w-[41.6667%]">

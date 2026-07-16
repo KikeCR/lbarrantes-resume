@@ -30,9 +30,17 @@ export const Navbar = () => {
 		>
 			<Toolbar>
 				<Fade duration={FADE_DURATION_SLOW} triggerOnce>
-					<div className="px-5 text-lg font-bold tracking-wide">
+					<a
+						href="/"
+						aria-label="Home"
+						onClick={(e) => {
+							e.preventDefault()
+							window.scrollTo({ top: 0, behavior: 'smooth' })
+						}}
+						className="block px-5 text-lg font-bold tracking-wide no-underline"
+					>
 						lbarrantes<span className="text-secondary">.</span>
-					</div>
+					</a>
 				</Fade>
 				<div className="order-2 ml-auto flex">
 					<FormControl variant="outlined">

@@ -30,7 +30,10 @@ export const Experience = () => {
 	const { sectionTitle } = pickTranslation(content, language)
 
 	return (
-		<section className="flex min-h-screen items-center justify-center bg-bg py-10 text-font sm:h-screen sm:py-0">
+		<section
+			id="experience-section"
+			className="flex min-h-screen items-center justify-center bg-bg py-10 text-font sm:h-screen sm:py-0"
+		>
 			<Fade direction="up" triggerOnce className="w-full">
 				<div className="mx-auto w-[91.6667%] md:w-[83.3333%]">
 					<ResumeSubtitle>{sectionTitle}</ResumeSubtitle>
