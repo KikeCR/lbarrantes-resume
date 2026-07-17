@@ -1,1 +1,2 @@
+/password-generator    /password-generator/    301
 /password-generator/*    https://lb-pass-generator.netlify.app/:splat   200
