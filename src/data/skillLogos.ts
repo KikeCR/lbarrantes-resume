@@ -5,6 +5,7 @@ import {
 	SiTailwindcss,
 	SiStorybook,
 	SiMui,
+	SiChakraui,
 	SiVite,
 	SiDjango,
 	SiPython,
@@ -18,6 +19,8 @@ export interface SkillLogo {
 	title: string
 	Icon: IconType
 	category: 'frontend' | 'backend'
+	/** Set to false to keep a skill out of the grid and show it only in the marquee. */
+	showInGrid?: boolean
 }
 
 export const skillLogos: SkillLogo[] = [
@@ -26,6 +29,7 @@ export const skillLogos: SkillLogo[] = [
 	{ title: 'Tailwind', Icon: SiTailwindcss, category: 'frontend' },
 	{ title: 'Design Systems', Icon: SiStorybook, category: 'frontend' },
 	{ title: 'Material UI', Icon: SiMui, category: 'frontend' },
+	{ title: 'Chakra UI', Icon: SiChakraui, category: 'frontend', showInGrid: false },
 	{ title: 'Vite', Icon: SiVite, category: 'frontend' },
 	{ title: 'Django', Icon: SiDjango, category: 'backend' },
 	{ title: 'Python', Icon: SiPython, category: 'backend' },

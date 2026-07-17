@@ -20,8 +20,12 @@ const content = {
 	},
 }
 
-const frontendLogos = skillLogos.filter((logo) => logo.category === 'frontend')
-const backendLogos = skillLogos.filter((logo) => logo.category === 'backend')
+const frontendLogos = skillLogos.filter(
+	(logo) => logo.category === 'frontend' && logo.showInGrid !== false,
+)
+const backendLogos = skillLogos.filter(
+	(logo) => logo.category === 'backend' && logo.showInGrid !== false,
+)
 const reversedSkillLogos = [...skillLogos].reverse()
 
 const MARQUEE_DURATION_SECONDS = 36
