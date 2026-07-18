@@ -18,12 +18,9 @@ export interface ResumeLocaleContent {
 	skillsLabel: string
 }
 
-// NOTE: bullets below are draft placeholders inferred from the site's bio/skills,
-// not verified accomplishments. Replace with real, specific achievements before
-// using this PDF in an actual job application.
 export const resumeContent: Record<'en' | 'es', ResumeLocaleContent> = {
 	en: {
-		headline: 'Full-Stack Software Engineer',
+		headline: 'Full-Stack Engineer | Proficient in AI & LLM Tooling',
 		summary:
 			'Full-stack developer with a track record thriving in startups and other fast-paced environments. Proactive and communication-focused, comfortable owning problems end to end across front-end, back-end, and now AI-assisted tooling.',
 		experienceLabel: 'Experience',
@@ -33,7 +30,7 @@ export const resumeContent: Record<'en' | 'es', ResumeLocaleContent> = {
 			{
 				experienceId: 'thoropass',
 				bullets: [
-					'Built and maintained full-stack features using React, TypeScript, and Python/Django in a fast-paced startup environment.',
+					'Delivered full-stack features end to end, from scoping through production, using React, TypeScript, and Python/Django.',
 					'Explored and integrated AI agents and LLM tooling into day-to-day engineering workflows.',
 					'Collaborated closely with cross-functional stakeholders, keeping technical decisions understood across the team.',
 				],
@@ -56,8 +53,8 @@ export const resumeContent: Record<'en' | 'es', ResumeLocaleContent> = {
 			{
 				experienceId: 'hp',
 				bullets: [
-					'Developed and maintained reporting tools as a Reporting Analyst / Developer.',
-					'Worked with SQL and data pipelines to support business reporting needs.',
+					'Created automated reporting tools that reduced report generation time by up to 90%.',
+					'Built SQL-based data pipelines to support business reporting needs.',
 				],
 			},
 		],
@@ -94,7 +91,7 @@ export const resumeContent: Record<'en' | 'es', ResumeLocaleContent> = {
 		],
 	},
 	es: {
-		headline: 'Ingeniero de Software Full-Stack',
+		headline: 'Ingeniero Full-Stack | Dominio de Herramientas de IA y LLM',
 		summary:
 			'Desarrollador full-stack con experiencia trabajando en startups y otros entornos de ritmo acelerado. Proactivo y enfocado en la comunicación, cómodo haciéndose cargo de problemas de principio a fin en front-end, back-end y, más recientemente, herramientas de IA.',
 		experienceLabel: 'Experiencia',
@@ -104,7 +101,7 @@ export const resumeContent: Record<'en' | 'es', ResumeLocaleContent> = {
 			{
 				experienceId: 'thoropass',
 				bullets: [
-					'Construcción y mantenimiento de funcionalidades full-stack con React, TypeScript y Python/Django en un entorno de startup de ritmo acelerado.',
+					'Entrega de funcionalidades full-stack de principio a fin, desde el diseño hasta producción, usando React, TypeScript y Python/Django.',
 					'Exploración e integración de agentes de IA y herramientas LLM en el flujo de trabajo diario de ingeniería.',
 					'Colaboración cercana con stakeholders multifuncionales, asegurando que las decisiones técnicas se entendieran en todo el equipo.',
 				],
@@ -127,8 +124,8 @@ export const resumeContent: Record<'en' | 'es', ResumeLocaleContent> = {
 			{
 				experienceId: 'hp',
 				bullets: [
-					'Desarrollo y mantenimiento de herramientas de reportería como Reporting Analyst / Developer.',
-					'Trabajo con SQL y pipelines de datos para necesidades de reportería del negocio.',
+					'Creación de herramientas de reportería automatizadas que redujeron el tiempo de generación de reportes hasta en un 90%.',
+					'Construcción de pipelines de datos basados en SQL para necesidades de reportería del negocio.',
 				],
 			},
 		],

@@ -12,7 +12,7 @@ describe('Profile', () => {
 		const profile = new ProfilePageObject()
 		expect(profile.githubHref).toBe('https://github.com/KikeCR')
 		expect(profile.linkedInHref).toBe(
-			'https://www.linkedin.com/in/luis-enrique-barrantes-8141995b/',
+			'https://www.linkedin.com/in/luis-enrique-barrantes/',
 		)
 	})
 
