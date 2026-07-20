@@ -15,6 +15,8 @@ import {
 	SiGit,
 } from 'react-icons/si'
 
+import { SiPlaywright } from './playwrightIcon'
+
 export interface SkillLogo {
 	title: string
 	Icon: IconType
@@ -29,7 +31,12 @@ export const skillLogos: SkillLogo[] = [
 	{ title: 'Tailwind', Icon: SiTailwindcss, category: 'frontend' },
 	{ title: 'Design Systems', Icon: SiStorybook, category: 'frontend' },
 	{ title: 'Material UI', Icon: SiMui, category: 'frontend' },
-	{ title: 'Chakra UI', Icon: SiChakraui, category: 'frontend', showInGrid: false },
+	{
+		title: 'Chakra UI',
+		Icon: SiChakraui,
+		category: 'frontend',
+		showInGrid: false,
+	},
 	{ title: 'Vite', Icon: SiVite, category: 'frontend' },
 	{ title: 'Django', Icon: SiDjango, category: 'backend' },
 	{ title: 'Python', Icon: SiPython, category: 'backend' },
@@ -37,4 +44,10 @@ export const skillLogos: SkillLogo[] = [
 	{ title: 'GraphQL', Icon: SiGraphql, category: 'backend' },
 	{ title: 'LLM Tooling', Icon: SiAnthropic, category: 'backend' },
 	{ title: 'Git', Icon: SiGit, category: 'backend' },
+	{
+		title: 'Playwright',
+		Icon: SiPlaywright,
+		category: 'backend',
+		showInGrid: false,
+	},
 ]

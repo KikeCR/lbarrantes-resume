@@ -61,14 +61,7 @@ export const resumeContent: Record<'en' | 'es', ResumeLocaleContent> = {
 		skillGroups: [
 			{
 				heading: 'Front-end',
-				items: [
-					'React',
-					'TypeScript',
-					'HTML',
-					'CSS',
-					'Vanilla JS',
-					'Vite',
-				],
+				items: ['React', 'TypeScript', 'HTML', 'CSS', 'Vanilla JS', 'Vite'],
 			},
 			{
 				heading: 'Design Systems',
@@ -85,6 +78,7 @@ export const resumeContent: Record<'en' | 'es', ResumeLocaleContent> = {
 					'SQL',
 					'pytest',
 					'React Testing Library',
+					'Playwright',
 					'AI Agents / LLM Tooling',
 				],
 			},
@@ -156,6 +150,7 @@ export const resumeContent: Record<'en' | 'es', ResumeLocaleContent> = {
 					'SQL',
 					'pytest',
 					'React Testing Library',
+					'Playwright',
 					'Agentes de IA / Herramientas LLM',
 				],
 			},
