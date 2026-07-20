@@ -7,12 +7,17 @@
 
 # testing
 /coverage
+/test-results
+/playwright-report
+/playwright/.cache
+/blob-report
 
 # production
 /build
 /dist
 
 # misc
+*.tsbuildinfo
 .DS_Store
 .env.local
 .env.development.local
