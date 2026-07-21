@@ -3,7 +3,7 @@ import {
 	SiReact,
 	SiTypescript,
 	SiTailwindcss,
-	SiStorybook,
+	SiRadixui,
 	SiMui,
 	SiChakraui,
 	SiVite,
@@ -29,7 +29,7 @@ export const skillLogos: SkillLogo[] = [
 	{ title: 'React', Icon: SiReact, category: 'frontend' },
 	{ title: 'TypeScript', Icon: SiTypescript, category: 'frontend' },
 	{ title: 'Tailwind', Icon: SiTailwindcss, category: 'frontend' },
-	{ title: 'Design Systems', Icon: SiStorybook, category: 'frontend' },
+	{ title: 'Radix UI', Icon: SiRadixui, category: 'frontend' },
 	{ title: 'Material UI', Icon: SiMui, category: 'frontend' },
 	{
 		title: 'Chakra UI',
