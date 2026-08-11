@@ -12,6 +12,7 @@ export class HomePage {
 			profile: page.locator(`#${SECTION_IDS.profile}`),
 			aboutMe: page.locator(`#${SECTION_IDS.aboutMe}`),
 			techStack: page.locator(`#${SECTION_IDS.techStack}`),
+			portfolio: page.locator(`#${SECTION_IDS.portfolio}`),
 			experience: page.locator(`#${SECTION_IDS.experience}`),
 			now: page.locator(`#${SECTION_IDS.now}`),
 			contactMe: page.locator(`#${SECTION_IDS.contactMe}`),

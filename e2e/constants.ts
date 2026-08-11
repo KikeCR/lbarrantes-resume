@@ -13,6 +13,7 @@ export const SECTION_IDS = {
 	profile: 'profile-section',
 	aboutMe: 'about-me-section',
 	techStack: 'tech-stack-section',
+	portfolio: 'portfolio-section',
 	experience: 'experience-section',
 	now: 'now-section',
 	contactMe: 'contact-me-section',

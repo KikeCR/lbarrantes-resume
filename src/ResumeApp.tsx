@@ -2,6 +2,7 @@ import { Navbar } from './Navbar'
 import { Profile } from './Profile'
 import { AboutMe } from './AboutMe'
 import { TechLogos } from './TechLogos'
+import { Portfolio } from './Portfolio'
 import { Experience } from './Experience'
 import { NowSection } from './NowSection'
 import { ContactMe } from './ContactMe'
@@ -17,6 +18,7 @@ export const ResumeApp = () => {
 				<Profile />
 				<AboutMe />
 				<TechLogos />
+				<Portfolio />
 				<Experience />
 				<NowSection />
 				<ContactMe />
