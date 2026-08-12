@@ -61,7 +61,15 @@ export const resumeContent: Record<'en' | 'es', ResumeLocaleContent> = {
 		skillGroups: [
 			{
 				heading: 'Front-end',
-				items: ['React', 'TypeScript', 'HTML', 'CSS', 'Vanilla JS', 'Vite'],
+				items: [
+					'React',
+					'Next.js',
+					'TypeScript',
+					'HTML',
+					'CSS',
+					'Vanilla JS',
+					'Vite',
+				],
 			},
 			{
 				heading: 'Design Systems',
@@ -69,7 +77,17 @@ export const resumeContent: Record<'en' | 'es', ResumeLocaleContent> = {
 			},
 			{
 				heading: 'Back-end',
-				items: ['Python', 'Django', 'GraphQL', 'PostgreSQL'],
+				items: [
+					'Python',
+					'Django',
+					'Node.js',
+					'Express',
+					'GraphQL',
+					'PostgreSQL',
+					'Prisma',
+					'Redis',
+					'Socket.IO',
+				],
 			},
 			{
 				heading: 'Tools & Other',
@@ -128,6 +146,7 @@ export const resumeContent: Record<'en' | 'es', ResumeLocaleContent> = {
 				heading: 'Front-end',
 				items: [
 					'React',
+					'Next.js',
 					'TypeScript',
 					'HTML',
 					'CSS',
@@ -141,7 +160,17 @@ export const resumeContent: Record<'en' | 'es', ResumeLocaleContent> = {
 			},
 			{
 				heading: 'Back-end',
-				items: ['Python', 'Django', 'GraphQL', 'PostgreSQL'],
+				items: [
+					'Python',
+					'Django',
+					'Node.js',
+					'Express',
+					'GraphQL',
+					'PostgreSQL',
+					'Prisma',
+					'Redis',
+					'Socket.IO',
+				],
 			},
 			{
 				heading: 'Herramientas y Otros',
