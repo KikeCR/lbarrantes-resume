@@ -57,6 +57,7 @@ export const portfolioProjects: PortfolioProject[] = [
 		name: 'Barrio Kits',
 		liveUrl: 'https://barriokits.dev',
 		liveLabel: 'barriokits.dev',
+		githubUrl: 'https://github.com/KikeCR/barriokits-landing',
 		tech: [
 			{ title: 'Next.js', Icon: SiNextdotjs },
 			{ title: 'React', Icon: SiReact },
