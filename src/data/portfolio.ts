@@ -8,6 +8,9 @@ import {
 	SiPostgresql,
 	SiRedis,
 	SiTypescript,
+	SiReact,
+	SiTailwindcss,
+	SiFramer,
 } from 'react-icons/si'
 
 export interface PortfolioProject {
@@ -47,6 +50,19 @@ export const portfolioProjects: PortfolioProject[] = [
 			{ title: 'PostgreSQL', Icon: SiPostgresql },
 			{ title: 'Redis', Icon: SiRedis },
 			{ title: 'Socket.IO', Icon: SiSocketdotio },
+		],
+	},
+	{
+		id: 'barriokits',
+		name: 'Barrio Kits',
+		liveUrl: 'https://barriokits.dev',
+		liveLabel: 'barriokits.dev',
+		tech: [
+			{ title: 'Next.js', Icon: SiNextdotjs },
+			{ title: 'React', Icon: SiReact },
+			{ title: 'TypeScript', Icon: SiTypescript },
+			{ title: 'Tailwind', Icon: SiTailwindcss },
+			{ title: 'Framer Motion', Icon: SiFramer },
 		],
 	},
 ]

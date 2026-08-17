@@ -9,7 +9,11 @@ import { pickTranslation } from './utils/pickTranslation'
 
 import { LanguageContext } from './contexts/language.context'
 import { ResumeSubtitle } from './components/ResumeSubtitle'
-import { CueBallMark, SleevesideMark } from './components/ProjectMarks'
+import {
+	CueBallMark,
+	SleevesideMark,
+	BarrioKitsMark,
+} from './components/ProjectMarks'
 
 const content = {
 	en: {
@@ -21,12 +25,15 @@ const content = {
 		taglines: {
 			cueball: 'Real-time · WebSockets',
 			sleeveside: 'Social · Discogs API',
+			barriokits: 'Boilerplates · Templates',
 		} as Record<string, string>,
 		descriptions: {
 			cueball:
 				'A shared watch-party queue for YouTube. Everyone in the room adds videos and votes live, with the queue synced in real time and played on a TV either through a real YouTube playlist or direct casting via the Lounge API.',
 			sleeveside:
 				'A multi-user vinyl collection tracker with a visual cover-art wall, condition grading, and play logs, plus a social layer and one-click jumps to Spotify and Apple Music to actually listen.',
+			barriokits:
+				'A storefront for developer boilerplate starters, code templates, Notion systems, and Canva templates, built to help you start your next project from a real foundation instead of a blank file.',
 		} as Record<string, string>,
 	},
 	es: {
@@ -38,12 +45,15 @@ const content = {
 		taglines: {
 			cueball: 'Tiempo real · WebSockets',
 			sleeveside: 'Social · API de Discogs',
+			barriokits: 'Boilerplates · Plantillas',
 		} as Record<string, string>,
 		descriptions: {
 			cueball:
 				'Una cola compartida de reproducción para YouTube: cualquiera en la sala agrega videos y vota en tiempo real, con la cola sincronizada al instante y reproducida en un TV mediante una playlist real de YouTube o transmisión directa vía la API de Lounge.',
 			sleeveside:
 				'Un rastreador de colecciones de vinilos multiusuario con un muro visual de portadas, calificación de condición, historial de reproducciones y una capa social, además de enlaces directos a Spotify y Apple Music para escuchar al instante.',
+			barriokits:
+				'Una tienda de boilerplates para desarrolladores, plantillas de código, sistemas de Notion y plantillas de Canva, pensada para empezar tu próximo proyecto desde una base real en lugar de un archivo en blanco.',
 		} as Record<string, string>,
 	},
 }
@@ -51,6 +61,7 @@ const content = {
 const projectMarks: Record<string, ReactNode> = {
 	cueball: <CueBallMark />,
 	sleeveside: <SleevesideMark />,
+	barriokits: <BarrioKitsMark />,
 }
 
 export const Portfolio = () => {
