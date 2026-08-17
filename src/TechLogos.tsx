@@ -68,7 +68,7 @@ interface TechLogoGroupProps {
 
 const TechLogoGroup = ({ label, logos }: TechLogoGroupProps) => (
 	<div className="mt-8">
-		<h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-font/60">
+		<h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-muted">
 			<span className="h-1.5 w-1.5 rounded-full bg-secondary" />
 			{label}
 		</h3>
@@ -76,10 +76,14 @@ const TechLogoGroup = ({ label, logos }: TechLogoGroupProps) => (
 			{logos.map(({ title, Icon }) => (
 				<div
 					key={title}
-					className="flex flex-col items-center gap-4 rounded-2xl border border-font/10 py-10 text-center transition-colors hover:border-link/40 hover:text-link lg:py-14"
+					className="group flex flex-col items-center gap-4 rounded-card border border-font/10 py-10 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-secondary/50 lg:py-14"
 				>
-					<Icon className="text-4xl lg:text-5xl" />
-					<span className="text-sm font-medium lg:text-base">{title}</span>
+					<span className="flex h-14 w-14 items-center justify-center rounded-full bg-secondary/10 text-2xl text-secondary transition-colors group-hover:bg-secondary/20 lg:h-16 lg:w-16 lg:text-3xl">
+						<Icon />
+					</span>
+					<span className="font-mono text-sm font-medium lg:text-base">
+						{title}
+					</span>
 				</div>
 			))}
 		</div>
@@ -123,7 +127,7 @@ const TechMarqueeRow = ({ logos, direction }: TechMarqueeRowProps) => {
 					className="flex shrink-0 items-center gap-2 rounded-full border border-font/10 px-4 py-2"
 				>
 					<Icon size={16} />
-					<span className="whitespace-nowrap text-xs font-medium uppercase tracking-wide">
+					<span className="whitespace-nowrap font-mono text-xs font-medium uppercase tracking-wide">
 						{title}
 					</span>
 				</div>

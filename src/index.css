@@ -3,31 +3,44 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-	/* "Minimal & refined" palette: a near-monochrome ink/warm-white base with
-	   a single terracotta accent family (full-strength + a lighter tint for
-	   secondary uses + a darker shade for hover), replacing the old
-	   three-hue teal/red/gold system. */
-	--color-secondary: #c1533d;
-	--color-navbar-title-text: #f5f2ed;
-	--color-navbar-icons: #f5f2ed;
-	--color-social-icons: #d98b76;
-	--color-social-icons-hover: #c1533d;
-	--color-bubble-font: #f5f2ed;
-	--color-timeline-icon: #c1533d;
-	--color-timeline-connector: #c1533d;
-	--color-timeline-text: #f5f2ed;
-	--color-timeline-timestamp: #d98b76;
-	--color-button: #c1533d;
-	--color-button-hover: #9c4530;
-	--color-button-text: #f5f2ed;
-	--color-link: #c1533d;
+	/* "Petrol & Copper" palette: a deep, cool petrol-teal base (dark mode is
+	   the primary target) with a single warm copper accent family
+	   (full-strength + a lighter tint for secondary uses + a darker shade
+	   for hover) as the one deliberate contrast note against the cool base. */
+	--color-secondary: #c96a2e;
+	--color-secondary-tint: #e0935c;
+	--color-navbar-title-text: #edeae3;
+	--color-navbar-icons: #edeae3;
+	--color-social-icons: #e0935c;
+	--color-social-icons-hover: #c96a2e;
+	--color-bubble-font: #edeae3;
+	--color-timeline-icon: #c96a2e;
+	--color-timeline-connector: #c96a2e;
+	--color-timeline-text: #edeae3;
+	--color-timeline-timestamp: #e0935c;
+	--color-button: #c96a2e;
+	--color-button-hover: #a6541f;
+	--color-button-text: #0b1f1f;
+	--color-link: #c96a2e;
+	/* Desaturated sage: de-emphasized text/labels that should read as a
+	   genuinely petrol-toned muted color rather than a washed-out gray. */
+	--color-muted: #4f7c71;
 
-	/* Display font for headings (Newsreader), body font for everything else
-	   (Inter) — loaded in index.html. Referenced from the MUI theme
-	   (src/theme.ts) as well as the native-heading rule below, so both
-	   plain HTML headings and MUI Typography variants pick them up. */
-	--font-display: 'Newsreader', serif;
-	--font-body: 'Inter', sans-serif;
+	/* Space Grotesk for headings, Work Sans for body, JetBrains Mono for
+	   small technical labels (tech-stack tags, experience dates, language
+	   toggle) — self-hosted via @fontsource, imported in main.tsx.
+	   Referenced from the MUI theme (src/theme.ts) as well as the
+	   native-heading rule below, so both plain HTML headings and MUI
+	   Typography variants pick them up. */
+	--font-display: 'Space Grotesk', sans-serif;
+	--font-body: 'Work Sans', sans-serif;
+	--font-mono: 'JetBrains Mono', monospace;
+
+	/* Shape consistency lock: one radius scale used everywhere. rounded-full
+	   remains a separate, deliberate pill-shape exception (badges, avatars,
+	   marquee pills) and isn't part of this scale. */
+	--radius-control: 12px;
+	--radius-card: 20px;
 
 	--spacing-navbar-height: 80px;
 
@@ -39,25 +52,31 @@
 	--breakpoint-md: 900px;
 
 	/* Mode-variant tokens: light-mode default, overridden under .dark below. */
-	--color-main: #1c1b1a;
-	--color-bg: #faf9f6;
-	--color-font: #1c1b1a;
-	--color-bubble-bg: #1c1b1a;
-	--color-timeline-bg: #1c1b1a;
-	--color-textfield-bg: #faf9f6;
-	--color-textfield-label: #1c1b1a;
-	--color-textfield-border: #c1533d;
+	--color-main: #0e2624;
+	--color-bg: #f4f7f5;
+	--color-font: #10201f;
+	--color-bubble-bg: #0e2624;
+	--color-timeline-bg: #0e2624;
+	--color-textfield-bg: #f4f7f5;
+	--color-textfield-label: #10201f;
+	--color-textfield-border: #c96a2e;
 }
 
 .dark {
-	--color-main: #262523;
-	--color-bg: #141414;
-	--color-font: #f5f2ed;
-	--color-bubble-bg: #262523;
-	--color-timeline-bg: #262523;
-	--color-textfield-bg: #262523;
-	--color-textfield-label: #f5f2ed;
-	--color-textfield-border: #d98b76;
+	--color-main: #12302e;
+	--color-bg: #0b1f1f;
+	--color-font: #edeae3;
+	--color-muted: #7fb5a6;
+	--color-bubble-bg: #14332f;
+	--color-timeline-bg: #14332f;
+	--color-textfield-bg: #14332f;
+	--color-textfield-label: #edeae3;
+	--color-textfield-border: #e8934a;
+	--color-secondary: #d9822f;
+	--color-secondary-tint: #e8934a;
+	--color-button: #d9822f;
+	--color-button-hover: #f0a15c;
+	--color-button-text: #0b1f1f;
 }
 
 /* Used by ThinkingIndicator's "AI thinking" dots (NowSection) — a gentle
@@ -123,6 +142,7 @@
 		scroll-behavior: smooth;
 	}
 	body {
+		position: relative;
 		margin: 0;
 		font-family: var(--font-body);
 		background-color: var(--color-bg);
@@ -135,4 +155,19 @@
 	h6 {
 		font-family: var(--font-display);
 	}
+}
+
+/* A faint, fixed film-grain layer gives the flat petrol/copper fields some
+   physical texture instead of reading as flat color blocks. Fixed +
+   pointer-events-none so it never affects scroll performance or hit-testing;
+   opacity is deliberately tiny (this is texture, not visible noise). */
+body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	z-index: 1000;
+	pointer-events: none;
+	opacity: 0.035;
+	mix-blend-mode: overlay;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }

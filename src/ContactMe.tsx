@@ -30,12 +30,12 @@ export const ContactMe = () => {
 			id="contact-me-section"
 			className="flex min-h-screen items-center justify-center bg-bg py-10 text-font md:py-0"
 		>
-			<div className="w-[91.6667%] md:w-[83.3333%]">
+			<div className="mx-auto max-w-5xl px-6 sm:px-10">
 				<Fade direction="up" triggerOnce>
 					<ResumeSubtitle>{sectionTitle}</ResumeSubtitle>
 				</Fade>
-				<div className="mt-8 flex w-full flex-wrap gap-6">
-					<div className="w-full md:w-[calc(25%-1rem)]">
+				<div className="mt-8 grid w-full grid-cols-1 gap-8 md:grid-cols-[1fr_3fr]">
+					<div>
 						<Fade direction="up" triggerOnce cascade>
 							<h3 className="my-[18.72px] text-[18.72px] font-bold leading-[normal]">
 								{formTitle}
@@ -48,7 +48,7 @@ export const ContactMe = () => {
 							/>
 						</Fade>
 					</div>
-					<div className="w-full sm:w-[calc(75%-1rem)]">
+					<div>
 						<Fade direction="up" triggerOnce>
 							<ContactMeForm />
 						</Fade>

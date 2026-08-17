@@ -21,7 +21,7 @@ export const Footer = () => {
 	return (
 		<footer className="border-t border-font/10 bg-bg py-6 text-font">
 			<div className="mx-auto flex w-[91.6667%] flex-col items-center justify-between gap-6 md:w-[83.3333%] md:flex-row">
-				<p className="text-sm text-font/60">
+				<p className="text-sm text-muted">
 					&copy; {year} Luis Barrantes. {builtWith}
 				</p>
 				<div className="flex items-center gap-4">

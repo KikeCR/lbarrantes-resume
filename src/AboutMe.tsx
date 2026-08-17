@@ -8,7 +8,7 @@ import { pickTranslation } from './utils/pickTranslation'
 import { LanguageContext } from './contexts/language.context'
 import { ResumeSubtitle } from './components/ResumeSubtitle'
 
-const AVATAR_SIZE = 120
+const AVATAR_SIZE = 140
 
 const content = {
 	en: {
@@ -35,23 +35,20 @@ export const AboutMe = () => {
 			<Fade direction="up" triggerOnce className="w-full">
 				<div className="mx-auto w-[91.6667%] md:w-[83.3333%]">
 					<ResumeSubtitle>{sectionTitle}</ResumeSubtitle>
-					<div className="mt-8 flex flex-wrap items-center justify-center gap-6">
-						<div className="w-full sm:flex-1">
-							<Fade triggerOnce>
-								<div
-									className="rounded-[24px] bg-bubble-bg px-[30px] py-6 text-right leading-relaxed text-bubble-font shadow-md [&_p]:my-4"
-									dangerouslySetInnerHTML={{ __html: myDescription }}
-								/>
-							</Fade>
-						</div>
-						<div className="w-full sm:w-auto">
+					<div className="mx-auto mt-8 grid max-w-5xl grid-cols-1 items-center gap-8 sm:grid-cols-[1fr_1.4fr] sm:gap-12">
+						<div className="flex justify-center sm:justify-end">
 							<Avatar
 								alt="Luis Barrantes"
 								src={avatar}
-								className="mx-auto sm:float-left sm:ml-4"
 								sx={{ width: AVATAR_SIZE, height: AVATAR_SIZE }}
 							/>
 						</div>
+						<Fade triggerOnce>
+							<div
+								className="rounded-card bg-bubble-bg px-[30px] py-6 leading-relaxed text-bubble-font shadow-md [&_p]:my-4"
+								dangerouslySetInnerHTML={{ __html: myDescription }}
+							/>
+						</Fade>
 					</div>
 				</div>
 			</Fade>

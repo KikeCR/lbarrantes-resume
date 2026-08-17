@@ -23,7 +23,8 @@ export class ExperiencePageObject {
 			company: li.querySelector('h3')?.textContent ?? '',
 			role: li.querySelector('p')?.textContent ?? '',
 			dateRange:
-				li.querySelector('.MuiTimelineOppositeContent-root')?.textContent ?? '',
+				li.querySelector('[data-testid="experience-date"]')?.textContent ??
+				'',
 		}))
 	}
 }
