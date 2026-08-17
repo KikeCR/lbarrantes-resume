@@ -49,6 +49,7 @@ export const Navbar = () => {
 							onChange={changeLanguage}
 							SelectDisplayProps={{ 'aria-label': 'Language' }}
 							sx={{
+								fontFamily: 'var(--font-mono)',
 								'&, & .MuiSelect-iconOutlined': {
 									color: 'var(--color-navbar-icons)',
 								},

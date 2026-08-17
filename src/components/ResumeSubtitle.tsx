@@ -1,6 +1,4 @@
 import type { ReactNode } from 'react'
-import dotsTitleLight from '../images/dots-bg-light.svg'
-import dotsTitleDark from '../images/dots-bg.svg'
 
 interface ResumeSubtitleProps {
 	children: ReactNode
@@ -8,16 +6,10 @@ interface ResumeSubtitleProps {
 
 export const ResumeSubtitle = ({ children }: ResumeSubtitleProps) => {
 	return (
-		<h2 className="relative text-4xl">
-			<img
-				src={dotsTitleDark}
-				alt=""
-				className="absolute left-[-14px] top-[15px] h-[37px] w-[37px] dark:hidden"
-			/>
-			<img
-				src={dotsTitleLight}
-				alt=""
-				className="absolute left-[-14px] top-[15px] hidden h-[37px] w-[37px] dark:block"
+		<h2 className="flex items-center gap-4 text-4xl sm:text-[2.5rem]">
+			<span
+				aria-hidden="true"
+				className="h-8 w-1.5 shrink-0 rounded-full bg-secondary sm:h-10"
 			/>
 			{children}
 		</h2>

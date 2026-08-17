@@ -54,7 +54,7 @@ export const DownloadResumeButton = ({
 			variant="contained"
 			disabled={isGenerating}
 			onClick={handleClick}
-			sx={{ textTransform: 'none', minWidth: { xs: 210, sm: 'auto' } }}
+			sx={{ minWidth: { xs: 210, sm: 'auto' } }}
 			startIcon={
 				isGenerating ? (
 					<CircularProgress size={16} color="inherit" />

@@ -32,7 +32,7 @@ export const NowSection = () => {
 					<div className="inline-block text-left">
 						<ResumeSubtitle>{sectionTitle}</ResumeSubtitle>
 					</div>
-					<p className="mt-8 text-lg leading-relaxed">{body}</p>
+					<p className="mt-8 text-xl leading-relaxed sm:text-2xl">{body}</p>
 					<div className="mt-10">
 						<ThinkingIndicator />
 					</div>
