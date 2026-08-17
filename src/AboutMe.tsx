@@ -14,12 +14,12 @@ const content = {
 	en: {
 		sectionTitle: 'Who is Luis Barrantes?',
 		myDescription:
-			"<p>I'm Luis Barrantes, a full-stack developer with a track record thriving in startups and other fast-paced environments, where priorities shift quickly and ownership matters. I'm proactive by nature. I look for problems before they become blockers, take initiative without waiting to be asked, and follow through on what I commit to. I put as much care into communication as I do into code: keeping my team and stakeholders in the loop, asking the right questions early, and making sure technical decisions are understood by everyone involved. Always eager to collaborate, adapt to new technologies, and keep growing both my technical and soft skills.</p><p>Love music and concerts, traveling, photography, outdoors, dogs, working out and hanging out with my loved ones.</p>",
+			"<p>I'm Luis Barrantes, a full-stack developer who thrives in fast-paced startup environments where ownership matters. I'm proactive by nature. I catch problems early, take initiative, and follow through on what I commit to. I care as much about clear communication as I do about clean code, and I'm always learning new technologies and skills.</p><p>Outside of work: music and concerts, traveling, photography, the outdoors, dogs, working out, and spending time with the people I love.</p>",
 	},
 	es: {
 		sectionTitle: '¿Quién es Luis Barrantes?',
 		myDescription:
-			'<p>Soy Luis Barrantes, full-stack developer con experiencia trabajando en startups y otros entornos de ritmo acelerado, donde las prioridades cambian rápido y la responsabilidad personal es clave. Soy proactivo por naturaleza: identifico problemas antes de que se conviertan en obstáculos, tomo la iniciativa sin esperar a que me lo pidan, y cumplo con lo que me comprometo a hacer. Le doy tanta importancia a la comunicación como al código: mantengo a mi equipo y a los stakeholders informados, hago las preguntas correctas a tiempo, y me aseguro de que las decisiones técnicas se entiendan por todos los involucrados. Siempre dispuesto a colaborar, adaptarme a nuevas tecnologías y seguir creciendo tanto en mis habilidades técnicas como blandas.</p><p>Me apasiona la música y los conciertos, viajar, la fotografía, los perros, el aire libre, hacer ejercicio y pasar el tiempo con mis seres queridos.</p>',
+			'<p>Soy Luis Barrantes, full-stack developer que se desenvuelve bien en startups y entornos de ritmo acelerado, donde la responsabilidad personal es clave. Soy proactivo por naturaleza: identifico problemas a tiempo, tomo la iniciativa y cumplo con lo que me comprometo a hacer. Le doy tanta importancia a la comunicación como al código, y siempre estoy aprendiendo nuevas tecnologías y habilidades.</p><p>Fuera del trabajo: música y conciertos, viajar, fotografía, el aire libre, perros, hacer ejercicio y pasar tiempo con mis seres queridos.</p>',
 	},
 }
 
