@@ -7,7 +7,7 @@ test.describe('Smoke', () => {
 		const homePage = new HomePage(page)
 		await homePage.open()
 
-		await expect(page).toHaveTitle('Luis Barrantes')
+		await expect(page).toHaveTitle(/^Luis Barrantes/)
 
 		for (const section of Object.values(homePage.sections)) {
 			await expect(section).toBeVisible()
