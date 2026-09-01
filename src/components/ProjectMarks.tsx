@@ -1,4 +1,5 @@
 import { LuCircleDot } from 'react-icons/lu'
+import { PiHandFill } from 'react-icons/pi'
 
 // Recreations of each app's own favicon/brand mark (see apps/web/app/icon.tsx
 // in the cueball and sleeveside repos), kept in their real brand colors
@@ -54,5 +55,14 @@ export const BarrioKitsMark = () => (
 			/>
 			<rect x="27.5" y="27.5" width="9" height="9" rx="1.5" fill="#ffffff" />
 		</svg>
+	</span>
+)
+
+export const DeskHandMark = () => (
+	<span
+		className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl shadow-sm"
+		style={{ background: '#2563eb' }}
+	>
+		<PiHandFill className="h-6 w-6 text-white" />
 	</span>
 )

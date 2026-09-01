@@ -11,6 +11,8 @@ import {
 	SiReact,
 	SiTailwindcss,
 	SiFramer,
+	SiPython,
+	SiFastapi,
 } from 'react-icons/si'
 
 export interface PortfolioProject {
@@ -36,6 +38,20 @@ export const portfolioProjects: PortfolioProject[] = [
 			{ title: 'PostgreSQL', Icon: SiPostgresql },
 			{ title: 'Redis', Icon: SiRedis },
 			{ title: 'TypeScript', Icon: SiTypescript },
+		],
+	},
+	{
+		id: 'deskhand',
+		name: 'DeskHand',
+		liveUrl: 'https://desk-hand.com',
+		liveLabel: 'desk-hand.com',
+		githubUrl: 'https://github.com/KikeCR/deskhand',
+		tech: [
+			{ title: 'Python', Icon: SiPython },
+			{ title: 'FastAPI', Icon: SiFastapi },
+			{ title: 'React', Icon: SiReact },
+			{ title: 'TypeScript', Icon: SiTypescript },
+			{ title: 'Tailwind', Icon: SiTailwindcss },
 		],
 	},
 	{

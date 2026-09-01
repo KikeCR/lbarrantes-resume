@@ -13,6 +13,7 @@ import {
 	CueBallMark,
 	SleevesideMark,
 	BarrioKitsMark,
+	DeskHandMark,
 } from './components/ProjectMarks'
 
 const content = {
@@ -26,6 +27,7 @@ const content = {
 			cueball: 'Real-time · WebSockets',
 			sleeveside: 'Social · Discogs API',
 			barriokits: 'Boilerplates · Templates',
+			deskhand: 'AI Agents · RAG',
 		} as Record<string, string>,
 		descriptions: {
 			cueball:
@@ -34,6 +36,8 @@ const content = {
 				'A multi-user vinyl collection tracker with a visual cover-art wall, condition grading, and play logs, plus a social layer and one-click jumps to Spotify and Apple Music to actually listen.',
 			barriokits:
 				'A storefront for developer boilerplate starters, code templates, Notion systems, and Canva templates, built to help you start your next project from a real foundation instead of a blank file.',
+			deskhand:
+				'An AI onboarding assistant that pairs a CrewAI multi-agent pipeline with RAG-grounded company policy docs and a deterministic decision engine, so the Week 1 checklist branches by role and location with the reasoning shown, not guessed by an LLM.',
 		} as Record<string, string>,
 	},
 	es: {
@@ -46,6 +50,7 @@ const content = {
 			cueball: 'Tiempo real · WebSockets',
 			sleeveside: 'Social · API de Discogs',
 			barriokits: 'Boilerplates · Plantillas',
+			deskhand: 'Agentes IA · RAG',
 		} as Record<string, string>,
 		descriptions: {
 			cueball:
@@ -54,6 +59,8 @@ const content = {
 				'Un rastreador de colecciones de vinilos multiusuario con un muro visual de portadas, calificación de condición, historial de reproducciones y una capa social, además de enlaces directos a Spotify y Apple Music para escuchar al instante.',
 			barriokits:
 				'Una tienda de boilerplates para desarrolladores, plantillas de código, sistemas de Notion y plantillas de Canva, pensada para empezar tu próximo proyecto desde una base real en lugar de un archivo en blanco.',
+			deskhand:
+				'Un asistente de onboarding con IA que combina un pipeline multiagente con CrewAI, documentos de política de la empresa mediante RAG y un motor de decisiones determinista, de modo que el checklist de la primera semana se ramifica según el rol y la ubicación, con el razonamiento visible en vez de adivinado por un LLM.',
 		} as Record<string, string>,
 	},
 }
@@ -62,6 +69,7 @@ const projectMarks: Record<string, ReactNode> = {
 	cueball: <CueBallMark />,
 	sleeveside: <SleevesideMark />,
 	barriokits: <BarrioKitsMark />,
+	deskhand: <DeskHandMark />,
 }
 
 export const Portfolio = () => {
