@@ -95,7 +95,7 @@ export const Portfolio = () => {
 					<div className="mt-10 grid gap-6 md:grid-cols-2 lg:gap-8">
 						{portfolioProjects.map((project) => (
 							<Fade key={project.id} direction="up" triggerOnce>
-								<article className="group relative flex h-full flex-col rounded-card border border-font/10 bg-font/[0.02] p-8 transition-all duration-300 hover:-translate-y-0.5 hover:border-secondary/50 hover:bg-font/[0.035] hover:shadow-[0_8px_20px_-10px_color-mix(in_srgb,var(--color-secondary)_45%,transparent)] sm:p-9">
+								<article className="group relative flex h-full flex-col rounded-card border border-card-border bg-card p-8 transition-all duration-300 hover:-translate-y-0.5 hover:border-secondary/50 hover:shadow-[0_8px_20px_-10px_color-mix(in_srgb,var(--color-secondary)_45%,transparent)] sm:p-9">
 									<div className="flex items-start justify-between gap-4">
 										<div className="flex items-center gap-4">
 											{projectMarks[project.id]}
@@ -127,7 +127,7 @@ export const Portfolio = () => {
 										{project.tech.map(({ title, Icon }) => (
 											<span
 												key={title}
-												className="inline-flex items-center gap-1.5 rounded-full border border-font/10 bg-font/[0.03] px-3 py-1.5 text-xs font-medium text-font/80"
+												className="inline-flex items-center gap-1.5 rounded-full border border-card-border bg-card px-3 py-1.5 text-xs font-medium text-font/80"
 											>
 												<Icon size={14} />
 												{title}

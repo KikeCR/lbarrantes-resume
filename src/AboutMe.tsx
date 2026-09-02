@@ -45,7 +45,7 @@ export const AboutMe = () => {
 						</div>
 						<Fade triggerOnce>
 							<div
-								className="rounded-card bg-bubble-bg px-[30px] py-6 leading-relaxed text-bubble-font shadow-md [&_p]:my-4"
+								className="rounded-card bg-bubble-bg px-[30px] py-6 leading-relaxed text-bubble-font shadow-[0_20px_40px_-16px_rgba(14,38,36,0.35)] [&_p]:my-4"
 								dangerouslySetInnerHTML={{ __html: myDescription }}
 							/>
 						</Fade>

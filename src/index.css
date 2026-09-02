@@ -55,11 +55,21 @@
 	--color-main: #0e2624;
 	--color-bg: #f4f7f5;
 	--color-font: #10201f;
-	--color-bubble-bg: #0e2624;
-	--color-timeline-bg: #0e2624;
+	--color-bubble-bg: #1f3d38;
+	--color-timeline-bg: #1f3d38;
 	--color-textfield-bg: #f4f7f5;
 	--color-textfield-label: #10201f;
 	--color-textfield-border: #c96a2e;
+
+	/* Card/chip surfaces: a same-opacity mix of --color-font over --color-bg
+	   (what these used to be, via e.g. bg-font/[0.02] + border-font/10) reads
+	   fine in dark mode but is nearly invisible in light mode, since a faint
+	   darkening of an already-light background barely registers while the
+	   same faint lightening of a dark background clearly does. So these are
+	   precomputed per mode instead of derived with a single opacity value. */
+	--color-card: #eaf0ed;
+	--color-card-border: #d7ded9;
+	--color-chip: #f1dfcb;
 }
 
 .dark {
@@ -77,6 +87,9 @@
 	--color-button: #d9822f;
 	--color-button-hover: #f0a15c;
 	--color-button-text: #0b1f1f;
+	--color-card: #0f2323;
+	--color-card-border: #21332f;
+	--color-chip: #1f2921;
 }
 
 /* Used by ThinkingIndicator's "AI thinking" dots (NowSection) — a gentle
