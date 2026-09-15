@@ -9,6 +9,8 @@ import {
 	SiVite,
 	SiNextdotjs,
 	SiDjango,
+	SiFastapi,
+	SiFlask,
 	SiPython,
 	SiNodedotjs,
 	SiExpress,
@@ -19,6 +21,10 @@ import {
 	SiGraphql,
 	SiAnthropic,
 	SiGit,
+	SiDocker,
+	SiGithubactions,
+	SiDeepseek,
+	SiCrewai,
 } from 'react-icons/si'
 
 import { SiPlaywright } from './playwrightIcon'
@@ -26,7 +32,7 @@ import { SiPlaywright } from './playwrightIcon'
 export interface SkillLogo {
 	title: string
 	Icon: IconType
-	category: 'frontend' | 'backend'
+	category: 'frontend' | 'backend' | 'ai'
 	/** Set to false to keep a skill out of the grid and show it only in the marquee. */
 	showInGrid?: boolean
 }
@@ -51,6 +57,8 @@ export const skillLogos: SkillLogo[] = [
 	{ title: 'Vite', Icon: SiVite, category: 'frontend' },
 	{ title: 'Next.js', Icon: SiNextdotjs, category: 'frontend' },
 	{ title: 'Django', Icon: SiDjango, category: 'backend' },
+	{ title: 'FastAPI', Icon: SiFastapi, category: 'backend', showInGrid: false },
+	{ title: 'Flask', Icon: SiFlask, category: 'backend', showInGrid: false },
 	{ title: 'Python', Icon: SiPython, category: 'backend' },
 	{ title: 'Node.js', Icon: SiNodedotjs, category: 'backend' },
 	{ title: 'Express', Icon: SiExpress, category: 'backend' },
@@ -64,17 +72,31 @@ export const skillLogos: SkillLogo[] = [
 		showInGrid: false,
 	},
 	{ title: 'GraphQL', Icon: SiGraphql, category: 'backend' },
+	{ title: 'Git', Icon: SiGit, category: 'backend', showInGrid: false },
 	{
-		title: 'LLM Tooling',
-		Icon: SiAnthropic,
+		title: 'Docker',
+		Icon: SiDocker,
 		category: 'backend',
 		showInGrid: false,
 	},
-	{ title: 'Git', Icon: SiGit, category: 'backend', showInGrid: false },
+	{
+		title: 'GitHub Actions',
+		Icon: SiGithubactions,
+		category: 'backend',
+		showInGrid: false,
+	},
 	{
 		title: 'Playwright',
 		Icon: SiPlaywright,
 		category: 'backend',
+		showInGrid: false,
+	},
+	{ title: 'DeepSeek', Icon: SiDeepseek, category: 'ai', showInGrid: false },
+	{ title: 'CrewAI', Icon: SiCrewai, category: 'ai', showInGrid: false },
+	{
+		title: 'LLM Tooling',
+		Icon: SiAnthropic,
+		category: 'ai',
 		showInGrid: false,
 	},
 ]

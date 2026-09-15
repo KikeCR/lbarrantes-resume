@@ -82,6 +82,15 @@ export const ResumeDocument = ({ language }: ResumeDocumentProps) => {
 				</View>
 
 				<View style={styles.section}>
+					<Text style={styles.sectionTitle}>{content.aiLlmLabel}</Text>
+					{content.aiLlmBullets.map((bullet, i) => (
+						<Text key={i} style={styles.bullet}>
+							• {bullet}
+						</Text>
+					))}
+				</View>
+
+				<View style={styles.section}>
 					<Text style={styles.sectionTitle}>{content.skillsLabel}</Text>
 					{content.skillGroups.map((group) => (
 						<View key={group.heading} style={styles.skillGroupRow}>
@@ -117,35 +126,35 @@ const ACCENT_COLOR = '#c1533d'
 
 const styles = StyleSheet.create({
 	page: {
-		paddingVertical: 40,
-		paddingHorizontal: 46,
+		paddingVertical: 24,
+		paddingHorizontal: 42,
 		fontFamily: 'Helvetica',
-		fontSize: 10,
+		fontSize: 9.5,
 		color: '#1a1a1a',
 	},
 	header: {
-		marginBottom: 12,
+		marginBottom: 8,
 	},
 	name: {
-		fontSize: 22,
+		fontSize: 20,
 		fontFamily: 'Helvetica-Bold',
 		color: ACCENT_COLOR,
 	},
 	headline: {
-		fontSize: 12.5,
-		marginTop: 2,
+		fontSize: 11.5,
+		marginTop: 1,
 		color: '#333333',
 	},
 	headerRule: {
 		height: 2,
 		width: 50,
 		backgroundColor: ACCENT_COLOR,
-		marginTop: 8,
-		marginBottom: 8,
+		marginTop: 5,
+		marginBottom: 5,
 	},
 	contactRow: {
 		flexDirection: 'row',
-		fontSize: 9,
+		fontSize: 8.5,
 	},
 	contactLink: {
 		color: '#1a1a1a',
@@ -156,26 +165,26 @@ const styles = StyleSheet.create({
 		color: '#999999',
 	},
 	summary: {
-		fontSize: 10,
-		lineHeight: 1.4,
-		marginBottom: 14,
+		fontSize: 9.5,
+		lineHeight: 1.3,
+		marginBottom: 8,
 	},
 	section: {
-		marginBottom: 12,
+		marginBottom: 6,
 	},
 	sectionTitle: {
-		fontSize: 12,
+		fontSize: 10.5,
 		fontFamily: 'Helvetica-Bold',
 		textTransform: 'uppercase',
 		letterSpacing: 0.5,
 		color: ACCENT_COLOR,
-		marginBottom: 7,
+		marginBottom: 4,
 		borderBottomWidth: 1.5,
 		borderBottomColor: ACCENT_COLOR,
-		paddingBottom: 3,
+		paddingBottom: 2,
 	},
 	entry: {
-		marginBottom: 7,
+		marginBottom: 3,
 	},
 	entryHeaderRow: {
 		flexDirection: 'row',
@@ -183,29 +192,29 @@ const styles = StyleSheet.create({
 	},
 	entryTitle: {
 		fontFamily: 'Helvetica-Bold',
-		fontSize: 10,
+		fontSize: 9.5,
 	},
 	entryDates: {
-		fontSize: 9,
+		fontSize: 8.5,
 		color: '#555555',
 	},
 	bullet: {
-		fontSize: 9.5,
-		lineHeight: 1.4,
-		marginTop: 2,
+		fontSize: 9,
+		lineHeight: 1.2,
+		marginTop: 0.75,
 		marginLeft: 10,
 	},
 	skillGroupRow: {
 		flexDirection: 'row',
-		marginBottom: 4,
+		marginBottom: 2,
 	},
 	skillGroupHeading: {
 		fontFamily: 'Helvetica-Bold',
-		fontSize: 9.5,
-		width: 130,
+		fontSize: 9,
+		width: 115,
 	},
 	skillGroupItems: {
-		fontSize: 9.5,
+		fontSize: 9,
 		flex: 1,
 	},
 })

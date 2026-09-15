@@ -14,12 +14,12 @@ const content = {
 	en: {
 		sectionTitle: 'Who is Luis Barrantes?',
 		myDescription:
-			"<p>I'm Luis Barrantes, a full-stack developer who thrives in fast-paced startup environments where ownership matters. I'm proactive by nature. I catch problems early, take initiative, and follow through on what I commit to. I care as much about clear communication as I do about clean code, and I'm always learning new technologies and skills.</p><p>Outside of work: music and concerts, traveling, photography, the outdoors, dogs, working out, and spending time with the people I love.</p>",
+			"<p>I'm Luis Barrantes, a full-stack engineer who thrives in fast-paced startup environments where ownership matters. I'm proactive by nature. I catch problems early, take initiative, and follow through on what I commit to. Lately that means designing retrieval-augmented generation pipelines and multi-agent LLM workflows alongside the front-end and back-end work I've always done. I care as much about clear communication as I do about clean code, and I'm always learning new technologies and skills.</p><p>Outside of work: music and concerts, traveling, photography, the outdoors, dogs, working out, and spending time with the people I love.</p>",
 	},
 	es: {
 		sectionTitle: '¿Quién es Luis Barrantes?',
 		myDescription:
-			'<p>Soy Luis Barrantes, full-stack developer que se desenvuelve bien en startups y entornos de ritmo acelerado, donde la responsabilidad personal es clave. Soy proactivo por naturaleza: identifico problemas a tiempo, tomo la iniciativa y cumplo con lo que me comprometo a hacer. Le doy tanta importancia a la comunicación como al código, y siempre estoy aprendiendo nuevas tecnologías y habilidades.</p><p>Fuera del trabajo: música y conciertos, viajar, fotografía, el aire libre, perros, hacer ejercicio y pasar tiempo con mis seres queridos.</p>',
+			'<p>Soy Luis Barrantes, ingeniero full-stack que se desenvuelve bien en startups y entornos de ritmo acelerado, donde la responsabilidad personal es clave. Soy proactivo por naturaleza: identifico problemas a tiempo, tomo la iniciativa y cumplo con lo que me comprometo a hacer. Últimamente eso incluye diseñar pipelines de generación aumentada por recuperación y flujos de trabajo multi-agente con LLMs, junto con el trabajo de front-end y back-end que siempre he hecho. Le doy tanta importancia a la comunicación como al código, y siempre estoy aprendiendo nuevas tecnologías y habilidades.</p><p>Fuera del trabajo: música y conciertos, viajar, fotografía, el aire libre, perros, hacer ejercicio y pasar tiempo con mis seres queridos.</p>',
 	},
 }
 
