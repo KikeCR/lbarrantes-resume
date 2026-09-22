@@ -25,7 +25,13 @@ export const ResumeDocument = ({ language }: ResumeDocumentProps) => {
 		.reverse()
 
 	return (
-		<Document>
+		<Document
+			title={`Luis Barrantes - ${content.headline}`}
+			author="Luis Barrantes"
+			subject="Resume"
+			creator="luisbarrantes.com"
+			keywords="Luis Barrantes, Full-Stack Engineer, React, TypeScript, Python, Django, AI, LLM, RAG"
+		>
 			<Page size="LETTER" style={styles.page}>
 				<View style={styles.header}>
 					<Text style={styles.name}>Luis Barrantes</Text>
@@ -65,7 +71,7 @@ export const ResumeDocument = ({ language }: ResumeDocumentProps) => {
 							<View key={entry.id} style={styles.entry} wrap={false}>
 								<View style={styles.entryHeaderRow}>
 									<Text style={styles.entryTitle}>
-										{entry.role} — {entry.company.replace('\n', ' ')}
+										{entry.role} - {entry.company.replace('\n', ' ')}
 									</Text>
 									<Text style={styles.entryDates}>
 										{entry.start} - {entry.end}
@@ -108,7 +114,7 @@ export const ResumeDocument = ({ language }: ResumeDocumentProps) => {
 						<View key={entry.id} style={styles.entry} wrap={false}>
 							<View style={styles.entryHeaderRow}>
 								<Text style={styles.entryTitle}>
-									{entry.role} — {entry.company.replace('\n', ' ')}
+									{entry.role} - {entry.company.replace('\n', ' ')}
 								</Text>
 								<Text style={styles.entryDates}>
 									{entry.start} - {entry.end}
